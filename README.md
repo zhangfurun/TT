@@ -3,20 +3,21 @@
 <br>更新时间:2017.2.27</br>
 
 <br>根据日常开发需求,基本分为一下内容</br>
-
-<br>Category</br>
-这里主要是针对苹果自带的控件的功能的拓展,如获取View的高度,宽度,动画设置等等</br>
-View</br>
-
-ViewController</br>
-这里可以作为项目的ViewController的基类</br>
-NetWork</br>
-这里主要针对项目中的数据请求进行封装</br>
-ResourceFiles</br>
-TTFrameWork中涉及到的资源选项</br>
-ShareKit</br>
-这里主要是项目中的分享模块的封装</br>
-Models</br>
+## Models</br>
 这里是model的基类</br>
-Common</br>
+## View</br>
+这里是项目中常用的View,如TTAlert弹框,TTTextView(占位符)</br>
+## ViewController</br>
+这里可以作为项目的ViewController的基类</br>
+## Category</br>
+这里主要是针对苹果自带的控件的功能的拓展,如获取View的高度,宽度,动画设置等等</br>
+
+## NetWork</br>
+这里主要针对项目中的数据请求进行封装</br>
+## ShareKit</br>
+这里主要是项目中的分享模块的封装</br>
+
+## Common</br>
 这里是工具类的整合</br>
+## ResourceFiles</br>
+TTFrameWork中涉及到的资源选项</br>
