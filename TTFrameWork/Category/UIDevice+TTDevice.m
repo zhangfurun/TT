@@ -37,44 +37,26 @@
 
 + (CurrentDeviceType)currentDeviceType {
     NSString *type = [UIDevice currentDeviceTypeString];
-    if ([UIDevice getOSVersion].doubleValue >= 8.0 ) {
-        if ([type containsString:@"iPhone"] && ![type containsString:@"Simulator"] ) {
-            return CurrentDeviceTypeIPhone;
-        }else {
-            if ([type containsString:@"iPhone"] && [type containsString:@"Simulator"]) {
-                return CurrentDeviceTypeIPhoneSimulator;
-            }else {
-                if ([type containsString:@"iPad"]) {
-                    return CurrentDeviceTypeIPad;
-                }else {
-                    if ([type containsString:@"iPod"]) {
-                        return CurrentDeviceTypeIPod;
-                    }else {
-                        return CurrentDeviceTypeNone;
-                    }
-                }
-            }
-        }
-        
+    
+    BOOL deviceIsSupport = [UIDevice getOSVersion].doubleValue >= 8.0;
+    BOOL isPhone        = deviceIsSupport ? ([type containsString:@"iPhone"])       : ([type rangeOfString:@"iPhone"].location != NSNotFound);
+    BOOL isSimulator    = deviceIsSupport ? ([type containsString:@"Simulator"])    : ([type rangeOfString:@"Simulator"].location != NSNotFound);
+    BOOL isPad          = deviceIsSupport ? ([type containsString:@"iPad"])         : ([type rangeOfString:@"iPad"].location != NSNotFound);
+    BOOL isPod          = deviceIsSupport ? ([type containsString:@"iPod"])         : ([type rangeOfString:@"iPod"].location != NSNotFound);
+    
+    if (isPhone && !isSimulator) {
+        return CurrentDeviceTypeIPhone;
     }else {
-        BOOL isPhone = [type rangeOfString:@"iPhone"].location != NSNotFound;
-        BOOL isSimulator = [type rangeOfString:@"Simulator"].location != NSNotFound;
-        BOOL isPad = [type rangeOfString:@"iPad"].location != NSNotFound;
-        BOOL isPod = [type rangeOfString:@"iPod"].location != NSNotFound;
-        if (isPhone && !isSimulator) {
-            return CurrentDeviceTypeIPhone;
+        if (isPhone && isSimulator) {
+            return CurrentDeviceTypeIPhoneSimulator;
         }else {
-            if (isPhone && isSimulator) {
-                return CurrentDeviceTypeIPhoneSimulator;
+            if (isPad) {
+                return CurrentDeviceTypeIPad;
             }else {
-                if (isPad) {
-                    return CurrentDeviceTypeIPad;
+                if (isPod) {
+                    return CurrentDeviceTypeIPod;
                 }else {
-                    if (isPod) {
-                        return CurrentDeviceTypeIPod;
-                    }else {
-                        return CurrentDeviceTypeNone;
-                    }
+                    return CurrentDeviceTypeNone;
                 }
             }
         }
