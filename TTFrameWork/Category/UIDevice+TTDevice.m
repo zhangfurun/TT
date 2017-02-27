@@ -10,51 +10,78 @@
 #import <sys/utsname.h>
 
 @implementation UIDevice (TTDevice)
-+ (NSString *)osVersion {
++ (NSString *)getOSVersion {
     return [[UIDevice currentDevice] systemVersion];
 }
 
-+ (NSString *)model{
++ (NSString *)getOSModel{
     return [[UIDevice currentDevice] model];
 }
 
-+ (BOOL)deviceContrastWithMachineType:(NSString *)type {
-    if ([[UIDevice iphoneType] isEqualToString:type]) {
-        return YES;
-    }
-    return NO;
++ (NSString *)getOSName {
+    return [[UIDevice currentDevice] name];
 }
 
-+ (BOOL)supportIphone {
-    if ([UIDevice deviceContrastWithMachineType:@"iPhone 5s"]) {
-        return YES;
-    } else if ([UIDevice deviceContrastWithMachineType:@"iPhone 6"]) {
-        return YES;
-    } else if ([UIDevice deviceContrastWithMachineType:@"iPhone 6 Plus"]) {
-        return YES;
-    } else if ([UIDevice deviceContrastWithMachineType:@"iPhone 6s"]) {
-        return YES;
-    } else if ([UIDevice deviceContrastWithMachineType:@"iPhone 6s Plus"]) {
-        return YES;
-    }else if ([UIDevice deviceContrastWithMachineType:@"iPhone SE"]) {
-        return YES;
-    }else if ([UIDevice deviceContrastWithMachineType:@"iPhone 7"]) {
-        return YES;
-    } else if ([UIDevice deviceContrastWithMachineType:@"iPhone 7 Plus"]) {
-        return YES;
-    }
-    return NO;
++ (BOOL)currentDeviceIsIPhone {
+    return [UIDevice currentDeviceType] == CurrentDeviceTypeIPhone;
 }
 
-+ (BOOL)isPad {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return NO;
-    } else {
-        return YES;
++ (BOOL)currentDeviceIsIPad {
+    return [UIDevice currentDeviceType] == CurrentDeviceTypeIPad;
+}
+
++ (BOOL)currentDeviceIsIPod {
+    return [UIDevice currentDeviceType] == CurrentDeviceTypeIPod;
+}
+
+
++ (CurrentDeviceType)currentDeviceType {
+    NSString *type = [UIDevice currentDeviceTypeString];
+    if ([UIDevice getOSVersion].doubleValue >= 8.0 ) {
+        if ([type containsString:@"iPhone"] && ![type containsString:@"Simulator"] ) {
+            return CurrentDeviceTypeIPhone;
+        }else {
+            if ([type containsString:@"iPhone"] && [type containsString:@"Simulator"]) {
+                return CurrentDeviceTypeIPhoneSimulator;
+            }else {
+                if ([type containsString:@"iPad"]) {
+                    return CurrentDeviceTypeIPad;
+                }else {
+                    if ([type containsString:@"iPod"]) {
+                        return CurrentDeviceTypeIPod;
+                    }else {
+                        return CurrentDeviceTypeNone;
+                    }
+                }
+            }
+        }
+        
+    }else {
+        BOOL isPhone = [type rangeOfString:@"iPhone"].location != NSNotFound;
+        BOOL isSimulator = [type rangeOfString:@"Simulator"].location != NSNotFound;
+        BOOL isPad = [type rangeOfString:@"iPad"].location != NSNotFound;
+        BOOL isPod = [type rangeOfString:@"iPod"].location != NSNotFound;
+        if (isPhone && !isSimulator) {
+            return CurrentDeviceTypeIPhone;
+        }else {
+            if (isPhone && isSimulator) {
+                return CurrentDeviceTypeIPhoneSimulator;
+            }else {
+                if (isPad) {
+                    return CurrentDeviceTypeIPad;
+                }else {
+                    if (isPod) {
+                        return CurrentDeviceTypeIPod;
+                    }else {
+                        return CurrentDeviceTypeNone;
+                    }
+                }
+            }
+        }
     }
 }
 
-+ (NSString *)iphoneType {
++ (NSString *)currentDeviceTypeString {
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
@@ -108,5 +135,15 @@
     return platform;
 }
 
++ (BOOL)isPad {
+    switch ([[UIDevice currentDevice] userInterfaceIdiom]) {
+        case UIUserInterfaceIdiomPad:
+            return YES;
+            break;
+        default:
+            return NO;
+            break;
+    }
+}
 
 @end

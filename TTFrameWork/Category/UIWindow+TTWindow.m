@@ -42,4 +42,14 @@
     }
     return result;
 }
+
++ (BOOL)deleteViewControllerFromNavigationController:(UINavigationController *)navigationController deleteViewController:(UIViewController *)viewController {
+    for (UIViewController *VC in navigationController.viewControllers) {
+        if ([VC isKindOfClass:[viewController class]]) {
+            [VC removeFromParentViewController];
+            return YES;
+        }
+    }
+    return NO;
+}
 @end
