@@ -15,6 +15,14 @@
 		1539543C1E64272B00A20FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539543A1E64272B00A20FB9 /* LaunchScreen.storyboard */; };
 		153954471E64272C00A20FB9 /* TTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954461E64272C00A20FB9 /* TTTests.m */; };
 		153954521E64272C00A20FB9 /* TTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954511E64272C00A20FB9 /* TTUITests.m */; };
+		153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955BA1E64288600A20FB9 /* UIDevice+TTDevice.m */; };
+		153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955BD1E6428ED00A20FB9 /* NSDate+TTDate.m */; };
+		153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C01E64298600A20FB9 /* NSFileManager+TTFileManager.m */; };
+		153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C31E642A1A00A20FB9 /* NSString+TTString.m */; };
+		153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C61E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m */; };
+		153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C91E642FDA00A20FB9 /* UIView+TTSuperView.m */; };
+		153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */; };
+		153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,23 @@
 		1539544D1E64272C00A20FB9 /* TTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		153954511E64272C00A20FB9 /* TTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTUITests.m; sourceTree = "<group>"; };
 		153954531E64272C00A20FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		153955B91E64288600A20FB9 /* UIDevice+TTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TTDevice.h"; sourceTree = "<group>"; };
+		153955BA1E64288600A20FB9 /* UIDevice+TTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TTDevice.m"; sourceTree = "<group>"; };
+		153955BC1E6428ED00A20FB9 /* NSDate+TTDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TTDate.h"; sourceTree = "<group>"; };
+		153955BD1E6428ED00A20FB9 /* NSDate+TTDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TTDate.m"; sourceTree = "<group>"; };
+		153955BF1E64298600A20FB9 /* NSFileManager+TTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+TTFileManager.h"; sourceTree = "<group>"; };
+		153955C01E64298600A20FB9 /* NSFileManager+TTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+TTFileManager.m"; sourceTree = "<group>"; };
+		153955C21E642A1A00A20FB9 /* NSString+TTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTString.h"; sourceTree = "<group>"; };
+		153955C31E642A1A00A20FB9 /* NSString+TTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTString.m"; sourceTree = "<group>"; };
+		153955C51E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+TTUserDefaults.h"; sourceTree = "<group>"; };
+		153955C61E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+TTUserDefaults.m"; sourceTree = "<group>"; };
+		153955C81E642FDA00A20FB9 /* UIView+TTSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTSuperView.h"; sourceTree = "<group>"; };
+		153955C91E642FDA00A20FB9 /* UIView+TTSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTSuperView.m"; sourceTree = "<group>"; };
+		153955CD1E64308A00A20FB9 /* TTConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConst.h; sourceTree = "<group>"; };
+		153955CE1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TTFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TTFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		153955D11E64365B00A20FB9 /* UIWindow+TTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TTWindow.h"; sourceTree = "<group>"; };
+		153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TTWindow.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +106,7 @@
 		153954201E64272B00A20FB9 = {
 			isa = PBXGroup;
 			children = (
+				153955B41E6427C900A20FB9 /* TTFrameWork */,
 				1539542B1E64272B00A20FB9 /* TT */,
 				153954451E64272C00A20FB9 /* TTTests */,
 				153954501E64272C00A20FB9 /* TTUITests */,
@@ -138,6 +164,46 @@
 				153954531E64272C00A20FB9 /* Info.plist */,
 			);
 			path = TTUITests;
+			sourceTree = "<group>";
+		};
+		153955B41E6427C900A20FB9 /* TTFrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				153955CC1E64308A00A20FB9 /* Common */,
+				153955B51E6427DC00A20FB9 /* Category */,
+			);
+			path = TTFrameWork;
+			sourceTree = "<group>";
+		};
+		153955B51E6427DC00A20FB9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				153955B91E64288600A20FB9 /* UIDevice+TTDevice.h */,
+				153955BA1E64288600A20FB9 /* UIDevice+TTDevice.m */,
+				153955BC1E6428ED00A20FB9 /* NSDate+TTDate.h */,
+				153955BD1E6428ED00A20FB9 /* NSDate+TTDate.m */,
+				153955BF1E64298600A20FB9 /* NSFileManager+TTFileManager.h */,
+				153955C01E64298600A20FB9 /* NSFileManager+TTFileManager.m */,
+				153955C21E642A1A00A20FB9 /* NSString+TTString.h */,
+				153955C31E642A1A00A20FB9 /* NSString+TTString.m */,
+				153955C51E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.h */,
+				153955C61E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m */,
+				153955C81E642FDA00A20FB9 /* UIView+TTSuperView.h */,
+				153955C91E642FDA00A20FB9 /* UIView+TTSuperView.m */,
+				153955CE1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.h */,
+				153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */,
+				153955D11E64365B00A20FB9 /* UIWindow+TTWindow.h */,
+				153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		153955CC1E64308A00A20FB9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				153955CD1E64308A00A20FB9 /* TTConst.h */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */,
+				153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */,
+				153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */,
 				153954341E64272B00A20FB9 /* ViewController.m in Sources */,
+				153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */,
+				153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */,
+				153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */,
+				153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */,
 				153954311E64272B00A20FB9 /* AppDelegate.m in Sources */,
+				153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */,
 				1539542E1E64272B00A20FB9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,8 +498,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
+				);
 				INFOPLIST_FILE = TT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TTFrameWork/ShareKit/SinaCenter/SDK_3_1_1",
+					"$(PROJECT_DIR)/TTFrameWork/ShareKit/WeChatCenter/SDK_1_6_2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangfurun.TT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -435,8 +518,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
+				);
 				INFOPLIST_FILE = TT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TTFrameWork/ShareKit/SinaCenter/SDK_3_1_1",
+					"$(PROJECT_DIR)/TTFrameWork/ShareKit/WeChatCenter/SDK_1_6_2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangfurun.TT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
