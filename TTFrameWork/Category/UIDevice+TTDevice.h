@@ -70,6 +70,8 @@ typedef enum : NSUInteger {
 
 /**
  快速获得当前设备是不是ipad或者iphone
+ 
+ PS:这个后期补充
  */
 + (BOOL)isPad;
 @end

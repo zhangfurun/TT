@@ -8,6 +8,8 @@
 
 #import "NSDate+TTDate.h"
 
+
+
 @implementation NSDate (TTDate)
 
 + (NSString *)secondFormatTime:(NSInteger)totalSecond {
@@ -27,19 +29,7 @@
     return result;
 }
 
-+ (NSString *)getTimeFormatWithTimestamp:(NSString *)timestamp format:(NSString *)format {
-    if (!timestamp || !format ) {
-        return @"";
-    }
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    formatter.timeZone = [NSTimeZone timeZoneWithName:@"beijing"];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:format];
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:([timestamp doubleValue]/ 1000.0)];
-    NSString *dateString = [formatter stringFromDate:date];
-    return dateString;
-}
+
 
 + (NSString *)date:(NSString *)dateStr dateFormat:(NSString *)dateFormat withFormat:(NSString *)targetFormat {
     if (!dateStr) {
@@ -54,16 +44,33 @@
     return [date dateWithFormat:targetFormat];
 }
 
+//时间戳
 + (NSString *)dateWithTimeStamp:(NSString *)timeStamp format:(NSString *)format {
     return [self getTimeFormatWithTimestamp:timeStamp format:format];
 }
 
++ (NSString *)getTimeFormatWithTimestamp:(NSString *)timestamp format:(NSString *)format {
+    if (!timestamp || !format ) {
+        return @"";
+    }
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"beijing"];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:format];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:([timestamp doubleValue]/ 1000.0)];
+    NSString *dateString = [formatter stringFromDate:date];
+    return dateString;
+}
+
+// 格式化时间
 - (NSString *)dateWithFormat:(NSString *)format {
     NSDateFormatter *formater = [[NSDateFormatter alloc] init];
     [formater setDateFormat:format];
     return [formater stringFromDate:self];
 }
 
+//获取时间的详情
 + (NSInteger)getCurrentYear {
     return [self getCurrentDateDetail].year;
 }
@@ -103,5 +110,40 @@
     NSDateComponents* comp = [gregorian components: unitFlags fromDate:dt];
     return comp;
 }
+
+- (NSString *)compareCurrentTime:(NSString *)str dateFormat:(NSString *)dataFormat withTurnFormat:(NSString *)turnFormat {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:dataFormat];
+    NSDate *timeDate = [dateFormatter dateFromString:str];
+    NSDate *currentDate = [NSDate date];
+    NSTimeInterval timeInterval = [currentDate timeIntervalSinceDate:timeDate];
+    long temp = 0;
+    NSString *result;
+    if (timeInterval/60 < 1)
+    {
+        result = [NSString stringWithFormat:@"刚刚"];
+    }
+    else if((temp = timeInterval/60) <60){
+        result = [NSString stringWithFormat:@"%ld分钟前",temp];
+    }
+    else if((temp = temp/60) <24){
+        result = [NSString stringWithFormat:@"%ld小时前",temp];
+    }else {
+        result = [NSDate date:str dateFormat:dataFormat withFormat:turnFormat];
+    }
+    //    else if((temp = temp/24) <30){
+    //        result = [NSString stringWithFormat:@"%ld天前",temp];
+    //    }
+    //    else if((temp = temp/30) <12){
+    //        result = [NSString stringWithFormat:@"%ld月前",temp];
+    //    }
+    //    else{
+    //        temp = temp/12;
+    //        result = [NSString stringWithFormat:@"%ld年前",temp];
+    //    }
+    return  result;
+}
+
 
 @end

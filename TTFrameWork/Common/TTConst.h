@@ -55,5 +55,29 @@ typedef enum : NSUInteger {
 #define TTLog(...)
 #endif
 
+// Default
+static NSString * const TimeFormatDefault = @"yyyy-MM-dd";
+
+static NSString *HH = @"HH";
+static NSString *mm = @"mm";
+static NSString *ss = @"ss";
+static NSString *HHmmss = @"HH:mm:ss";
+
+static NSString *YYYY = @"YYYY";
+static NSString *YY = @"YY";
+static NSString *MM = @"MM";
+static NSString *dd = @"dd";
+
+static NSString *MM_dd = @"MM-dd";
+static NSString *MM_dd_HHmm = @"MM-dd HH:mm";
+static NSString *YY_MM_dd = @"YY-MM-dd";
+static NSString *YYYY_MM_dd = @"YYYY-MM-dd";
+static NSString *YYYY_MM_ddHHmmss = @"YYYY-MM-dd HH:mm:ss";
+
+static NSString *MMdd = @"MM.dd";
+static NSString *YYMMdd = @"YY.MM.dd";
+static NSString *YYYYMMdd = @"YYYY.MM.dd";
+static NSString *YYYYMMddHHmmss = @"YYYY.MM.dd HH:mm:ss";
+
 
 #endif /* TTConst_h */
