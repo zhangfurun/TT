@@ -24,8 +24,27 @@
  */
 + (BOOL)isFileExistAtPath:(NSString *)path;
 
+/**
+ 判断文件夹内是否有内容
+
+ @param path 文件夹的李靖
+ @param error 错误信息指针
+ */
 + (BOOL)isEmptyFolderWithPath:(NSString *)path error:(NSError **)error;
+
+/**
+ 删除文件
+
+ @param path 需要删除文件的路径
+ @param isDir 判断是文件还是为文件夹  YES:文件夹  NO:单个文件
+ */
 + (BOOL)deleteFileAtPath:(NSString *)path isDirectory:(BOOL)isDir;
+
+/**
+ 创建文件夹
+
+ @param path 创建文件夹的路径   
+ */
 + (BOOL)createDirectorysAtPath:(NSString *)path;
 
 /**
