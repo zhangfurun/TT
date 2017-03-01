@@ -509,6 +509,7 @@
 					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
 				);
 				INFOPLIST_FILE = TT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,6 +530,7 @@
 					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
 				);
 				INFOPLIST_FILE = TT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
