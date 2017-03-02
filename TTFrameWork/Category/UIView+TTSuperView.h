@@ -75,25 +75,26 @@
 - (CGPoint)newCenterWithCenterX:(CGFloat)centerX;
 - (CGPoint)newCenterWithCenterY:(CGFloat)centerY;
 
-/*
- * 裁剪成一个圆
+
+/**
+ 裁剪成一个圆
  */
 - (void)setLayerCornerRadius;
 - (void)setLayerCornerRadiusWithRadius:(CGFloat)radius;
-- (void)setBorderWidth:(CGFloat)width borderColor:(CGColorRef)borderColor;
+- (void)setBorderWidth:(CGFloat)width borderColor:(CGColorRef)borderColor isCirCle:(BOOL)isCircle;
 - (void)setBorderWidth:(CGFloat)width borderColor:(CGColorRef)borderColor radius:(CGFloat)radius;
 
 /**
- *  加载xib
+ 加载xib
  */
 + (id)loadFromNib;
 + (NSString *)ClassStr;
 
 /**
- *  RotateAnimation
+ *  设置旋转动画
  */
-- (void)startRotationWithDisableViews:(NSArray *)disableViews;
 - (void)rotateAnimation;
+- (void)startRotationWithDisableViews:(NSArray *)disableViews;
 - (void)stopRotationDisableViews:(NSArray *)disableViews;
 
 /**
@@ -112,26 +113,29 @@
 - (void)popFromView:(UIView *)aView completion:(void(^)(BOOL finished))completion;
 - (void)setAlpha:(CGFloat)alpha isAnimation:(BOOL)isAnimation duration:(NSTimeInterval)duration completionBlock:(void(^)())completion;
 
-#pragma mark - 绘制
+#pragma mark - 绘制(虚线)
 /**
- ** lineView:       需要绘制成虚线的view
- ** lineLength:     虚线的宽度
- ** lineSpacing:    虚线的间距
- ** lineColor:      虚线的颜色
- **/
+ 绘制虚线
+
+ @param lineView 需要绘制成虚线的view
+ @param lineLength 虚线实体的长度
+ @param lineSpacing 虚线两个实体之间的宽度
+ @param lineColor 虚线的颜色
+ */
 + (CAShapeLayer *)drawDashLine:(UIView *)lineView lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor *)lineColor;
 
 /**
- ** lineView:       需要绘制成虚线的view
- ** cornerRadius:   虚线拐角的弧度
- ** lineLength:     虚线的宽度
- ** lineSpacing:    虚线的间距
- ** lineColor:      虚线的颜色
- **/
+ 绘制一条首尾相接,边为虚线的矩形
+
+ @param lineView 需要绘制的view
+ @param cornerRadius 矩形的弧度(虚线拐角的弧度)
+ @param lineWidth 矩形边框的宽度(虚线的宽度)
+ @param lineLength 虚线实体的长度
+ @param lineSpacing 虚线两个实体之间的宽度(虚线的间距)
+ @param lineColor 矩形边框的颜色(虚线的颜色)
+ */
 + (CAShapeLayer *)drawDashedBorderAroundView:(UIView *)lineView cornerRadius:(CGFloat)cornerRadius lineWidth:(CGFloat)lineWidth lineLength:(int)lineLength lineSpacing:(int)lineSpacing lineColor:(UIColor*)lineColor;
 
 #pragma mark - Autoresizing
 - (void)setAutoresizeMaskAll;
-
-
 @end

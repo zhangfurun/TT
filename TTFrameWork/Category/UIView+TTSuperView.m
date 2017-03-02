@@ -383,8 +383,8 @@ typedef void(^VoidBlock)();
     self.clipsToBounds = YES;
 }
 
-- (void)setBorderWidth:(CGFloat)width borderColor:(CGColorRef)borderColor {
-    [self setBorderWidth:width borderColor:borderColor radius:0];
+- (void)setBorderWidth:(CGFloat)width borderColor:(CGColorRef)borderColor isCirCle:(BOOL)isCircle {
+    [self setBorderWidth:width borderColor:borderColor radius:isCircle ? (self.height / 2) : 0];
 }
 
 - (void)setBorderWidth:(CGFloat)width borderColor:(CGColorRef)borderColor radius:(CGFloat)radius {
@@ -416,6 +416,11 @@ typedef void(^VoidBlock)();
 }
 
 #pragma mark - RotateAnimation
+- (void)rotateAnimation {
+    self.transform = CGAffineTransformRotate(self.transform, (M_2_PI / 180.0));
+    [self performSelector:@selector(rotateAnimation) withObject:nil afterDelay:0.01];
+}
+
 - (void)startRotationWithDisableViews:(NSArray *)disableViews {
     for (UIView *aView in disableViews) {
         aView.userInteractionEnabled = NO;
@@ -423,11 +428,6 @@ typedef void(^VoidBlock)();
     }
     self.userInteractionEnabled = NO;
     [self rotateAnimation];
-}
-
-- (void)rotateAnimation {
-    self.transform = CGAffineTransformRotate(self.transform, (M_2_PI / 180.0));
-    [self performSelector:@selector(rotateAnimation) withObject:nil afterDelay:0.01];
 }
 
 - (void)stopRotationDisableViews:(NSArray *)disableViews {
