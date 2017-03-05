@@ -67,7 +67,6 @@ typedef enum : NSUInteger {
 
 
 #warning 特殊
-
 /**
  快速获得当前设备是不是ipad或者iphone
  
