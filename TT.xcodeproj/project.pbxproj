@@ -24,6 +24,8 @@
 		153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */; };
 		153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */; };
 		153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955D51E643BF900A20FB9 /* NSBundle+TTBundle.m */; };
+		15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF221E6907BA001636DA /* MBProgressHUD.m */; };
+		15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF251E690831001636DA /* TTHUDMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TTWindow.m"; sourceTree = "<group>"; };
 		153955D41E643BF900A20FB9 /* NSBundle+TTBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TTBundle.h"; sourceTree = "<group>"; };
 		153955D51E643BF900A20FB9 /* NSBundle+TTBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TTBundle.m"; sourceTree = "<group>"; };
+		15C7BF211E6907BA001636DA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		15C7BF221E6907BA001636DA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		15C7BF241E690831001636DA /* TTHUDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHUDMessage.h; sourceTree = "<group>"; };
+		15C7BF251E690831001636DA /* TTHUDMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHUDMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 		153955B41E6427C900A20FB9 /* TTFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				15C7BF1F1E69078C001636DA /* TTHUDMessage */,
 				153955CC1E64308A00A20FB9 /* Common */,
 				153955B51E6427DC00A20FB9 /* Category */,
 			);
@@ -209,6 +216,25 @@
 				153955CD1E64308A00A20FB9 /* TTConst.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		15C7BF1F1E69078C001636DA /* TTHUDMessage */ = {
+			isa = PBXGroup;
+			children = (
+				15C7BF201E6907B4001636DA /* MBProgressHUD */,
+				15C7BF241E690831001636DA /* TTHUDMessage.h */,
+				15C7BF251E690831001636DA /* TTHUDMessage.m */,
+			);
+			path = TTHUDMessage;
+			sourceTree = "<group>";
+		};
+		15C7BF201E6907B4001636DA /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				15C7BF211E6907BA001636DA /* MBProgressHUD.h */,
+				15C7BF221E6907BA001636DA /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,10 +375,12 @@
 				153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */,
 				153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */,
 				153954341E64272B00A20FB9 /* ViewController.m in Sources */,
+				15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */,
 				153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */,
 				153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */,
 				153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */,
 				153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */,
+				15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */,
 				153954311E64272B00A20FB9 /* AppDelegate.m in Sources */,
 				153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */,
 				1539542E1E64272B00A20FB9 /* main.m in Sources */,
