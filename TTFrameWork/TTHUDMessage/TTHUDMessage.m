@@ -18,9 +18,11 @@ NSString * const Delete_Loading     = @"正在删除%@";
 NSString * const Send_Loading       = @"正在发送%@";
 
 static MBProgressHUD *HUD;
+
+static TTHUDMessage *instance;
+
 @implementation TTHUDMessage
 + (instancetype)allocWithZone:(struct _NSZone *)zone{
-    static TTHUDMessage *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [super allocWithZone:zone];
@@ -112,12 +114,12 @@ static MBProgressHUD *HUD;
         [self hideHUD];
         [view endEditing:YES];
         HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
-        HUD.labelText = text;
-        HUD.detailsLabelText = detailText;
+        HUD.label.text = text;
+        HUD.detailsLabel.text = detailText;
         HUD.mode = MBProgressHUDModeText;
         HUD.margin = margin?:10.0f;
         HUD.removeFromSuperViewOnHide = YES;
-        [HUD hide:YES afterDelay:2];
+        [HUD hideAnimated:YES afterDelay:2];
         if (completed) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 completed();
@@ -153,11 +155,11 @@ static MBProgressHUD *HUD;
                 break;
         }
         HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:fileName]];
-        HUD.labelText = text;
+        HUD.label.text = text;
         HUD.margin = 10.0f;
         HUD.userInteractionEnabled = NO;
         HUD.removeFromSuperViewOnHide = YES;
-        [HUD hide:YES afterDelay:2];
+        [HUD hideAnimated:YES afterDelay:2];
         if (completed) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 completed();
@@ -167,31 +169,36 @@ static MBProgressHUD *HUD;
 }
 
 + (void)showInView:(UIView *)view showText:(NSString *)text progress:(float)progress {
+    [self showInView:view showText:text progress:progress withProgressType:HUDShowProgressTypeDeterminate];
+}
+
++ (void)showInView:(UIView *)view showText:(NSString *)text progress:(float)progress withProgressType:(HUDShowProgressType)progressType {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (HUD && HUD.mode == MBProgressHUDModeDeterminate) {
+        if (HUD && HUD.mode == (MBProgressHUDMode)progressType) {
             HUD.progress = progress;
-            HUD.labelText = [NSString stringWithFormat:@"%.2f%@",progress * 100,@"%"];
-            HUD.detailsLabelText = text;
+            HUD.label.text = [NSString stringWithFormat:@"%.2f%@",progress * 100,@"%"];
+            HUD.detailsLabel.text = text;
         } else {
             [self hideHUD];
             HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
-            HUD.mode = MBProgressHUDModeDeterminate;
-            HUD.detailsLabelText = text;
+            HUD.mode = (MBProgressHUDMode)progressType;
+            HUD.detailsLabel.text = text;
         }
     });
+    
 }
 
 + (void)showInView:(UIView *)view showText:(NSString *)text currentCount:(NSString *)currentCount totalCount:(NSString *)totalCount {
     dispatch_async(dispatch_get_main_queue(), ^{
         if (HUD && HUD.mode == MBProgressHUDModeDeterminateHorizontalBar) {
             HUD.progress = currentCount.floatValue / totalCount.floatValue;
-            HUD.labelText = [NSString stringWithFormat:@"%@/%@",currentCount,totalCount];
-            HUD.detailsLabelText = text;
+            HUD.label.text = [NSString stringWithFormat:@"%@/%@",currentCount,totalCount];
+            HUD.detailsLabel.text = text;
         } else {
             [self hide];
             HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
             HUD.mode = MBProgressHUDModeDeterminateHorizontalBar;
-            HUD.detailsLabelText = text;
+            HUD.detailsLabel.text = text;
         }
     });
 }
@@ -216,13 +223,9 @@ static MBProgressHUD *HUD;
             default:
                 break;
         }
-        [HUD setLabelText:showText];
-        [HUD setDetailsLabelText:showDetailsText];
+        HUD.label.text = showText;
+        HUD.detailsLabel.text = showDetailsText;
     });
-}
-
-+ (NSArray *)allHUDInView:(UIView *)view{
-    return [MBProgressHUD allHUDsForView:view];
 }
 
 + (void)hide{
@@ -233,14 +236,14 @@ static MBProgressHUD *HUD;
 
 + (void)hideHUD{
     if (HUD) {
-        [HUD hide:YES];
+        [HUD hideAnimated:YES];
         HUD = nil;
     }
 }
 
 + (void)hideAllHUDInView:(UIView *)view{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [MBProgressHUD hideAllHUDsForView:view animated:YES];
+        [MBProgressHUD hideHUDForView:view animated:YES];
     });
 }
 @end

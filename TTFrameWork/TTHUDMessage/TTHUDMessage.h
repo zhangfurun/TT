@@ -20,6 +20,21 @@ typedef NS_ENUM(NSUInteger, HUDShowTextType) {
 };
 
 typedef enum : NSUInteger {
+    /// UIActivityIndicatorView.
+    HUDShowProgressTypeIndeterminate,
+    /// A round, pie-chart like, progress view.
+    HUDShowProgressTypeDeterminate,
+    /// Horizontal progress bar.
+    HUDShowProgressTypeDeterminateHorizontalBar,
+    /// Ring-shaped progress view.
+    HUDShowProgressTypeAnnularDeterminate,
+    /// Shows a custom view.
+    HUDShowProgressTypeCustomView,
+    /// Shows only labels.
+    HUDShowProgressTypeText
+} HUDShowProgressType;
+
+typedef enum : NSUInteger {
     HUDShowCompletedTypeInfo,
     HUDShowCompletedTypeCompleted,
     HUDShowCompletedTypeError,
@@ -43,9 +58,13 @@ typedef enum : NSUInteger {
 + (void)showInView:(UIView *)view showCompletedText:(NSString *)text withCompletedType:(HUDShowCompletedType)completedType;
 + (void)showInView:(UIView *)view showCompletedText:(NSString *)text withCompletedType:(HUDShowCompletedType)completedType completedBlock:(void(^)())completed;
 + (void)showInView:(UIView *)view showText:(NSString *)text progress:(float)progress;
++ (void)showInView:(UIView *)view showText:(NSString *)text progress:(float)progress withProgressType:(HUDShowProgressType)progressType;
 + (void)showInView:(UIView *)view showText:(NSString *)text currentCount:(NSString *)currentCount totalCount:(NSString *)totalCount;
 + (void)updateShowText:(NSString *)text andDetailsText:(NSString *)detailsText inView:(UIView *)view withHUDTextType:(HUDShowTextType)hudTextType;
-+ (NSArray *)allHUDInView:(UIView *)view;
 + (void)hide;
 + (void)hideAllHUDInView:(UIView *)view;
 @end
+
+//@interface TTHUDMessage : NSObject
+//
+//@end
