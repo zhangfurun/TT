@@ -101,13 +101,24 @@ typedef void(^reqUploadBlock)(TTBaseRequest *request, NSUInteger bytesWritten, l
 
 #pragma mark - Children Class
 
+// 针对请求的链接,个人理解可以分为:根目录+分类文件地址+参数
 /**
- 设置请求地址
+ 设置请求地址(开头根文件地址)
  这里我们可以理解为,在整个项目的请求连接中,所有数据请求的根目录
  e.g.http://IP地址:端口/根文件夹/
  */
 - (NSString *)getRequestHost;
+
+/**
+ 设置请求地址(分类文件地址)
+ 根据不同的功能,后台提供的接口会根据功能进行分类,这里主要是重写返回当前数据请求的分类地址
+ */
 - (NSString *)getRequestQuery;
+
+/**
+ 设置请求头中"User-Agent"参数
+ 主要是针对当前系统
+ */
 - (NSString *)getUserAgent;
 
 /**
@@ -131,11 +142,41 @@ typedef void(^reqUploadBlock)(TTBaseRequest *request, NSUInteger bytesWritten, l
  */
 - (NSDictionary *)getDefaultParameters;
 
+/**
+ 请求数据的处理
+ 这里值比较重要的部分,请求到的数据在这里进行处理
+ 比如获取用户数据,我们获取到的数据可以通过self.requestDic进行读取,通过相关的数据转型,可以采用MJExtension等方法(不多说),然后将获取到的数据,存放到self.requestDic中,Key_Model作为KEY,在数据请求成功中,进行数据获取
+ */
 - (void)processResult;
+
+/**
+ 取消当前对象的数据请求
+ 这个针对的是TTBaseViewController中的cancelAllRequest,在销毁的当前页面的时候,建议将所有的数据请求调用该方法
+ */
 + (void)cancelTheRequest;
+
+/**
+ 判断是不是请求的数据是成功的数据
+ e.g.:因为存在有些数据请求,请求本身是成功的,但是返回的数据为错误信息,一般正常情况,服务器会返回给一定的约定的错误代码,根据实际情况进行相关的显示
+ */
 - (BOOL)success;
+
+/**
+ 获取数据请求的失败信息
+ */
 - (NSString *)errorMsg;
+
+/**
+ 数据请求的全部个数
+ e.g.:主要应用于分页加载数据,获取当前数据请求针对接口数据的全部数据的数据,这个建议跟服务器进行对接
+ */
 - (NSInteger)totalCount;
+
+/**
+ 判断是不是还需要进行加载跟多的数据
+ 这里结合上面的totalCount,判断当前数据是不是还需要进行加载跟多的数据
+ 建议:在进行数据请求的过程,特别是分页数据的加载,服务器返回数据,添加Status(名称随意)数据模块,客户端进行统一解析
+ */
 - (BOOL)hasMoreData;
 
 @end
