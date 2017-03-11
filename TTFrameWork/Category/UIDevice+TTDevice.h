@@ -41,28 +41,28 @@ typedef enum : NSUInteger {
 /**
  判断当前设备是不是手机(iPhone)
  */
-+ (BOOL)currentDeviceIsIPhone;
++ (BOOL)getDeviceIsIPhone;
 
 /**
  判断当前设备是不是IPad
  */
-+ (BOOL)currentDeviceIsIPad;
++ (BOOL)getDeviceIsIPad;
 
 /**
  判断当前设备是不是IPod
  */
-+ (BOOL)currentDeviceIsIPod;
++ (BOOL)getDeviceIsIPod;
 
 
 /**
  获取当前设备类型
  */
-+ (CurrentDeviceType)currentDeviceType;
++ (CurrentDeviceType)getDeviceType;
 
 /**
  获取当前设备的具体型号
  */
-+ (NSString *)currentDeviceTypeString;
++ (NSString *)getDeviceTypeString;
 
 
 

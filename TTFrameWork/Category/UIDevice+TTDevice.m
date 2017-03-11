@@ -22,21 +22,21 @@
     return [[UIDevice currentDevice] name];
 }
 
-+ (BOOL)currentDeviceIsIPhone {
-    return [UIDevice currentDeviceType] == CurrentDeviceTypeIPhone;
++ (BOOL)getDeviceIsIPhone {
+    return [UIDevice getDeviceType] == CurrentDeviceTypeIPhone;
 }
 
-+ (BOOL)currentDeviceIsIPad {
-    return [UIDevice currentDeviceType] == CurrentDeviceTypeIPad;
++ (BOOL)getDeviceIsIPad {
+    return [UIDevice getDeviceType] == CurrentDeviceTypeIPad;
 }
 
-+ (BOOL)currentDeviceIsIPod {
-    return [UIDevice currentDeviceType] == CurrentDeviceTypeIPod;
++ (BOOL)getDeviceIsIPod {
+    return [UIDevice getDeviceType] == CurrentDeviceTypeIPod;
 }
 
 
-+ (CurrentDeviceType)currentDeviceType {
-    NSString *type = [UIDevice currentDeviceTypeString];
++ (CurrentDeviceType)getDeviceType {
+    NSString *type = [UIDevice getDeviceTypeString];
     
     BOOL deviceIsSupport = [UIDevice getOSVersion].doubleValue >= 8.0;
     BOOL isPhone        = deviceIsSupport ? ([type containsString:@"iPhone"])       : ([type rangeOfString:@"iPhone"].location != NSNotFound);
@@ -63,7 +63,7 @@
     }
 }
 
-+ (NSString *)currentDeviceTypeString {
++ (NSString *)getDeviceTypeString {
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
