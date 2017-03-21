@@ -71,10 +71,13 @@
     }
 }
 
+
 #pragma mark - Other
 
 + (BOOL)isExistsForKey:(NSString *)defaultName{
     NSArray *allKeys = USER_DEFAULTS.dictionaryRepresentation.allKeys;
     return [allKeys containsObject:defaultName];
 }
+
+
 @end
