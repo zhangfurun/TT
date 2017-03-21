@@ -48,8 +48,6 @@
 		15A0D8C01E8162D2003A109E /* TTBinaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A21E8162D2003A109E /* TTBinaryData.m */; };
 		15A0D8C11E8162D2003A109E /* TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A41E8162D2003A109E /* TTKit.m */; };
 		15A0D8C21E8162D2003A109E /* TTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A61E8162D2003A109E /* TTManager.m */; };
-		15A0D8C31E8162D2003A109E /* TTBinaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A81E8162D2003A109E /* TTBinaryData.m */; };
-		15A0D8C41E8162D2003A109E /* TTManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8AB1E8162D2003A109E /* TTManager.m */; };
 		15A0D8E31E81681F003A109E /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8C91E81681F003A109E /* MJDictionaryCache.m */; };
 		15A0D8E41E81681F003A109E /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8CC1E81681F003A109E /* MJExtensionConst.m */; };
 		15A0D8E51E81681F003A109E /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8CE1E81681F003A109E /* MJFoundation.m */; };
@@ -72,18 +70,18 @@
 		15A0D9341E8169E5003A109E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D9331E8169E5003A109E /* CFNetwork.framework */; };
 		15A0D9361E816A3E003A109E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D9351E816A3E003A109E /* libc++.tbd */; };
 		15A0D9621E816B26003A109E /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D93B1E816B26003A109E /* ShareContentInfo.m */; };
-		15A0D9631E816B26003A109E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D93E1E816B26003A109E /* libWeiboSDK.a */; };
 		15A0D9641E816B26003A109E /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D9471E816B26003A109E /* WeiboSDK.bundle */; };
 		15A0D9651E816B26003A109E /* SinaAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D94B1E816B26003A109E /* SinaAuthRequest.m */; };
 		15A0D9661E816B26003A109E /* TTSinaCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D94D1E816B26003A109E /* TTSinaCenter.m */; };
-		15A0D9671E816B26003A109E /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D9501E816B26003A109E /* TencentOpenAPI.framework */; };
 		15A0D9681E816B26003A109E /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D9511E816B26003A109E /* TencentOpenApi_IOS_Bundle.bundle */; };
 		15A0D9691E816B26003A109E /* TTTencentCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D9531E816B26003A109E /* TTTencentCenter.m */; };
 		15A0D96A1E816B26003A109E /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D9551E816B26003A109E /* TTAuthInfo.m */; };
 		15A0D96B1E816B26003A109E /* TTBaseShareCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D9571E816B26003A109E /* TTBaseShareCenter.m */; };
-		15A0D96C1E816B26003A109E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D95A1E816B26003A109E /* libWeChatSDK.a */; };
 		15A0D96D1E816B26003A109E /* TTWeChatCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D95F1E816B26003A109E /* TTWeChatCenter.m */; };
 		15A0D96E1E816B26003A109E /* WXAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D9611E816B26003A109E /* WXAuthRequest.m */; };
+		15A0D96F1E816D93003A109E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D93E1E816B26003A109E /* libWeiboSDK.a */; };
+		15A0D9711E816DA1003A109E /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D9501E816B26003A109E /* TencentOpenAPI.framework */; };
+		15A0D9721E816DAA003A109E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A0D95A1E816B26003A109E /* libWeChatSDK.a */; };
 		15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF221E6907BA001636DA /* MBProgressHUD.m */; };
 		15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF251E690831001636DA /* TTHUDMessage.m */; };
 		2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEE8CC1E73D4E20089CE1F /* TTBaseRequest.m */; };
@@ -209,11 +207,6 @@
 		15A0D8A41E8162D2003A109E /* TTKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTKit.m; sourceTree = "<group>"; };
 		15A0D8A51E8162D2003A109E /* TTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTManager.h; sourceTree = "<group>"; };
 		15A0D8A61E8162D2003A109E /* TTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTManager.m; sourceTree = "<group>"; };
-		15A0D8A71E8162D2003A109E /* TTBinaryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBinaryData.h; sourceTree = "<group>"; };
-		15A0D8A81E8162D2003A109E /* TTBinaryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBinaryData.m; sourceTree = "<group>"; };
-		15A0D8A91E8162D2003A109E /* TTConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConst.h; sourceTree = "<group>"; };
-		15A0D8AA1E8162D2003A109E /* TTManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTManager.h; sourceTree = "<group>"; };
-		15A0D8AB1E8162D2003A109E /* TTManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTManager.m; sourceTree = "<group>"; };
 		15A0D8C81E81681F003A109E /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
 		15A0D8C91E81681F003A109E /* MJDictionaryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDictionaryCache.m; sourceTree = "<group>"; };
 		15A0D8CA1E81681F003A109E /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
@@ -283,6 +276,7 @@
 		15A0D95F1E816B26003A109E /* TTWeChatCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWeChatCenter.m; sourceTree = "<group>"; };
 		15A0D9601E816B26003A109E /* WXAuthRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAuthRequest.h; sourceTree = "<group>"; };
 		15A0D9611E816B26003A109E /* WXAuthRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAuthRequest.m; sourceTree = "<group>"; };
+		15A0D9731E816DFF003A109E /* TTConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTConst.h; sourceTree = "<group>"; };
 		15C7BF211E6907BA001636DA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		15C7BF221E6907BA001636DA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		15C7BF241E690831001636DA /* TTHUDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHUDMessage.h; sourceTree = "<group>"; };
@@ -327,9 +321,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A0D96C1E816B26003A109E /* libWeChatSDK.a in Frameworks */,
-				15A0D9671E816B26003A109E /* TencentOpenAPI.framework in Frameworks */,
-				15A0D9631E816B26003A109E /* libWeiboSDK.a in Frameworks */,
+				15A0D9721E816DAA003A109E /* libWeChatSDK.a in Frameworks */,
+				15A0D9711E816DA1003A109E /* TencentOpenAPI.framework in Frameworks */,
+				15A0D96F1E816D93003A109E /* libWeiboSDK.a in Frameworks */,
 				15A0D9361E816A3E003A109E /* libc++.tbd in Frameworks */,
 				15A0D9341E8169E5003A109E /* CFNetwork.framework in Frameworks */,
 				15A0D9321E8169DF003A109E /* CoreTelephony.framework in Frameworks */,
@@ -465,14 +459,10 @@
 		15A0D8741E8162D2003A109E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				15A0D9731E816DFF003A109E /* TTConst.h */,
 				15A0D8751E8162D2003A109E /* Libs */,
 				15A0D8761E8162D2003A109E /* SDWebImage */,
 				15A0D89E1E8162D2003A109E /* Tools */,
-				15A0D8A71E8162D2003A109E /* TTBinaryData.h */,
-				15A0D8A81E8162D2003A109E /* TTBinaryData.m */,
-				15A0D8A91E8162D2003A109E /* TTConst.h */,
-				15A0D8AA1E8162D2003A109E /* TTManager.h */,
-				15A0D8AB1E8162D2003A109E /* TTManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -996,8 +986,6 @@
 				15A0D8EA1E81681F003A109E /* NSObject+MJCoding.m in Sources */,
 				15A0D8B81E8162D2003A109E /* UIImage+GIF.m in Sources */,
 				15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */,
-				15A0D8C31E8162D2003A109E /* TTBinaryData.m in Sources */,
-				15A0D8C41E8162D2003A109E /* TTManager.m in Sources */,
 				153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */,
 				2DEEE9261E73DCF10089CE1F /* AFURLConnectionOperation.m in Sources */,
 				15A0D8E31E81681F003A109E /* MJDictionaryCache.m in Sources */,
@@ -1188,7 +1176,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/TencentCenter/SDK_2_9_3",
 				);
 				INFOPLIST_FILE = TT/Info.plist;
@@ -1196,9 +1183,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/SinaCenter/SDK_3_1_1",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/WeChatCenter/SDK_1_6_2",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/SinaCenter/SDK_3_1_1",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/WeChatCenter/SDK_1_6_2",
 				);
@@ -1217,7 +1201,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/TencentCenter/SDK_2_9_3",
 				);
 				INFOPLIST_FILE = TT/Info.plist;
@@ -1225,9 +1208,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/SinaCenter/SDK_3_1_1",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/WeChatCenter/SDK_1_6_2",
-					"$(PROJECT_DIR)/TTFrameWork/ShareKit/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/SinaCenter/SDK_3_1_1",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/WeChatCenter/SDK_1_6_2",
 				);
