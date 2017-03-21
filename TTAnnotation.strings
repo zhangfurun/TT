@@ -1,0 +1,27 @@
+/* 
+  TTAnnotation.strings
+  TT
+
+  Created by 张福润 on 2017/3/21.
+  Copyright © 2017年 张福润. All rights reserved.
+*/
+
+
+
+/*
+ 1.添加的依赖库
+ TTShare中使用微信,QQ,微博分享,因此,在使用SDK,需要添加相应的依赖库
+ SystemConfiguration.framework, 
+ libz.dylib, 
+ libsqlite3.0.dylib, 
+ libc++.dylib, 
+ Security.framework, 
+ CoreTelephony.framework, 
+ CFNetwork.framework。
+ 
+ 2.设置.a文件
+ 在你的工程文件中选择Build Setting，在"Other Linker Flags"中加入"-Objc -all_load"，
+ 在Search Paths中添加 libWeChatSDK.a ，WXApi.h，WXApiObject.h(这个好像拖入后,运行一次,系统自己添加)
+ 
+ 
+ */
