@@ -80,6 +80,7 @@ static TTHUDMessage *instance;
         NSInteger i = 0;
         do {
             NSString *imgName = [NSString stringWithFormat:@"B_%ld.png",i];
+            
             [imgs addObject:[UIImage imageNamed:imgName]];
             i++;
         } while (i < 8);
@@ -92,7 +93,7 @@ static TTHUDMessage *instance;
         HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
         HUD.customView = imageView;
         HUD.mode = MBProgressHUDModeCustomView;
-        HUD.color = [UIColor clearColor];
+        HUD.bezelView.color = [UIColor clearColor];
         HUD.margin = 10.0;
     });
 }

@@ -14,24 +14,24 @@
 #import "TTWeChatCenter.h"
 #import "TTTencentCenter.h"
 
-NSString * const SourceApp_QQ   = @"com.tencent.mqq";
-NSString * const SourceApp_QQHD = @"com.tencent.mipadqq";
-NSString * const SourceApp_WX   = @"com.tencent.xin";
-NSString * const SourceApp_WB   = @"com.sina.weibo";
-NSString * const SourceApp_WBHD = @"com.sina.weibohd";
+NSString * const SourceApp_QQ       = @"com.tencent.mqq";
+NSString * const SourceApp_QQHD     = @"com.tencent.mipadqq";
+NSString * const SourceApp_WX       = @"com.tencent.xin";
+NSString * const SourceApp_WB       = @"com.sina.weibo";
+NSString * const SourceApp_WBHD     = @"com.sina.weibohd";
 
-NSString * const ErrorDescKey = @"shareErrDesc";
+NSString * const ErrorDescKey       = @"shareErrDesc";
 
-NSString * const QQAppIdKey = @"QQAppIdKey";
+NSString * const QQAppIdKey         = @"QQAppIdKey";
 
-NSString * const SinaAppIdKey = @"SinaAppIdKey";
+NSString * const SinaAppIdKey       = @"SinaAppIdKey";
 NSString * const SinaRedirectURIKey = @"SinaRedirectURIKey";
 
-NSString * const WeChatAppIdKey = @"WeChatAppIdKey";
+NSString * const WeChatAppIdKey     = @"WeChatAppIdKey";
 NSString * const WeChatAppSecretKey = @"WeChatAppSecretKey";
 
-NSString * const UserDefaultKey = @"User_%@";
-NSString * const AuthDefaultKey = @"Auth_%@";
+NSString * const UserDefaultKey     = @"User_%@";
+NSString * const AuthDefaultKey     = @"Auth_%@";
 
 @interface TTBaseShareCenter () {
     TTShareUser *_user;
