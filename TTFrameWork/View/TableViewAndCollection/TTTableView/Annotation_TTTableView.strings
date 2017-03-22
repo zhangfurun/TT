@@ -1,0 +1,77 @@
+/* 
+  Annotation_TTTableView.strings
+  TT
+
+  Created by 张福润 on 2017/3/22.
+  Copyright © 2017年 张福润. All rights reserved.
+ 
+ 
+*/
+TTTableView使用栗子:
+
+一般情况,用在分页数据获取和数据刷新
+
+** 建议:TTTableview配合以下文件使用:
+1.TTBaseRequest及其子类使用
+2.TTHUDMessage
+
+栗子:
+1.属性
+@property (assign, nonatomic) NSInteger page; //记录当前需要加载数据的页数
+
+2.方法
+- (void)getBuyStoriesRequest:(BOOL)isRefresh {
+    if ([GetShoppingCartRequest isRequesting]) {
+        return;
+    }
+    /* 判断是不是需要加载的动画,首次进入*/
+    if (isRefresh && self.buyAllStories.count == 0) {
+        [ZZHUDMessage showInView:self.view];
+    }
+    
+    //获取需要请求数据的页数,如果是刷新,则为1(这里需要跟服务器进行沟通,确认第一页是0还是1),如果不是,将之前保存的页数+1,获取下一页的数据
+    NSInteger requestPage = isRefresh ? 1 : _page + 1;
+    __weak typeof (self) WS = self;
+    // 设置刷新,这个需要设置,不然不出现刷新的Header动画
+    [self.tableView setRefreshBlock:^{
+        [WS getBuyStoriesRequest:YES];
+    }];
+    // 参数
+    NSDictionary *parameters = @{@"pageNo":@(requestPage),
+                                 @"pageSize":@10};
+    //数据请求
+    [GetRequest requestParameters:parameters successBlock:^(ZZBaseRequest *request) {
+        // 数据请求成功
+        // 将数据请求成功的数据的页数存储
+        WS.page = requestPage;
+        // 获取数据
+        NSArray *result = request.resultDict[Key_Model];
+        if (isRefresh) {
+            // 如果是刷新,则将获取的数据赋值给当前页面的数据数组
+            WS.buyAllStories = result.mutableCopy;
+        } else {
+            // 如果不是刷新,也就是加载更多,将获取的数据添加到当前页面的数组
+            [WS.buyAllStories addObjectsFromArray:result] ;
+        }
+        // 设置加载更多的Block
+        id moreBlock = ^ {
+            [WS getBuyStoriesRequest:NO];
+        };
+        // 判断是不是需要加载更多
+        [WS.tableView setMoreBlock:request.hasMoreData ? moreBlock : nil];
+        // tableView刷新数据
+        [WS.tableView reloadData];
+        // TTTableView 停止加载刷新 or 加载更多的动画
+        [WS.tableView didFinishedLoading];
+        // 将HUD取消
+        [ZZHUDMessage hide];
+    } cancelBlock:^(ZZBaseRequest *request) {
+        // 数据请求取消
+        [ZZHUDMessage hide];
+    } failureBlock:^(ZZBaseRequest *request, NSError *error) {
+        // 数据请求失败
+        [ZZHUDMessage showCompletedText:@"请求失败，请重试~~" withCompletedType:HUDShowCompletedTypeError];
+        [WS.tableView didFinishedLoading];
+
+    }];
+}
