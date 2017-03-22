@@ -10,6 +10,13 @@
 
 #import "TTHUDMessage.h"
 
+#import "TTConst.h"
+
+#import "HyperlinkButton.h"
+#import "TTBottomBarView.h"
+
+#import "UIView+TTSuperView.h"
+
 @interface ViewController ()
 
 @end
@@ -18,6 +25,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    HyperlinkButton *button = [HyperlinkButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:self action:@selector(onHyperlinkBtnTap) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"你点啊" forState:UIControlStateNormal];
+    [button setFrame:CGRectMake(100, 100, 100, 100)];
+    [self.view addSubview:button];
+    
+    TTBottomBarView *barView = [[TTBottomBarView alloc] initWithFrame:CGRectMake(0, KEY_WINDOW.height - 44, KEY_WINDOW.width, 44)];
+    barView.backgroundColor = [UIColor yellowColor];
+    [barView showInView:self.view];
+    
+}
+
+- (void)onHyperlinkBtnTap {
+    NSLog(@"点击了");
 }
 
 
