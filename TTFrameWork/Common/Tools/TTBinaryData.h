@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// 有关二进制文件的处理
 
 extern NSString * const MIMEType_TEXT;
 extern NSString * const MIMEType_Plain;

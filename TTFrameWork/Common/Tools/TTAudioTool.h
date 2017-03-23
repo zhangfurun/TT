@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// 获取系统的声音
+
 @interface TTAudioTool : NSObject
 + (float)fetchSystemVolume;
 @end
