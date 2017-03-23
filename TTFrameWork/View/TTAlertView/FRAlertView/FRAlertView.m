@@ -8,7 +8,7 @@
 
 #import "FRAlertView.h"
 
-#import "ZZConst.h"
+#import "TTConst.h"
 
 #define FR_width [UIScreen mainScreen].bounds.size.width
 #define FR_height [UIScreen mainScreen].bounds.size.height
