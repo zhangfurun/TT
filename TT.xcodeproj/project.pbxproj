@@ -131,6 +131,33 @@
 		15A1B1271E83AA730082A6A3 /* FourPingTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1221E83AA730082A6A3 /* FourPingTransition.m */; };
 		15A1B1281E83AA730082A6A3 /* PopAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1241E83AA730082A6A3 /* PopAnimationView.m */; };
 		15A1B1291E83AA730082A6A3 /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1261E83AA730082A6A3 /* PopView.m */; };
+		15A1B1351E83C14E0082A6A3 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B12B1E83C14E0082A6A3 /* AliyunOSSiOS.framework */; };
+		15A1B1361E83C14E0082A6A3 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B12D1E83C14E0082A6A3 /* SMS_SDKLocalizable.strings */; };
+		15A1B1371E83C14E0082A6A3 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B1301E83C14E0082A6A3 /* MOBFoundation.framework */; };
+		15A1B1381E83C14E0082A6A3 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B1311E83C14E0082A6A3 /* SMS_SDK.framework */; };
+		15A1B13B1E83C1CD0082A6A3 /* libicucore.A.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B13A1E83C1CD0082A6A3 /* libicucore.A.tbd */; };
+		15A1B13D1E83C1D50082A6A3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B13C1E83C1D50082A6A3 /* MessageUI.framework */; };
+		15A1B13F1E83C1DA0082A6A3 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B13E1E83C1DA0082A6A3 /* JavaScriptCore.framework */; };
+		15A1B1411E83C1E10082A6A3 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B1401E83C1E10082A6A3 /* libstdc++.6.0.9.tbd */; };
+		15A1B1431E83C1E90082A6A3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A1B1421E83C1E90082A6A3 /* AdSupport.framework */; };
+		15A1B1451E83C2120082A6A3 /* Annotation_SMS.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B1441E83C2120082A6A3 /* Annotation_SMS.strings */; };
+		15A1B16F1E83C2FF0082A6A3 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B14D1E83C2FF0082A6A3 /* aescrypt.c */; };
+		15A1B1701E83C2FF0082A6A3 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B14E1E83C2FF0082A6A3 /* aeskey.c */; };
+		15A1B1711E83C2FF0082A6A3 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1501E83C2FF0082A6A3 /* aestab.c */; };
+		15A1B1721E83C2FF0082A6A3 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1541E83C2FF0082A6A3 /* entropy.c */; };
+		15A1B1731E83C2FF0082A6A3 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1561E83C2FF0082A6A3 /* fileenc.c */; };
+		15A1B1741E83C2FF0082A6A3 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1581E83C2FF0082A6A3 /* hmac.c */; };
+		15A1B1751E83C2FF0082A6A3 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B15A1E83C2FF0082A6A3 /* prng.c */; };
+		15A1B1761E83C2FF0082A6A3 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B15C1E83C2FF0082A6A3 /* pwd2key.c */; };
+		15A1B1771E83C2FF0082A6A3 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B15E1E83C2FF0082A6A3 /* sha1.c */; };
+		15A1B1781E83C2FF0082A6A3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B1601E83C2FF0082A6A3 /* Info.plist */; };
+		15A1B1791E83C2FF0082A6A3 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1631E83C2FF0082A6A3 /* ioapi.c */; };
+		15A1B17A1E83C2FF0082A6A3 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1651E83C2FF0082A6A3 /* mztools.c */; };
+		15A1B17B1E83C2FF0082A6A3 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1671E83C2FF0082A6A3 /* unzip.c */; };
+		15A1B17C1E83C2FF0082A6A3 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1691E83C2FF0082A6A3 /* zip.c */; };
+		15A1B17D1E83C2FF0082A6A3 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B16C1E83C2FF0082A6A3 /* SSZipArchive.m */; };
+		15A1B1801E83C3A70082A6A3 /* TTAliyunOSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B17F1E83C3A70082A6A3 /* TTAliyunOSSManager.m */; };
+		15A1B1831E83C3CF0082A6A3 /* TTSMSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B1821E83C3CF0082A6A3 /* TTSMSManager.m */; };
 		15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF221E6907BA001636DA /* MBProgressHUD.m */; };
 		15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF251E690831001636DA /* TTHUDMessage.m */; };
 		2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEE8CC1E73D4E20089CE1F /* TTBaseRequest.m */; };
@@ -420,6 +447,57 @@
 		15A1B1241E83AA730082A6A3 /* PopAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimationView.m; sourceTree = "<group>"; };
 		15A1B1251E83AA730082A6A3 /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
 		15A1B1261E83AA730082A6A3 /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
+		15A1B12B1E83C14E0082A6A3 /* AliyunOSSiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliyunOSSiOS.framework; sourceTree = "<group>"; };
+		15A1B12E1E83C14E0082A6A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		15A1B12F1E83C14E0082A6A3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		15A1B1301E83C14E0082A6A3 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		15A1B1311E83C14E0082A6A3 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		15A1B1341E83C14E0082A6A3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		15A1B13A1E83C1CD0082A6A3 /* libicucore.A.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.A.tbd; path = usr/lib/libicucore.A.tbd; sourceTree = SDKROOT; };
+		15A1B13C1E83C1D50082A6A3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		15A1B13E1E83C1DA0082A6A3 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		15A1B1401E83C1E10082A6A3 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		15A1B1421E83C1E90082A6A3 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		15A1B1441E83C2120082A6A3 /* Annotation_SMS.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_SMS.strings; sourceTree = "<group>"; };
+		15A1B14B1E83C2FF0082A6A3 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		15A1B14C1E83C2FF0082A6A3 /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_via_ace.h; sourceTree = "<group>"; };
+		15A1B14D1E83C2FF0082A6A3 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		15A1B14E1E83C2FF0082A6A3 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		15A1B14F1E83C2FF0082A6A3 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		15A1B1501E83C2FF0082A6A3 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		15A1B1511E83C2FF0082A6A3 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		15A1B1521E83C2FF0082A6A3 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		15A1B1531E83C2FF0082A6A3 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		15A1B1541E83C2FF0082A6A3 /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
+		15A1B1551E83C2FF0082A6A3 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
+		15A1B1561E83C2FF0082A6A3 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		15A1B1571E83C2FF0082A6A3 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		15A1B1581E83C2FF0082A6A3 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		15A1B1591E83C2FF0082A6A3 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		15A1B15A1E83C2FF0082A6A3 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		15A1B15B1E83C2FF0082A6A3 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		15A1B15C1E83C2FF0082A6A3 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		15A1B15D1E83C2FF0082A6A3 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		15A1B15E1E83C2FF0082A6A3 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		15A1B15F1E83C2FF0082A6A3 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		15A1B1601E83C2FF0082A6A3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A1B1621E83C2FF0082A6A3 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		15A1B1631E83C2FF0082A6A3 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		15A1B1641E83C2FF0082A6A3 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		15A1B1651E83C2FF0082A6A3 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		15A1B1661E83C2FF0082A6A3 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		15A1B1671E83C2FF0082A6A3 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		15A1B1681E83C2FF0082A6A3 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		15A1B1691E83C2FF0082A6A3 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		15A1B16A1E83C2FF0082A6A3 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		15A1B16B1E83C2FF0082A6A3 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		15A1B16C1E83C2FF0082A6A3 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		15A1B16D1E83C2FF0082A6A3 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
+		15A1B16E1E83C2FF0082A6A3 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		15A1B17E1E83C3A70082A6A3 /* TTAliyunOSSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAliyunOSSManager.h; sourceTree = "<group>"; };
+		15A1B17F1E83C3A70082A6A3 /* TTAliyunOSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAliyunOSSManager.m; sourceTree = "<group>"; };
+		15A1B1811E83C3CF0082A6A3 /* TTSMSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSMSManager.h; sourceTree = "<group>"; };
+		15A1B1821E83C3CF0082A6A3 /* TTSMSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSMSManager.m; sourceTree = "<group>"; };
 		15C7BF211E6907BA001636DA /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		15C7BF221E6907BA001636DA /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		15C7BF241E690831001636DA /* TTHUDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHUDMessage.h; sourceTree = "<group>"; };
@@ -464,15 +542,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A1B1431E83C1E90082A6A3 /* AdSupport.framework in Frameworks */,
+				15A1B1411E83C1E10082A6A3 /* libstdc++.6.0.9.tbd in Frameworks */,
+				15A1B13F1E83C1DA0082A6A3 /* JavaScriptCore.framework in Frameworks */,
+				15A1B13D1E83C1D50082A6A3 /* MessageUI.framework in Frameworks */,
+				15A1B13B1E83C1CD0082A6A3 /* libicucore.A.tbd in Frameworks */,
 				15A0D9361E816A3E003A109E /* libc++.tbd in Frameworks */,
+				15A1B1371E83C14E0082A6A3 /* MOBFoundation.framework in Frameworks */,
 				15A0D9341E8169E5003A109E /* CFNetwork.framework in Frameworks */,
 				15A0D9321E8169DF003A109E /* CoreTelephony.framework in Frameworks */,
 				15A0D9301E8169C7003A109E /* Security.framework in Frameworks */,
+				15A1B1351E83C14E0082A6A3 /* AliyunOSSiOS.framework in Frameworks */,
 				1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */,
 				1527C1251E8217B900E828A5 /* libWeChatSDK.a in Frameworks */,
 				1527C1221E8217B800E828A5 /* TencentOpenAPI.framework in Frameworks */,
 				15A0D92E1E8169BF003A109E /* libc++.1.tbd in Frameworks */,
 				15A0D92C1E8169B8003A109E /* libsqlite3.0.tbd in Frameworks */,
+				15A1B1381E83C14E0082A6A3 /* SMS_SDK.framework in Frameworks */,
 				15A0D92A1E8169B2003A109E /* libz.1.2.8.tbd in Frameworks */,
 				15A0D9281E8169A9003A109E /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -713,6 +799,9 @@
 		15A0D8751E8162D2003A109E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				15A1B1491E83C2FF0082A6A3 /* SSZipArchive */,
+				15A1B12A1E83C14E0082A6A3 /* AliyunOSS */,
+				15A1B12C1E83C14E0082A6A3 /* SMS_SDK */,
 				15A1B1201E83AA730082A6A3 /* CustomPopAnimation */,
 				15A1B11C1E83A9AE0082A6A3 /* NetWorkReachability */,
 				15A1B1051E83A9020082A6A3 /* SDCycleScrollView */,
@@ -790,6 +879,11 @@
 		15A0D9261E8169A9003A109E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				15A1B1421E83C1E90082A6A3 /* AdSupport.framework */,
+				15A1B1401E83C1E10082A6A3 /* libstdc++.6.0.9.tbd */,
+				15A1B13E1E83C1DA0082A6A3 /* JavaScriptCore.framework */,
+				15A1B13C1E83C1D50082A6A3 /* MessageUI.framework */,
+				15A1B13A1E83C1CD0082A6A3 /* libicucore.A.tbd */,
 				15A0D9351E816A3E003A109E /* libc++.tbd */,
 				15A0D9331E8169E5003A109E /* CFNetwork.framework */,
 				15A0D9311E8169DF003A109E /* CoreTelephony.framework */,
@@ -1142,6 +1236,87 @@
 			path = CustomPopAnimation;
 			sourceTree = "<group>";
 		};
+		15A1B12A1E83C14E0082A6A3 /* AliyunOSS */ = {
+			isa = PBXGroup;
+			children = (
+				15A1B12B1E83C14E0082A6A3 /* AliyunOSSiOS.framework */,
+				15A1B17E1E83C3A70082A6A3 /* TTAliyunOSSManager.h */,
+				15A1B17F1E83C3A70082A6A3 /* TTAliyunOSSManager.m */,
+			);
+			path = AliyunOSS;
+			sourceTree = "<group>";
+		};
+		15A1B12C1E83C14E0082A6A3 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				15A1B1441E83C2120082A6A3 /* Annotation_SMS.strings */,
+				15A1B12D1E83C14E0082A6A3 /* SMS_SDKLocalizable.strings */,
+				15A1B1301E83C14E0082A6A3 /* MOBFoundation.framework */,
+				15A1B1311E83C14E0082A6A3 /* SMS_SDK.framework */,
+				15A1B1811E83C3CF0082A6A3 /* TTSMSManager.h */,
+				15A1B1821E83C3CF0082A6A3 /* TTSMSManager.m */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		15A1B1491E83C2FF0082A6A3 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				15A1B14A1E83C2FF0082A6A3 /* aes */,
+				15A1B1601E83C2FF0082A6A3 /* Info.plist */,
+				15A1B1611E83C2FF0082A6A3 /* minizip */,
+				15A1B16B1E83C2FF0082A6A3 /* SSZipArchive.h */,
+				15A1B16C1E83C2FF0082A6A3 /* SSZipArchive.m */,
+				15A1B16D1E83C2FF0082A6A3 /* SSZipCommon.h */,
+				15A1B16E1E83C2FF0082A6A3 /* ZipArchive.h */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		15A1B14A1E83C2FF0082A6A3 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				15A1B14B1E83C2FF0082A6A3 /* aes.h */,
+				15A1B14C1E83C2FF0082A6A3 /* aes_via_ace.h */,
+				15A1B14D1E83C2FF0082A6A3 /* aescrypt.c */,
+				15A1B14E1E83C2FF0082A6A3 /* aeskey.c */,
+				15A1B14F1E83C2FF0082A6A3 /* aesopt.h */,
+				15A1B1501E83C2FF0082A6A3 /* aestab.c */,
+				15A1B1511E83C2FF0082A6A3 /* aestab.h */,
+				15A1B1521E83C2FF0082A6A3 /* brg_endian.h */,
+				15A1B1531E83C2FF0082A6A3 /* brg_types.h */,
+				15A1B1541E83C2FF0082A6A3 /* entropy.c */,
+				15A1B1551E83C2FF0082A6A3 /* entropy.h */,
+				15A1B1561E83C2FF0082A6A3 /* fileenc.c */,
+				15A1B1571E83C2FF0082A6A3 /* fileenc.h */,
+				15A1B1581E83C2FF0082A6A3 /* hmac.c */,
+				15A1B1591E83C2FF0082A6A3 /* hmac.h */,
+				15A1B15A1E83C2FF0082A6A3 /* prng.c */,
+				15A1B15B1E83C2FF0082A6A3 /* prng.h */,
+				15A1B15C1E83C2FF0082A6A3 /* pwd2key.c */,
+				15A1B15D1E83C2FF0082A6A3 /* pwd2key.h */,
+				15A1B15E1E83C2FF0082A6A3 /* sha1.c */,
+				15A1B15F1E83C2FF0082A6A3 /* sha1.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		15A1B1611E83C2FF0082A6A3 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				15A1B1621E83C2FF0082A6A3 /* crypt.h */,
+				15A1B1631E83C2FF0082A6A3 /* ioapi.c */,
+				15A1B1641E83C2FF0082A6A3 /* ioapi.h */,
+				15A1B1651E83C2FF0082A6A3 /* mztools.c */,
+				15A1B1661E83C2FF0082A6A3 /* mztools.h */,
+				15A1B1671E83C2FF0082A6A3 /* unzip.c */,
+				15A1B1681E83C2FF0082A6A3 /* unzip.h */,
+				15A1B1691E83C2FF0082A6A3 /* zip.c */,
+				15A1B16A1E83C2FF0082A6A3 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		15C7BF1F1E69078C001636DA /* TTHUDMessage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1352,6 +1527,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"zh-Hans",
 			);
 			mainGroup = 153954201E64272B00A20FB9;
 			productRefGroup = 1539542A1E64272B00A20FB9 /* Products */;
@@ -1372,11 +1549,13 @@
 			files = (
 				1527C1231E8217B900E828A5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				2DEEE9051E73DCA00089CE1F /* hud_error@2x.png in Resources */,
+				15A1B1361E83C14E0082A6A3 /* SMS_SDKLocalizable.strings in Resources */,
 				2DEEE90A1E73DCA00089CE1F /* refresh_header_loading.png in Resources */,
 				15A1B09B1E82A2620082A6A3 /* Annotation_TTTableView.strings in Resources */,
 				15A1B06F1E8292B30082A6A3 /* TTMoreFooterView.xib in Resources */,
 				1527C11F1E8217B800E828A5 /* WeiboSDK.bundle in Resources */,
 				15A1B09D1E82AF720082A6A3 /* Annotation_TTCollectionView.strings in Resources */,
+				15A1B1781E83C2FF0082A6A3 /* Info.plist in Resources */,
 				2DEEE9081E73DCA00089CE1F /* ratingbar_bgstar.png in Resources */,
 				2DEEE9041E73DCA00089CE1F /* hud_error.png in Resources */,
 				1539543C1E64272B00A20FB9 /* LaunchScreen.storyboard in Resources */,
@@ -1387,6 +1566,7 @@
 				2DEEE9061E73DCA00089CE1F /* hud_info.png in Resources */,
 				2DEEE9021E73DCA00089CE1F /* hud_completed.png in Resources */,
 				15A1B0711E8292CD0082A6A3 /* TTRefreshHeaderView.xib in Resources */,
+				15A1B1451E83C2120082A6A3 /* Annotation_SMS.strings in Resources */,
 				153954391E64272B00A20FB9 /* Assets.xcassets in Resources */,
 				2DEEE9031E73DCA00089CE1F /* hud_completed@2x.png in Resources */,
 				2DEEE9091E73DCA00089CE1F /* ratingbar_fgstar.png in Resources */,
@@ -1418,11 +1598,13 @@
 				15A1B0FF1E83A7DF0082A6A3 /* WHUCalendarCell.m in Sources */,
 				15A1AF2A1E8284FE0082A6A3 /* SDImageCache.m in Sources */,
 				15A1AF311E8284FE0082A6A3 /* SDWebImagePrefetcher.m in Sources */,
+				15A1B1831E83C3CF0082A6A3 /* TTSMSManager.m in Sources */,
 				2DEEE9211E73DCF10089CE1F /* AFHTTPRequestOperation.m in Sources */,
 				15A1AF391E8284FE0082A6A3 /* UIView+WebCacheOperation.m in Sources */,
 				15A0D8E51E81681F003A109E /* MJFoundation.m in Sources */,
 				153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */,
 				2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */,
+				15A1B17C1E83C2FF0082A6A3 /* zip.c in Sources */,
 				15A1B0EC1E8381670082A6A3 /* UIAlertView+MyAlertView.m in Sources */,
 				15A1AF2C1E8284FE0082A6A3 /* SDWebImageCompat.m in Sources */,
 				15A1B1001E83A7DF0082A6A3 /* WHUCalendarFlowLayout.m in Sources */,
@@ -1438,12 +1620,14 @@
 				1527C1271E8217B900E828A5 /* WXAuthRequest.m in Sources */,
 				15A1B0EA1E8381670082A6A3 /* AlertViewRecorder.m in Sources */,
 				15A1B1291E83AA730082A6A3 /* PopView.m in Sources */,
+				15A1B1701E83C2FF0082A6A3 /* aeskey.c in Sources */,
 				15A1B1041E83A7DF0082A6A3 /* WHUCalendarYMSelectView.m in Sources */,
 				153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */,
 				15A1AF331E8284FE0082A6A3 /* UIImage+GIF.m in Sources */,
 				15A0D8C11E8162D2003A109E /* TTKit.m in Sources */,
 				15A0D8C21E8162D2003A109E /* TTManager.m in Sources */,
 				15A1B0601E828DE50082A6A3 /* TTBottomBarView.m in Sources */,
+				15A1B16F1E83C2FF0082A6A3 /* aescrypt.c in Sources */,
 				1527C1201E8217B800E828A5 /* SinaAuthRequest.m in Sources */,
 				15A1B11F1E83A9AE0082A6A3 /* NetWorkReachability.m in Sources */,
 				15A1B0B81E837CC10082A6A3 /* TTTextView.m in Sources */,
@@ -1460,6 +1644,7 @@
 				15A1B0D71E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m in Sources */,
 				153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */,
 				15A1B1191E83A9020082A6A3 /* SDCollectionViewCell.m in Sources */,
+				15A1B1731E83C2FF0082A6A3 /* fileenc.c in Sources */,
 				15A1AF301E8284FE0082A6A3 /* SDWebImageManager.m in Sources */,
 				1527C12A1E8217FE00E828A5 /* TTShareUser.m in Sources */,
 				2DEEE9291E73DCF10089CE1F /* AFURLSessionManager.m in Sources */,
@@ -1467,22 +1652,28 @@
 				2DEEE9251E73DCF10089CE1F /* AFSecurityPolicy.m in Sources */,
 				15A1B0FE1E83A7DF0082A6A3 /* WHUCalendarCal.m in Sources */,
 				15A1B0E11E83813D0082A6A3 /* NSArray+PrintChinese.m in Sources */,
+				15A1B1711E83C2FF0082A6A3 /* aestab.c in Sources */,
 				2DEEE9281E73DCF10089CE1F /* AFURLResponseSerialization.m in Sources */,
 				15A1B1161E83A9020082A6A3 /* TAAnimatedDotView.m in Sources */,
 				15A1B0861E829BD30082A6A3 /* TestCell.m in Sources */,
 				15A1B0BF1E837DF60082A6A3 /* TTScrollView.m in Sources */,
+				15A1B17B1E83C2FF0082A6A3 /* unzip.c in Sources */,
 				15A1B1281E83AA730082A6A3 /* PopAnimationView.m in Sources */,
 				15A1B0D21E83809B0082A6A3 /* WaterfallDecorationReusableView.m in Sources */,
 				15A0D8EA1E81681F003A109E /* NSObject+MJCoding.m in Sources */,
 				15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */,
 				153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */,
+				15A1B1751E83C2FF0082A6A3 /* prng.c in Sources */,
 				2DEEE9261E73DCF10089CE1F /* AFURLConnectionOperation.m in Sources */,
 				15A1B0EB1E8381670082A6A3 /* FRAlertView.m in Sources */,
+				15A1B1801E83C3A70082A6A3 /* TTAliyunOSSManager.m in Sources */,
 				15A0D8E31E81681F003A109E /* MJDictionaryCache.m in Sources */,
 				153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */,
 				2DEEE9271E73DCF10089CE1F /* AFURLRequestSerialization.m in Sources */,
 				2DEEE9221E73DCF10089CE1F /* AFHTTPRequestOperationManager.m in Sources */,
 				153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */,
+				15A1B17A1E83C2FF0082A6A3 /* mztools.c in Sources */,
+				15A1B1791E83C2FF0082A6A3 /* ioapi.c in Sources */,
 				15A1B0D11E83809B0082A6A3 /* WaterfallCollectionViewLayout.m in Sources */,
 				15A0D8E91E81681F003A109E /* NSObject+MJClass.m in Sources */,
 				15A1B11B1E83A9020082A6A3 /* UIView+SDExtension.m in Sources */,
@@ -1491,7 +1682,9 @@
 				15A0D8E81E81681F003A109E /* MJPropertyType.m in Sources */,
 				2DEEE9241E73DCF10089CE1F /* AFNetworkReachabilityManager.m in Sources */,
 				15A1AF341E8284FE0082A6A3 /* UIImage+MultiFormat.m in Sources */,
+				15A1B1761E83C2FF0082A6A3 /* pwd2key.c in Sources */,
 				1527C1241E8217B900E828A5 /* TTTencentCenter.m in Sources */,
+				15A1B1741E83C2FF0082A6A3 /* hmac.c in Sources */,
 				15A1B0BC1E837D0C0082A6A3 /* TTWebView.m in Sources */,
 				15A1B1021E83A7DF0082A6A3 /* WHUCalendarPopView.m in Sources */,
 				15A1AF2E1E8284FE0082A6A3 /* SDWebImageDownloader.m in Sources */,
@@ -1499,6 +1692,7 @@
 				15A1AF321E8284FE0082A6A3 /* UIButton+WebCache.m in Sources */,
 				15A1B0B41E837C800082A6A3 /* TTAlertView.m in Sources */,
 				15A1AF281E8284FE0082A6A3 /* NSData+ImageContentType.m in Sources */,
+				15A1B1771E83C2FF0082A6A3 /* sha1.c in Sources */,
 				15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */,
 				15A1B0941E82A1300082A6A3 /* TTCollectionView.m in Sources */,
 				153954311E64272B00A20FB9 /* AppDelegate.m in Sources */,
@@ -1514,8 +1708,10 @@
 				15A1AF361E8284FE0082A6A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				15A0D96B1E816B26003A109E /* TTBaseShareCenter.m in Sources */,
 				15A1B0AB1E837C2C0082A6A3 /* TTContentScrollView.m in Sources */,
+				15A1B1721E83C2FF0082A6A3 /* entropy.c in Sources */,
 				15A0D8ED1E81681F003A109E /* NSString+MJExtension.m in Sources */,
 				153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */,
+				15A1B17D1E83C2FF0082A6A3 /* SSZipArchive.m in Sources */,
 				15A1B06D1E8292AB0082A6A3 /* TTMoreFooterView.m in Sources */,
 				15A1B0511E8285E60082A6A3 /* iCarousel.m in Sources */,
 				15A1AF291E8284FE0082A6A3 /* NSImage+WebCache.m in Sources */,
@@ -1577,6 +1773,16 @@
 				1539543B1E64272B00A20FB9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		15A1B12D1E83C14E0082A6A3 /* SMS_SDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A1B12E1E83C14E0082A6A3 /* en */,
+				15A1B12F1E83C14E0082A6A3 /* fr */,
+				15A1B1341E83C14E0082A6A3 /* zh-Hans */,
+			);
+			name = SMS_SDKLocalizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1680,6 +1886,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/TencentCenter/SDK_2_9_3",
+					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/AliyunOSS",
+					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/SMS_SDK",
 				);
 				INFOPLIST_FILE = TT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1708,6 +1916,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/TencentCenter/SDK_2_9_3",
+					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/AliyunOSS",
+					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/SMS_SDK",
 				);
 				INFOPLIST_FILE = TT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

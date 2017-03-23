@@ -1,0 +1,24 @@
+/*
+ Annotation_SMS.strings
+ TT
+ 
+ Created by 张福润 on 2017/3/23.
+ Copyright © 2017年 张福润. All rights reserved.
+ */
+
+
+/*
+ 
+ 添加依赖库
+ 
+ libz.dylib
+ libicucore.dylib
+ MessageUI.framework
+ JavaScriptCore.framework
+ libstdc++.dylib
+ 注意XCode7上运行报错的话，需要添加这些依赖库
+ SystemConfiguration.framework
+ CoreTelephony.framework
+ AdSupport.framework
+ 
+ */

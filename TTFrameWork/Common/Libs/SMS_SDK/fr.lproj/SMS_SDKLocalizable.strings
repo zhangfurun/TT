@@ -1,0 +1,36 @@
+/*
+ SMS_SDKLocalizable.strings
+ SMS_SDK
+ 
+ Created by 刘 靖煌 on 2/2/15.
+ Copyright (c) 2015 掌淘科技. All rights reserved.
+ */
+
+///#begin en
+/**
+ *	@brief	Error code，If it is you call the API, you should see the error code table, if it is an HTTP error, this attribute indicates the HTTP error code.
+ ErrorCode	 Error description                                    Remarks
+ 400    Invalid request                                           The request could not be identified
+ 408    Invalid parameter                                         The parameters are invalid in the request
+ 456    Phone number is empty                                     The submitted phone number or country code is empty
+ 457    Phone number is illegal                                   The submitted phone number or country code is incorrect
+ 458    Phone number in the blacklist                             Mobile phone number in the blacklist
+ 459    Unable to obtain data                                     Unable to obtain data related to the appkey
+ 460    Permission denied                                         Please turn on the switch to sending text messages by clients
+ 461    Do not support the region to send text messages           Do not support the region to send text messages
+ 462    Sending messages limited per minute                       Sending text message already hit its time limit
+ 463    Sending messages limited everyday                         Sending text message to the phone number already hit its limit
+ 464    Sending text message hits limit                           Sending text message to the device already hit its limit
+ 465    Sending text message hits limit                           Sending text message to the device already hit the app\'s limit
+ 466    The verification code is empty                            The submitted verification code is empty
+ 467    Too frequently                                            Check validation code too frequently
+ 468    Invalid validation code                                   Invalid validation code
+ 470    Insufficient balance                                      Insufficient balance
+ 472    Unable to obtain data                                     Obtaining client platform information failed
+ 475    No application information of appkey exists               No application information of appkey exists
+ 476    The current appkey send text messages over limit          The current appkey send text messages over limit
+ 477    The current phone number send messages over the limit     The current phone number send messages over the limit
+ 478    The current phone number in the current application sends messages over the limit
+ 500    Server Error                                              Server Error
+ */
+///#end
