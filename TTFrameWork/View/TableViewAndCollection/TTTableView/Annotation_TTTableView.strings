@@ -20,13 +20,13 @@ TTTableView使用栗子:
 @property (assign, nonatomic) NSInteger page; //记录当前需要加载数据的页数
 
 2.方法
-- (void)getBuyStoriesRequest:(BOOL)isRefresh {
+- (void)getRequest:(BOOL)isRefresh {
     if ([GetShoppingCartRequest isRequesting]) {
         return;
     }
     /* 判断是不是需要加载的动画,首次进入*/
     if (isRefresh && self.buyAllStories.count == 0) {
-        [ZZHUDMessage showInView:self.view];
+        [TTHUDMessage showInView:self.view];
     }
     
     //获取需要请求数据的页数,如果是刷新,则为1(这里需要跟服务器进行沟通,确认第一页是0还是1),如果不是,将之前保存的页数+1,获取下一页的数据
@@ -34,13 +34,13 @@ TTTableView使用栗子:
     __weak typeof (self) WS = self;
     // 设置刷新,这个需要设置,不然不出现刷新的Header动画
     [self.tableView setRefreshBlock:^{
-        [WS getBuyStoriesRequest:YES];
+        [WS getRequest:YES];
     }];
     // 参数
     NSDictionary *parameters = @{@"pageNo":@(requestPage),
                                  @"pageSize":@10};
     //数据请求
-    [GetRequest requestParameters:parameters successBlock:^(ZZBaseRequest *request) {
+    [GetRequest requestParameters:parameters successBlock:^(TTBaseRequest *request) {
         // 数据请求成功
         // 将数据请求成功的数据的页数存储
         WS.page = requestPage;
@@ -55,7 +55,7 @@ TTTableView使用栗子:
         }
         // 设置加载更多的Block
         id moreBlock = ^ {
-            [WS getBuyStoriesRequest:NO];
+            [WS getRequest:NO];
         };
         // 判断是不是需要加载更多
         [WS.tableView setMoreBlock:request.hasMoreData ? moreBlock : nil];
@@ -64,13 +64,13 @@ TTTableView使用栗子:
         // TTTableView 停止加载刷新 or 加载更多的动画
         [WS.tableView didFinishedLoading];
         // 将HUD取消
-        [ZZHUDMessage hide];
-    } cancelBlock:^(ZZBaseRequest *request) {
+        [TTHUDMessage hide];
+    } cancelBlock:^(TTBaseRequest *request) {
         // 数据请求取消
-        [ZZHUDMessage hide];
-    } failureBlock:^(ZZBaseRequest *request, NSError *error) {
+        [TTHUDMessage hide];
+    } failureBlock:^(TTBaseRequest *request, NSError *error) {
         // 数据请求失败
-        [ZZHUDMessage showCompletedText:@"请求失败，请重试~~" withCompletedType:HUDShowCompletedTypeError];
+        [TTHUDMessage showCompletedText:@"请求失败，请重试~~" withCompletedType:HUDShowCompletedTypeError];
         [WS.tableView didFinishedLoading];
 
     }];

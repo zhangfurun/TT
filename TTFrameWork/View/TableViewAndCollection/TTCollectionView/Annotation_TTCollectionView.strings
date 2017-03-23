@@ -6,3 +6,79 @@
   Copyright © 2017年 张福润. All rights reserved.
 */
 
+TTCollectionView的使用方式可以参考TTTableView的使用方案
+1.设置TTCollectionView的loadDelegate
+self.collectionView.loadDelegate = self;
+2.遵循代理TTCollectionViewDelegate
+
+3.注册cell如果有头视图和底视图的话,必须要注册
+
+[self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TTCell class]) bundle:nil] forCellWithReuseIdentifier:StoryCellIdentifier];
+
+[self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([TTCollectionReusableView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:TTHeaderViewIdentifier];
+[self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:FooterReuserViewIdentifier];
+
+
+4.设置记录当前获取数据的分页页数
+@property (assign, nonatomic) NSInteger pages;
+
+5.数据获取
+
+- (void)getRequest:(BOOL)isRefresh {
+    __weak typeof(self) WS = self;
+    if ([GetUserReadHistoriesRequest isRequesting]) {
+        return;
+    }
+    // 首次进入
+    if (isRefresh && _histories.count == 0) {
+        [TTHUDMessage showInView:self.view showRequestText:EMPTY_STR];
+    }
+    // 获取当前需要加载的数据页数(刷新的话,重置为1)
+    NSInteger page = isRefresh ? 1 : _pages + 1;
+    //参数
+    NSDictionary *param = @{@"pageNo"   :@(page),@"pageSize" :@12};
+    
+    //数据请求
+    [GetRequest requestParameters:parameters successBlock:^(TTBaseRequest *request) {
+        // 数据请求成功
+        // 将数据请求成功的数据的页数存储
+        WS.page = page;
+        // 获取数据
+        NSArray *result = request.resultDict[Key_Model];
+        if (isRefresh) {
+            // 如果是刷新,则将获取的数据赋值给当前页面的数据数组
+            WS.datas = result.mutableCopy;
+        } else {
+            // 如果不是刷新,也就是加载更多,将获取的数据添加到当前页面的数组
+            [WS.datas addObjectsFromArray:result] ;
+        }
+        // 判断是不是需要加载更多
+        [WS.collectionView isDisplayMoreView:request.hasMoreData];
+        // collection刷新数据
+        [WS.collectionView reloadData];
+        // TTCollectionView 停止加载刷新 or 加载更多的动画
+        [WS.collectionView didFinishedLoading];
+        // 将HUD取消
+        [TTHUDMessage hide];
+    } cancelBlock:^(TTBaseRequest *request) {
+        // 数据请求取消
+        [TTHUDMessage hide];
+    } failureBlock:^(TTBaseRequest *request, NSError *error) {
+        // 数据请求失败
+        [TTHUDMessage showCompletedText:@"请求失败，请重试~~" withCompletedType:HUDShowCompletedTypeError];
+        [WS.collectionView didFinishedLoading];
+        
+    }];
+
+}
+
+6.代理实现,这个也是区别于TTTableView的
+// 刷新的代理
+- (void)collectionViewRefresh:(TTCollectionView *)collectionView {
+    [self getRequest:YES];
+}
+
+// 加载更多的代理
+- (void)collectionViewLoadMore:(TTCollectionView *)collectionView {
+   [self getRequest:NO];
+}

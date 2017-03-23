@@ -830,11 +830,11 @@
 		15A1B0891E82A1140082A6A3 /* TTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */,
 				15A1B0901E82A1300082A6A3 /* TTCollectionView.h */,
 				15A1B0911E82A1300082A6A3 /* TTCollectionView.m */,
 				15A1B0921E82A1300082A6A3 /* TTCollectionViewBaseCell.h */,
 				15A1B0931E82A1300082A6A3 /* TTCollectionViewBaseCell.m */,
-				15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */,
 			);
 			path = TTCollectionView;
 			sourceTree = "<group>";
