@@ -1,16 +1,16 @@
 //
-//  TTManager.m
+//  TTLogManager.m
 //  TT
 //
 //  Created by 张福润 on 2017/3/11.
 //  Copyright © 2017年 张福润. All rights reserved.
 //
 
-#import "TTManager.h"
+#import "TTLogManager.h"
 
 #import "NSUserDefaults+TTUserDefaults.h"
 
-@implementation TTManager
+@implementation TTLogManager
 
 #pragma mark - Property Method
 + (void)setLogStatus:(BOOL)logStatus{

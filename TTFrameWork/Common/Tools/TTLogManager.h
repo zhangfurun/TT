@@ -1,5 +1,5 @@
 //
-//  TTManager.h
+//  TTLogManager.h
 //  TT
 //
 //  Created by 张福润 on 2017/3/11.
@@ -10,7 +10,7 @@
 
 static NSString * const kLogStatus = @"kLogStatus";
 
-@interface TTManager : NSObject
+@interface TTLogManager : NSObject
 
 + (void)setLogStatus:(BOOL)logStatus;
 + (BOOL)logStatus;
