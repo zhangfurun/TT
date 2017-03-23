@@ -9,7 +9,7 @@
 #import "TTBaseRequest.h"
 
 #import "TTConst.h"
-#import "TTManager.h"
+#import "TTLogManager.h"
 #import "TTBinaryData.h"
 
 #import "AFNetworking.h"
@@ -106,7 +106,7 @@ static NSMutableArray *requests;
         }
     }
     mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
-    if ([TTManager logStatus]) {
+    if ([TTLogManager logStatus]) {
         TTLog(@"%@",_requestUrl);
     }
     TTRequestType reqMethod = [self getRequestMethod];
@@ -195,7 +195,7 @@ static NSMutableArray *requests;
 - (void)finishRequest{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [requests removeObject:self];
-    if ([TTManager logStatus]) {
+    if ([TTLogManager logStatus]) {
         TTLog(@"%@ requestFinished: %@", self,_requestUrl);
         //        TTLog(@"%@", requests);
     }
