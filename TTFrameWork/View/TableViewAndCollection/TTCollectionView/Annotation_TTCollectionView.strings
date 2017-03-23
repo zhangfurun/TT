@@ -1,11 +1,12 @@
-/* 
-  Annotation_TTCollectionView.strings
-  TT
+/*
+ Annotation_TTCollectionView.strings
+ TT
+ 
+ Created by 张福润 on 2017/3/22.
+ Copyright © 2017年 张福润. All rights reserved.
+ */
 
-  Created by 张福润 on 2017/3/22.
-  Copyright © 2017年 张福润. All rights reserved.
-*/
-
+/*
 TTCollectionView的使用方式可以参考TTTableView的使用方案
 1.设置TTCollectionView的loadDelegate
 self.collectionView.loadDelegate = self;
@@ -69,7 +70,7 @@ self.collectionView.loadDelegate = self;
         [WS.collectionView didFinishedLoading];
         
     }];
-
+    
 }
 
 6.代理实现,这个也是区别于TTTableView的
@@ -80,5 +81,6 @@ self.collectionView.loadDelegate = self;
 
 // 加载更多的代理
 - (void)collectionViewLoadMore:(TTCollectionView *)collectionView {
-   [self getRequest:NO];
+    [self getRequest:NO];
 }
+*/

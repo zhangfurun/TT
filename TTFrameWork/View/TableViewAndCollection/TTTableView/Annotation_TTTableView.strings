@@ -1,12 +1,14 @@
-/* 
-  Annotation_TTTableView.strings
-  TT
+/*
+ Annotation_TTTableView.strings
+ TT
+ 
+ Created by 张福润 on 2017/3/22.
+ Copyright © 2017年 张福润. All rights reserved.
+ 
+ 
+ */
 
-  Created by 张福润 on 2017/3/22.
-  Copyright © 2017年 张福润. All rights reserved.
- 
- 
-*/
+/*
 TTTableView使用栗子:
 
 一般情况,用在分页数据获取和数据刷新
@@ -24,7 +26,7 @@ TTTableView使用栗子:
     if ([GetShoppingCartRequest isRequesting]) {
         return;
     }
-    /* 判断是不是需要加载的动画,首次进入*/
+    // 判断是不是需要加载的动画,首次进入
     if (isRefresh && self.buyAllStories.count == 0) {
         [TTHUDMessage showInView:self.view];
     }
@@ -37,8 +39,7 @@ TTTableView使用栗子:
         [WS getRequest:YES];
     }];
     // 参数
-    NSDictionary *parameters = @{@"pageNo":@(requestPage),
-                                 @"pageSize":@10};
+    NSDictionary *parameters = @{@"pageNo":@(requestPage), @"pageSize":@10};
     //数据请求
     [GetRequest requestParameters:parameters successBlock:^(TTBaseRequest *request) {
         // 数据请求成功
@@ -72,6 +73,7 @@ TTTableView使用栗子:
         // 数据请求失败
         [TTHUDMessage showCompletedText:@"请求失败，请重试~~" withCompletedType:HUDShowCompletedTypeError];
         [WS.tableView didFinishedLoading];
-
+        
     }];
 }
+*/
