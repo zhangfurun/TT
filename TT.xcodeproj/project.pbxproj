@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150184521E8D18BC00788E47 /* HyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501842D1E8D18BC00788E47 /* HyperlinkButton.m */; };
+		150184531E8D18BC00788E47 /* TTContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184301E8D18BC00788E47 /* TTContentScrollView.m */; };
+		150184541E8D18BC00788E47 /* TTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184321E8D18BC00788E47 /* TTScrollView.m */; };
+		150184551E8D18BC00788E47 /* TTTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184341E8D18BC00788E47 /* TTTopScrollView.m */; };
+		150184571E8D18BC00788E47 /* TTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501843A1E8D18BC00788E47 /* TTTextView.m */; };
+		150184581E8D18BC00788E47 /* TTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501843D1E8D18BC00788E47 /* TTWebView.m */; };
+		150184661E8D19A800788E47 /* CarouselManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501845B1E8D19A800788E47 /* CarouselManager.m */; };
+		150184671E8D19A800788E47 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501845F1E8D19A800788E47 /* iCarousel.m */; };
+		150184681E8D19A800788E47 /* TTBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184621E8D19A800788E47 /* TTBottomBarView.m */; };
+		150184691E8D19A800788E47 /* TTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184651E8D19A800788E47 /* TTStarView.m */; };
 		1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0F61E82175200E828A5 /* TTAuthInfo.m */; };
 		1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0FA1E8217A300E828A5 /* ShareContentInfo.m */; };
 		1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1527C0FE1E8217B800E828A5 /* libWeiboSDK.a */; };
@@ -81,8 +91,6 @@
 		15A1AF371E8284FE0082A6A3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1AF221E8284FE0082A6A3 /* UIImageView+WebCache.m */; };
 		15A1AF381E8284FE0082A6A3 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1AF241E8284FE0082A6A3 /* UIView+WebCache.m */; };
 		15A1AF391E8284FE0082A6A3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1AF261E8284FE0082A6A3 /* UIView+WebCacheOperation.m */; };
-		15A1B0511E8285E60082A6A3 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0501E8285E60082A6A3 /* iCarousel.m */; };
-		15A1B0601E828DE50082A6A3 /* TTBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B05F1E828DE50082A6A3 /* TTBottomBarView.m */; };
 		15A1B06D1E8292AB0082A6A3 /* TTMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B06C1E8292AB0082A6A3 /* TTMoreFooterView.m */; };
 		15A1B06F1E8292B30082A6A3 /* TTMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B06E1E8292B30082A6A3 /* TTMoreFooterView.xib */; };
 		15A1B0711E8292CD0082A6A3 /* TTRefreshHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B0701E8292CD0082A6A3 /* TTRefreshHeaderView.xib */; };
@@ -95,14 +103,9 @@
 		15A1B0951E82A1300082A6A3 /* TTCollectionViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0931E82A1300082A6A3 /* TTCollectionViewBaseCell.m */; };
 		15A1B09B1E82A2620082A6A3 /* Annotation_TTTableView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B09A1E82A2620082A6A3 /* Annotation_TTTableView.strings */; };
 		15A1B09D1E82AF720082A6A3 /* Annotation_TTCollectionView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */; };
-		15A1B0AB1E837C2C0082A6A3 /* TTContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0A81E837C2C0082A6A3 /* TTContentScrollView.m */; };
-		15A1B0AC1E837C2C0082A6A3 /* TTTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0AA1E837C2C0082A6A3 /* TTTopScrollView.m */; };
 		15A1B0B01E837C5B0082A6A3 /* HyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0AF1E837C5B0082A6A3 /* HyperlinkButton.m */; };
 		15A1B0B41E837C800082A6A3 /* TTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0B31E837C800082A6A3 /* TTAlertView.m */; };
 		15A1B0B81E837CC10082A6A3 /* TTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0B71E837CC10082A6A3 /* TTTextView.m */; };
-		15A1B0BC1E837D0C0082A6A3 /* TTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0BB1E837D0C0082A6A3 /* TTWebView.m */; };
-		15A1B0BF1E837DF60082A6A3 /* TTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0BE1E837DF60082A6A3 /* TTScrollView.m */; };
-		15A1B0C21E837E480082A6A3 /* TTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0C11E837E480082A6A3 /* TTStarView.m */; };
 		15A1B0D11E83809B0082A6A3 /* WaterfallCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0CC1E83809B0082A6A3 /* WaterfallCollectionViewLayout.m */; };
 		15A1B0D21E83809B0082A6A3 /* WaterfallDecorationReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0CE1E83809B0082A6A3 /* WaterfallDecorationReusableView.m */; };
 		15A1B0D71E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0D61E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m */; };
@@ -202,6 +205,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1501842C1E8D18BC00788E47 /* HyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkButton.h; sourceTree = "<group>"; };
+		1501842D1E8D18BC00788E47 /* HyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkButton.m; sourceTree = "<group>"; };
+		1501842F1E8D18BC00788E47 /* TTContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTContentScrollView.h; sourceTree = "<group>"; };
+		150184301E8D18BC00788E47 /* TTContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTContentScrollView.m; sourceTree = "<group>"; };
+		150184311E8D18BC00788E47 /* TTScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScrollView.h; sourceTree = "<group>"; };
+		150184321E8D18BC00788E47 /* TTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollView.m; sourceTree = "<group>"; };
+		150184331E8D18BC00788E47 /* TTTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTopScrollView.h; sourceTree = "<group>"; };
+		150184341E8D18BC00788E47 /* TTTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTopScrollView.m; sourceTree = "<group>"; };
+		150184391E8D18BC00788E47 /* TTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextView.h; sourceTree = "<group>"; };
+		1501843A1E8D18BC00788E47 /* TTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextView.m; sourceTree = "<group>"; };
+		1501843C1E8D18BC00788E47 /* TTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWebView.h; sourceTree = "<group>"; };
+		1501843D1E8D18BC00788E47 /* TTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWebView.m; sourceTree = "<group>"; };
+		1501845A1E8D19A800788E47 /* CarouselManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselManager.h; sourceTree = "<group>"; };
+		1501845B1E8D19A800788E47 /* CarouselManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselManager.m; sourceTree = "<group>"; };
+		1501845E1E8D19A800788E47 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		1501845F1E8D19A800788E47 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		150184611E8D19A800788E47 /* TTBottomBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBottomBarView.h; sourceTree = "<group>"; };
+		150184621E8D19A800788E47 /* TTBottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBottomBarView.m; sourceTree = "<group>"; };
+		150184641E8D19A800788E47 /* TTStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTStarView.h; sourceTree = "<group>"; };
+		150184651E8D19A800788E47 /* TTStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTStarView.m; sourceTree = "<group>"; };
 		1527C0F51E82175200E828A5 /* TTAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAuthInfo.h; sourceTree = "<group>"; };
 		1527C0F61E82175200E828A5 /* TTAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAuthInfo.m; sourceTree = "<group>"; };
 		1527C0F91E8217A300E828A5 /* ShareContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentInfo.h; sourceTree = "<group>"; };
@@ -352,10 +375,6 @@
 		15A1AF241E8284FE0082A6A3 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		15A1AF251E8284FE0082A6A3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		15A1AF261E8284FE0082A6A3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		15A1B04F1E8285E60082A6A3 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		15A1B0501E8285E60082A6A3 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		15A1B05E1E828DE50082A6A3 /* TTBottomBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBottomBarView.h; sourceTree = "<group>"; };
-		15A1B05F1E828DE50082A6A3 /* TTBottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBottomBarView.m; sourceTree = "<group>"; };
 		15A1B06B1E8292AB0082A6A3 /* TTMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreFooterView.h; sourceTree = "<group>"; };
 		15A1B06C1E8292AB0082A6A3 /* TTMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreFooterView.m; sourceTree = "<group>"; };
 		15A1B06E1E8292B30082A6A3 /* TTMoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMoreFooterView.xib; sourceTree = "<group>"; };
@@ -375,22 +394,12 @@
 		15A1B0931E82A1300082A6A3 /* TTCollectionViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionViewBaseCell.m; sourceTree = "<group>"; };
 		15A1B09A1E82A2620082A6A3 /* Annotation_TTTableView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTTableView.strings; sourceTree = "<group>"; };
 		15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTCollectionView.strings; sourceTree = "<group>"; };
-		15A1B0A71E837C2C0082A6A3 /* TTContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTContentScrollView.h; sourceTree = "<group>"; };
-		15A1B0A81E837C2C0082A6A3 /* TTContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTContentScrollView.m; sourceTree = "<group>"; };
-		15A1B0A91E837C2C0082A6A3 /* TTTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTopScrollView.h; sourceTree = "<group>"; };
-		15A1B0AA1E837C2C0082A6A3 /* TTTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTopScrollView.m; sourceTree = "<group>"; };
 		15A1B0AE1E837C5B0082A6A3 /* HyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkButton.h; sourceTree = "<group>"; };
 		15A1B0AF1E837C5B0082A6A3 /* HyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkButton.m; sourceTree = "<group>"; };
 		15A1B0B21E837C800082A6A3 /* TTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertView.h; sourceTree = "<group>"; };
 		15A1B0B31E837C800082A6A3 /* TTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertView.m; sourceTree = "<group>"; };
 		15A1B0B61E837CC10082A6A3 /* TTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextView.h; sourceTree = "<group>"; };
 		15A1B0B71E837CC10082A6A3 /* TTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextView.m; sourceTree = "<group>"; };
-		15A1B0BA1E837D0C0082A6A3 /* TTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWebView.h; sourceTree = "<group>"; };
-		15A1B0BB1E837D0C0082A6A3 /* TTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWebView.m; sourceTree = "<group>"; };
-		15A1B0BD1E837DF60082A6A3 /* TTScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScrollView.h; sourceTree = "<group>"; };
-		15A1B0BE1E837DF60082A6A3 /* TTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollView.m; sourceTree = "<group>"; };
-		15A1B0C01E837E480082A6A3 /* TTStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTStarView.h; sourceTree = "<group>"; };
-		15A1B0C11E837E480082A6A3 /* TTStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTStarView.m; sourceTree = "<group>"; };
 		15A1B0CB1E83809B0082A6A3 /* WaterfallCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCollectionViewLayout.h; sourceTree = "<group>"; };
 		15A1B0CC1E83809B0082A6A3 /* WaterfallCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewLayout.m; sourceTree = "<group>"; };
 		15A1B0CD1E83809B0082A6A3 /* WaterfallDecorationReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallDecorationReusableView.h; sourceTree = "<group>"; };
@@ -584,6 +593,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1501842B1E8D18BC00788E47 /* TTButton */ = {
+			isa = PBXGroup;
+			children = (
+				1501842C1E8D18BC00788E47 /* HyperlinkButton.h */,
+				1501842D1E8D18BC00788E47 /* HyperlinkButton.m */,
+			);
+			path = TTButton;
+			sourceTree = "<group>";
+		};
+		1501842E1E8D18BC00788E47 /* TTScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				1501842F1E8D18BC00788E47 /* TTContentScrollView.h */,
+				150184301E8D18BC00788E47 /* TTContentScrollView.m */,
+				150184311E8D18BC00788E47 /* TTScrollView.h */,
+				150184321E8D18BC00788E47 /* TTScrollView.m */,
+				150184331E8D18BC00788E47 /* TTTopScrollView.h */,
+				150184341E8D18BC00788E47 /* TTTopScrollView.m */,
+			);
+			path = TTScrollView;
+			sourceTree = "<group>";
+		};
+		150184381E8D18BC00788E47 /* TTTextView */ = {
+			isa = PBXGroup;
+			children = (
+				150184391E8D18BC00788E47 /* TTTextView.h */,
+				1501843A1E8D18BC00788E47 /* TTTextView.m */,
+			);
+			path = TTTextView;
+			sourceTree = "<group>";
+		};
+		1501843B1E8D18BC00788E47 /* TTWebView */ = {
+			isa = PBXGroup;
+			children = (
+				1501843C1E8D18BC00788E47 /* TTWebView.h */,
+				1501843D1E8D18BC00788E47 /* TTWebView.m */,
+			);
+			path = TTWebView;
+			sourceTree = "<group>";
+		};
+		150184591E8D19A800788E47 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				1501845A1E8D19A800788E47 /* CarouselManager.h */,
+				1501845B1E8D19A800788E47 /* CarouselManager.m */,
+				1501845C1E8D19A800788E47 /* Support */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		1501845C1E8D19A800788E47 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1501845D1E8D19A800788E47 /* iCarousel */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1501845D1E8D19A800788E47 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				1501845E1E8D19A800788E47 /* iCarousel.h */,
+				1501845F1E8D19A800788E47 /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		150184601E8D19A800788E47 /* TTBottomBarView */ = {
+			isa = PBXGroup;
+			children = (
+				150184611E8D19A800788E47 /* TTBottomBarView.h */,
+				150184621E8D19A800788E47 /* TTBottomBarView.m */,
+			);
+			path = TTBottomBarView;
+			sourceTree = "<group>";
+		};
+		150184631E8D19A800788E47 /* TTStarView */ = {
+			isa = PBXGroup;
+			children = (
+				150184641E8D19A800788E47 /* TTStarView.h */,
+				150184651E8D19A800788E47 /* TTStarView.m */,
+			);
+			path = TTStarView;
+			sourceTree = "<group>";
+		};
 		1527C0F41E82173A00E828A5 /* ShareModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -961,36 +1055,19 @@
 		15A1B04C1E8285650082A6A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				15A1B0B91E837D010082A6A3 /* TTWebView */,
-				15A1B04D1E8285E60082A6A3 /* Support */,
+				150184591E8D19A800788E47 /* Carousel */,
+				150184601E8D19A800788E47 /* TTBottomBarView */,
+				150184631E8D19A800788E47 /* TTStarView */,
+				1501842B1E8D18BC00788E47 /* TTButton */,
+				1501842E1E8D18BC00788E47 /* TTScrollView */,
+				150184381E8D18BC00788E47 /* TTTextView */,
+				1501843B1E8D18BC00788E47 /* TTWebView */,
 				15A1B0B51E837CAB0082A6A3 /* TTTextView */,
 				15A1B0B11E837C670082A6A3 /* TTAlertView */,
 				15A1B0AD1E837C390082A6A3 /* TTButton */,
-				15A1B0A61E837C1B0082A6A3 /* TTScrollView */,
 				15A1B0611E8291DE0082A6A3 /* TableViewAndCollection */,
-				15A1B05E1E828DE50082A6A3 /* TTBottomBarView.h */,
-				15A1B05F1E828DE50082A6A3 /* TTBottomBarView.m */,
-				15A1B0C01E837E480082A6A3 /* TTStarView.h */,
-				15A1B0C11E837E480082A6A3 /* TTStarView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		15A1B04D1E8285E60082A6A3 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B04E1E8285E60082A6A3 /* iCarousel */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		15A1B04E1E8285E60082A6A3 /* iCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B04F1E8285E60082A6A3 /* iCarousel.h */,
-				15A1B0501E8285E60082A6A3 /* iCarousel.m */,
-			);
-			path = iCarousel;
 			sourceTree = "<group>";
 		};
 		15A1B0611E8291DE0082A6A3 /* TableViewAndCollection */ = {
@@ -1049,19 +1126,6 @@
 			path = TTCollectionView;
 			sourceTree = "<group>";
 		};
-		15A1B0A61E837C1B0082A6A3 /* TTScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0BD1E837DF60082A6A3 /* TTScrollView.h */,
-				15A1B0BE1E837DF60082A6A3 /* TTScrollView.m */,
-				15A1B0A91E837C2C0082A6A3 /* TTTopScrollView.h */,
-				15A1B0AA1E837C2C0082A6A3 /* TTTopScrollView.m */,
-				15A1B0A71E837C2C0082A6A3 /* TTContentScrollView.h */,
-				15A1B0A81E837C2C0082A6A3 /* TTContentScrollView.m */,
-			);
-			path = TTScrollView;
-			sourceTree = "<group>";
-		};
 		15A1B0AD1E837C390082A6A3 /* TTButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1088,15 +1152,6 @@
 				15A1B0B71E837CC10082A6A3 /* TTTextView.m */,
 			);
 			path = TTTextView;
-			sourceTree = "<group>";
-		};
-		15A1B0B91E837D010082A6A3 /* TTWebView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0BA1E837D0C0082A6A3 /* TTWebView.h */,
-				15A1B0BB1E837D0C0082A6A3 /* TTWebView.m */,
-			);
-			path = TTWebView;
 			sourceTree = "<group>";
 		};
 		15A1B0C61E837FBA0082A6A3 /* CustomLayout */ = {
@@ -1609,6 +1664,7 @@
 				15A0D8E51E81681F003A109E /* MJFoundation.m in Sources */,
 				153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */,
 				2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */,
+				150184661E8D19A800788E47 /* CarouselManager.m in Sources */,
 				15A1B17C1E83C2FF0082A6A3 /* zip.c in Sources */,
 				15A1B0EC1E8381670082A6A3 /* UIAlertView+MyAlertView.m in Sources */,
 				15A1AF2C1E8284FE0082A6A3 /* SDWebImageCompat.m in Sources */,
@@ -1617,7 +1673,6 @@
 				153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */,
 				15A1B1181E83A9020082A6A3 /* TAPageControl.m in Sources */,
 				1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */,
-				15A1B0C21E837E480082A6A3 /* TTStarView.m in Sources */,
 				15A1B0E21E83813D0082A6A3 /* NSDictionary+PrintChinese.m in Sources */,
 				15A1B08F1E82A12B0082A6A3 /* TTTableViewBaseCell.m in Sources */,
 				15A0D8EC1E81681F003A109E /* NSObject+MJProperty.m in Sources */,
@@ -1625,12 +1680,13 @@
 				1527C1271E8217B900E828A5 /* WXAuthRequest.m in Sources */,
 				15A1B0EA1E8381670082A6A3 /* AlertViewRecorder.m in Sources */,
 				15A1B1291E83AA730082A6A3 /* PopView.m in Sources */,
+				150184541E8D18BC00788E47 /* TTScrollView.m in Sources */,
 				15A1B1701E83C2FF0082A6A3 /* aeskey.c in Sources */,
 				15A1B1041E83A7DF0082A6A3 /* WHUCalendarYMSelectView.m in Sources */,
 				153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */,
 				15A1AF331E8284FE0082A6A3 /* UIImage+GIF.m in Sources */,
+				150184671E8D19A800788E47 /* iCarousel.m in Sources */,
 				15A0D8C11E8162D2003A109E /* TTKit.m in Sources */,
-				15A1B0601E828DE50082A6A3 /* TTBottomBarView.m in Sources */,
 				15A1B16F1E83C2FF0082A6A3 /* aescrypt.c in Sources */,
 				1527C1201E8217B800E828A5 /* SinaAuthRequest.m in Sources */,
 				15A1B11F1E83A9AE0082A6A3 /* NetWorkReachability.m in Sources */,
@@ -1641,8 +1697,10 @@
 				1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */,
 				15A1B1271E83AA730082A6A3 /* FourPingTransition.m in Sources */,
 				15A1B0741E8292DC0082A6A3 /* TTRefreshHeaderView.m in Sources */,
+				150184691E8D19A800788E47 /* TTStarView.m in Sources */,
 				15A1B1011E83A7DF0082A6A3 /* WHUCalendarItem.m in Sources */,
 				15A1B08E1E82A12B0082A6A3 /* TTTableView.m in Sources */,
+				150184531E8D18BC00788E47 /* TTContentScrollView.m in Sources */,
 				15A1AF371E8284FE0082A6A3 /* UIImageView+WebCache.m in Sources */,
 				15A1B0B01E837C5B0082A6A3 /* HyperlinkButton.m in Sources */,
 				15A1B0D71E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m in Sources */,
@@ -1655,12 +1713,13 @@
 				153954341E64272B00A20FB9 /* ViewController.m in Sources */,
 				2DEEE9251E73DCF10089CE1F /* AFSecurityPolicy.m in Sources */,
 				15A1B0FE1E83A7DF0082A6A3 /* WHUCalendarCal.m in Sources */,
+				150184681E8D19A800788E47 /* TTBottomBarView.m in Sources */,
 				15A1B0E11E83813D0082A6A3 /* NSArray+PrintChinese.m in Sources */,
 				15A1B1711E83C2FF0082A6A3 /* aestab.c in Sources */,
 				2DEEE9281E73DCF10089CE1F /* AFURLResponseSerialization.m in Sources */,
 				15A1B1161E83A9020082A6A3 /* TAAnimatedDotView.m in Sources */,
+				150184571E8D18BC00788E47 /* TTTextView.m in Sources */,
 				15A1B0861E829BD30082A6A3 /* TestCell.m in Sources */,
-				15A1B0BF1E837DF60082A6A3 /* TTScrollView.m in Sources */,
 				15A1B17B1E83C2FF0082A6A3 /* unzip.c in Sources */,
 				15A1B1281E83AA730082A6A3 /* PopAnimationView.m in Sources */,
 				15A1B0D21E83809B0082A6A3 /* WaterfallDecorationReusableView.m in Sources */,
@@ -1685,11 +1744,11 @@
 				15A1B11A1E83A9020082A6A3 /* SDCycleScrollView.m in Sources */,
 				15A0D8E81E81681F003A109E /* MJPropertyType.m in Sources */,
 				2DEEE9241E73DCF10089CE1F /* AFNetworkReachabilityManager.m in Sources */,
+				150184581E8D18BC00788E47 /* TTWebView.m in Sources */,
 				15A1AF341E8284FE0082A6A3 /* UIImage+MultiFormat.m in Sources */,
 				15A1B1761E83C2FF0082A6A3 /* pwd2key.c in Sources */,
 				1527C1241E8217B900E828A5 /* TTTencentCenter.m in Sources */,
 				15A1B1741E83C2FF0082A6A3 /* hmac.c in Sources */,
-				15A1B0BC1E837D0C0082A6A3 /* TTWebView.m in Sources */,
 				15A1B1021E83A7DF0082A6A3 /* WHUCalendarPopView.m in Sources */,
 				15A1AF2E1E8284FE0082A6A3 /* SDWebImageDownloader.m in Sources */,
 				153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */,
@@ -1699,9 +1758,9 @@
 				15A1B1771E83C2FF0082A6A3 /* sha1.c in Sources */,
 				15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */,
 				15A1B0941E82A1300082A6A3 /* TTCollectionView.m in Sources */,
+				150184521E8D18BC00788E47 /* HyperlinkButton.m in Sources */,
 				153954311E64272B00A20FB9 /* AppDelegate.m in Sources */,
 				15A1AF2F1E8284FE0082A6A3 /* SDWebImageDownloaderOperation.m in Sources */,
-				15A1B0AC1E837C2C0082A6A3 /* TTTopScrollView.m in Sources */,
 				15A1B1861E83C4E60082A6A3 /* TTLogManager.m in Sources */,
 				1527C1211E8217B800E828A5 /* TTSinaCenter.m in Sources */,
 				15A0D8E41E81681F003A109E /* MJExtensionConst.m in Sources */,
@@ -1713,18 +1772,17 @@
 				15A1AF351E8284FE0082A6A3 /* UIImage+WebP.m in Sources */,
 				15A1AF361E8284FE0082A6A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				15A0D96B1E816B26003A109E /* TTBaseShareCenter.m in Sources */,
-				15A1B0AB1E837C2C0082A6A3 /* TTContentScrollView.m in Sources */,
 				15A1B1721E83C2FF0082A6A3 /* entropy.c in Sources */,
 				15A0D8ED1E81681F003A109E /* NSString+MJExtension.m in Sources */,
 				153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */,
 				15A1B17D1E83C2FF0082A6A3 /* SSZipArchive.m in Sources */,
 				15A1B06D1E8292AB0082A6A3 /* TTMoreFooterView.m in Sources */,
-				15A1B0511E8285E60082A6A3 /* iCarousel.m in Sources */,
 				15A1AF291E8284FE0082A6A3 /* NSImage+WebCache.m in Sources */,
 				15A0D8EE1E81681F003A109E /* TTBaseModel.m in Sources */,
 				15A0D8E61E81681F003A109E /* MJProperty.m in Sources */,
 				15A0D8BF1E8162D2003A109E /* TTAudioTool.m in Sources */,
 				15A1AF2B1E8284FE0082A6A3 /* SDImageCacheConfig.m in Sources */,
+				150184551E8D18BC00788E47 /* TTTopScrollView.m in Sources */,
 				1527C1261E8217B900E828A5 /* TTWeChatCenter.m in Sources */,
 				2DEEE92C1E73E76C0089CE1F /* TTRequest.m in Sources */,
 				1539542E1E64272B00A20FB9 /* main.m in Sources */,
