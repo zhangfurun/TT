@@ -751,9 +751,9 @@
 		150184C51E8D1C3800788E47 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
+				150184C81E8D1C3800788E47 /* Support */,
 				150184C61E8D1C3800788E47 /* CarouselManager.h */,
 				150184C71E8D1C3800788E47 /* CarouselManager.m */,
-				150184C81E8D1C3800788E47 /* Support */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
