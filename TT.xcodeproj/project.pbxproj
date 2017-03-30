@@ -7,16 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		150184521E8D18BC00788E47 /* HyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501842D1E8D18BC00788E47 /* HyperlinkButton.m */; };
-		150184531E8D18BC00788E47 /* TTContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184301E8D18BC00788E47 /* TTContentScrollView.m */; };
-		150184541E8D18BC00788E47 /* TTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184321E8D18BC00788E47 /* TTScrollView.m */; };
-		150184551E8D18BC00788E47 /* TTTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184341E8D18BC00788E47 /* TTTopScrollView.m */; };
-		150184571E8D18BC00788E47 /* TTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501843A1E8D18BC00788E47 /* TTTextView.m */; };
-		150184581E8D18BC00788E47 /* TTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501843D1E8D18BC00788E47 /* TTWebView.m */; };
-		150184661E8D19A800788E47 /* CarouselManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501845B1E8D19A800788E47 /* CarouselManager.m */; };
-		150184671E8D19A800788E47 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501845F1E8D19A800788E47 /* iCarousel.m */; };
-		150184681E8D19A800788E47 /* TTBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184621E8D19A800788E47 /* TTBottomBarView.m */; };
-		150184691E8D19A800788E47 /* TTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184651E8D19A800788E47 /* TTStarView.m */; };
+		150184AC1E8D1A3000788E47 /* TTMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184721E8D1A3000788E47 /* TTMoreFooterView.m */; };
+		150184AD1E8D1A3000788E47 /* TTMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 150184731E8D1A3000788E47 /* TTMoreFooterView.xib */; };
+		150184AE1E8D1A3000788E47 /* TTRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184761E8D1A3000788E47 /* TTRefreshHeaderView.m */; };
+		150184AF1E8D1A3000788E47 /* TTRefreshHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 150184771E8D1A3000788E47 /* TTRefreshHeaderView.xib */; };
+		150184B01E8D1A3000788E47 /* Annotation_TTCollectionView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 150184791E8D1A3000788E47 /* Annotation_TTCollectionView.strings */; };
+		150184B11E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501847D1E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.m */; };
+		150184B21E8D1A3000788E47 /* WaterfallCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184801E8D1A3000788E47 /* WaterfallCollectionViewLayout.m */; };
+		150184B31E8D1A3000788E47 /* WaterfallDecorationReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184821E8D1A3000788E47 /* WaterfallDecorationReusableView.m */; };
+		150184B41E8D1A3000788E47 /* TTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184841E8D1A3000788E47 /* TTCollectionView.m */; };
+		150184B51E8D1A3000788E47 /* TTCollectionViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184861E8D1A3000788E47 /* TTCollectionViewBaseCell.m */; };
+		150184B61E8D1A3000788E47 /* Annotation_TTTableView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 150184881E8D1A3000788E47 /* Annotation_TTTableView.strings */; };
+		150184B71E8D1A3000788E47 /* TTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501848A1E8D1A3000788E47 /* TTTableView.m */; };
+		150184B81E8D1A3000788E47 /* TTTableViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501848C1E8D1A3000788E47 /* TTTableViewBaseCell.m */; };
+		150184B91E8D1A3000788E47 /* AlertViewRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184901E8D1A3000788E47 /* AlertViewRecorder.m */; };
+		150184BA1E8D1A3000788E47 /* FRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184921E8D1A3000788E47 /* FRAlertView.m */; };
+		150184BB1E8D1A3000788E47 /* UIAlertView+MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184941E8D1A3000788E47 /* UIAlertView+MyAlertView.m */; };
+		150184BC1E8D1A3000788E47 /* TTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184961E8D1A3000788E47 /* TTAlertView.m */; };
+		150184BE1E8D1A3000788E47 /* HyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501849B1E8D1A3000788E47 /* HyperlinkButton.m */; };
+		150184BF1E8D1A3000788E47 /* TTContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1501849E1E8D1A3000788E47 /* TTContentScrollView.m */; };
+		150184C01E8D1A3000788E47 /* TTScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184A01E8D1A3000788E47 /* TTScrollView.m */; };
+		150184C11E8D1A3000788E47 /* TTTopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184A21E8D1A3000788E47 /* TTTopScrollView.m */; };
+		150184C31E8D1A3000788E47 /* TTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184A71E8D1A3000788E47 /* TTTextView.m */; };
+		150184C41E8D1A3000788E47 /* TTWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184AA1E8D1A3000788E47 /* TTWebView.m */; };
+		150184D21E8D1C3800788E47 /* CarouselManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184C71E8D1C3800788E47 /* CarouselManager.m */; };
+		150184D31E8D1C3800788E47 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184CB1E8D1C3800788E47 /* iCarousel.m */; };
+		150184D41E8D1C3800788E47 /* TTBottomBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184CE1E8D1C3800788E47 /* TTBottomBarView.m */; };
+		150184D51E8D1C3800788E47 /* TTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184D11E8D1C3800788E47 /* TTStarView.m */; };
 		1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0F61E82175200E828A5 /* TTAuthInfo.m */; };
 		1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0FA1E8217A300E828A5 /* ShareContentInfo.m */; };
 		1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1527C0FE1E8217B800E828A5 /* libWeiboSDK.a */; };
@@ -91,30 +108,11 @@
 		15A1AF371E8284FE0082A6A3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1AF221E8284FE0082A6A3 /* UIImageView+WebCache.m */; };
 		15A1AF381E8284FE0082A6A3 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1AF241E8284FE0082A6A3 /* UIView+WebCache.m */; };
 		15A1AF391E8284FE0082A6A3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1AF261E8284FE0082A6A3 /* UIView+WebCacheOperation.m */; };
-		15A1B06D1E8292AB0082A6A3 /* TTMoreFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B06C1E8292AB0082A6A3 /* TTMoreFooterView.m */; };
-		15A1B06F1E8292B30082A6A3 /* TTMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B06E1E8292B30082A6A3 /* TTMoreFooterView.xib */; };
-		15A1B0711E8292CD0082A6A3 /* TTRefreshHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B0701E8292CD0082A6A3 /* TTRefreshHeaderView.xib */; };
-		15A1B0741E8292DC0082A6A3 /* TTRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0731E8292DC0082A6A3 /* TTRefreshHeaderView.m */; };
 		15A1B0861E829BD30082A6A3 /* TestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0841E829BD30082A6A3 /* TestCell.m */; };
 		15A1B0871E829BD30082A6A3 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B0851E829BD30082A6A3 /* TestCell.xib */; };
-		15A1B08E1E82A12B0082A6A3 /* TTTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B08B1E82A12B0082A6A3 /* TTTableView.m */; };
-		15A1B08F1E82A12B0082A6A3 /* TTTableViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B08D1E82A12B0082A6A3 /* TTTableViewBaseCell.m */; };
-		15A1B0941E82A1300082A6A3 /* TTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0911E82A1300082A6A3 /* TTCollectionView.m */; };
-		15A1B0951E82A1300082A6A3 /* TTCollectionViewBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0931E82A1300082A6A3 /* TTCollectionViewBaseCell.m */; };
-		15A1B09B1E82A2620082A6A3 /* Annotation_TTTableView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B09A1E82A2620082A6A3 /* Annotation_TTTableView.strings */; };
-		15A1B09D1E82AF720082A6A3 /* Annotation_TTCollectionView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */; };
-		15A1B0B01E837C5B0082A6A3 /* HyperlinkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0AF1E837C5B0082A6A3 /* HyperlinkButton.m */; };
-		15A1B0B41E837C800082A6A3 /* TTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0B31E837C800082A6A3 /* TTAlertView.m */; };
-		15A1B0B81E837CC10082A6A3 /* TTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0B71E837CC10082A6A3 /* TTTextView.m */; };
-		15A1B0D11E83809B0082A6A3 /* WaterfallCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0CC1E83809B0082A6A3 /* WaterfallCollectionViewLayout.m */; };
-		15A1B0D21E83809B0082A6A3 /* WaterfallDecorationReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0CE1E83809B0082A6A3 /* WaterfallDecorationReusableView.m */; };
-		15A1B0D71E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0D61E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m */; };
 		15A1B0DB1E83812E0082A6A3 /* MLImageCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0DA1E83812E0082A6A3 /* MLImageCrop.m */; };
 		15A1B0E11E83813D0082A6A3 /* NSArray+PrintChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0DE1E83813D0082A6A3 /* NSArray+PrintChinese.m */; };
 		15A1B0E21E83813D0082A6A3 /* NSDictionary+PrintChinese.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0E01E83813D0082A6A3 /* NSDictionary+PrintChinese.m */; };
-		15A1B0EA1E8381670082A6A3 /* AlertViewRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0E51E8381670082A6A3 /* AlertViewRecorder.m */; };
-		15A1B0EB1E8381670082A6A3 /* FRAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0E71E8381670082A6A3 /* FRAlertView.m */; };
-		15A1B0EC1E8381670082A6A3 /* UIAlertView+MyAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0E91E8381670082A6A3 /* UIAlertView+MyAlertView.m */; };
 		15A1B0FE1E83A7DF0082A6A3 /* WHUCalendarCal.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0F01E83A7DF0082A6A3 /* WHUCalendarCal.m */; };
 		15A1B0FF1E83A7DF0082A6A3 /* WHUCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0F21E83A7DF0082A6A3 /* WHUCalendarCell.m */; };
 		15A1B1001E83A7DF0082A6A3 /* WHUCalendarFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A1B0F41E83A7DF0082A6A3 /* WHUCalendarFlowLayout.m */; };
@@ -204,26 +202,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1501842C1E8D18BC00788E47 /* HyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkButton.h; sourceTree = "<group>"; };
-		1501842D1E8D18BC00788E47 /* HyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkButton.m; sourceTree = "<group>"; };
-		1501842F1E8D18BC00788E47 /* TTContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTContentScrollView.h; sourceTree = "<group>"; };
-		150184301E8D18BC00788E47 /* TTContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTContentScrollView.m; sourceTree = "<group>"; };
-		150184311E8D18BC00788E47 /* TTScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScrollView.h; sourceTree = "<group>"; };
-		150184321E8D18BC00788E47 /* TTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollView.m; sourceTree = "<group>"; };
-		150184331E8D18BC00788E47 /* TTTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTopScrollView.h; sourceTree = "<group>"; };
-		150184341E8D18BC00788E47 /* TTTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTopScrollView.m; sourceTree = "<group>"; };
-		150184391E8D18BC00788E47 /* TTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextView.h; sourceTree = "<group>"; };
-		1501843A1E8D18BC00788E47 /* TTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextView.m; sourceTree = "<group>"; };
-		1501843C1E8D18BC00788E47 /* TTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWebView.h; sourceTree = "<group>"; };
-		1501843D1E8D18BC00788E47 /* TTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWebView.m; sourceTree = "<group>"; };
-		1501845A1E8D19A800788E47 /* CarouselManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselManager.h; sourceTree = "<group>"; };
-		1501845B1E8D19A800788E47 /* CarouselManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselManager.m; sourceTree = "<group>"; };
-		1501845E1E8D19A800788E47 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
-		1501845F1E8D19A800788E47 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
-		150184611E8D19A800788E47 /* TTBottomBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBottomBarView.h; sourceTree = "<group>"; };
-		150184621E8D19A800788E47 /* TTBottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBottomBarView.m; sourceTree = "<group>"; };
-		150184641E8D19A800788E47 /* TTStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTStarView.h; sourceTree = "<group>"; };
-		150184651E8D19A800788E47 /* TTStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTStarView.m; sourceTree = "<group>"; };
+		150184711E8D1A3000788E47 /* TTMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreFooterView.h; sourceTree = "<group>"; };
+		150184721E8D1A3000788E47 /* TTMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreFooterView.m; sourceTree = "<group>"; };
+		150184731E8D1A3000788E47 /* TTMoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMoreFooterView.xib; sourceTree = "<group>"; };
+		150184751E8D1A3000788E47 /* TTRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRefreshHeaderView.h; sourceTree = "<group>"; };
+		150184761E8D1A3000788E47 /* TTRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRefreshHeaderView.m; sourceTree = "<group>"; };
+		150184771E8D1A3000788E47 /* TTRefreshHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTRefreshHeaderView.xib; sourceTree = "<group>"; };
+		150184791E8D1A3000788E47 /* Annotation_TTCollectionView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTCollectionView.strings; sourceTree = "<group>"; };
+		1501847C1E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		1501847D1E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		1501847F1E8D1A3000788E47 /* WaterfallCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCollectionViewLayout.h; sourceTree = "<group>"; };
+		150184801E8D1A3000788E47 /* WaterfallCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewLayout.m; sourceTree = "<group>"; };
+		150184811E8D1A3000788E47 /* WaterfallDecorationReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallDecorationReusableView.h; sourceTree = "<group>"; };
+		150184821E8D1A3000788E47 /* WaterfallDecorationReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallDecorationReusableView.m; sourceTree = "<group>"; };
+		150184831E8D1A3000788E47 /* TTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollectionView.h; sourceTree = "<group>"; };
+		150184841E8D1A3000788E47 /* TTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionView.m; sourceTree = "<group>"; };
+		150184851E8D1A3000788E47 /* TTCollectionViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollectionViewBaseCell.h; sourceTree = "<group>"; };
+		150184861E8D1A3000788E47 /* TTCollectionViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionViewBaseCell.m; sourceTree = "<group>"; };
+		150184881E8D1A3000788E47 /* Annotation_TTTableView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTTableView.strings; sourceTree = "<group>"; };
+		150184891E8D1A3000788E47 /* TTTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTableView.h; sourceTree = "<group>"; };
+		1501848A1E8D1A3000788E47 /* TTTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableView.m; sourceTree = "<group>"; };
+		1501848B1E8D1A3000788E47 /* TTTableViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTableViewBaseCell.h; sourceTree = "<group>"; };
+		1501848C1E8D1A3000788E47 /* TTTableViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableViewBaseCell.m; sourceTree = "<group>"; };
+		1501848F1E8D1A3000788E47 /* AlertViewRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewRecorder.h; sourceTree = "<group>"; };
+		150184901E8D1A3000788E47 /* AlertViewRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewRecorder.m; sourceTree = "<group>"; };
+		150184911E8D1A3000788E47 /* FRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRAlertView.h; sourceTree = "<group>"; };
+		150184921E8D1A3000788E47 /* FRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRAlertView.m; sourceTree = "<group>"; };
+		150184931E8D1A3000788E47 /* UIAlertView+MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MyAlertView.h"; sourceTree = "<group>"; };
+		150184941E8D1A3000788E47 /* UIAlertView+MyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MyAlertView.m"; sourceTree = "<group>"; };
+		150184951E8D1A3000788E47 /* TTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertView.h; sourceTree = "<group>"; };
+		150184961E8D1A3000788E47 /* TTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertView.m; sourceTree = "<group>"; };
+		1501849A1E8D1A3000788E47 /* HyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkButton.h; sourceTree = "<group>"; };
+		1501849B1E8D1A3000788E47 /* HyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkButton.m; sourceTree = "<group>"; };
+		1501849D1E8D1A3000788E47 /* TTContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTContentScrollView.h; sourceTree = "<group>"; };
+		1501849E1E8D1A3000788E47 /* TTContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTContentScrollView.m; sourceTree = "<group>"; };
+		1501849F1E8D1A3000788E47 /* TTScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTScrollView.h; sourceTree = "<group>"; };
+		150184A01E8D1A3000788E47 /* TTScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTScrollView.m; sourceTree = "<group>"; };
+		150184A11E8D1A3000788E47 /* TTTopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTopScrollView.h; sourceTree = "<group>"; };
+		150184A21E8D1A3000788E47 /* TTTopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTopScrollView.m; sourceTree = "<group>"; };
+		150184A61E8D1A3000788E47 /* TTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextView.h; sourceTree = "<group>"; };
+		150184A71E8D1A3000788E47 /* TTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextView.m; sourceTree = "<group>"; };
+		150184A91E8D1A3000788E47 /* TTWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTWebView.h; sourceTree = "<group>"; };
+		150184AA1E8D1A3000788E47 /* TTWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTWebView.m; sourceTree = "<group>"; };
+		150184C61E8D1C3800788E47 /* CarouselManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarouselManager.h; sourceTree = "<group>"; };
+		150184C71E8D1C3800788E47 /* CarouselManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarouselManager.m; sourceTree = "<group>"; };
+		150184CA1E8D1C3800788E47 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		150184CB1E8D1C3800788E47 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		150184CD1E8D1C3800788E47 /* TTBottomBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBottomBarView.h; sourceTree = "<group>"; };
+		150184CE1E8D1C3800788E47 /* TTBottomBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBottomBarView.m; sourceTree = "<group>"; };
+		150184D01E8D1C3800788E47 /* TTStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTStarView.h; sourceTree = "<group>"; };
+		150184D11E8D1C3800788E47 /* TTStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTStarView.m; sourceTree = "<group>"; };
 		1527C0F51E82175200E828A5 /* TTAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAuthInfo.h; sourceTree = "<group>"; };
 		1527C0F61E82175200E828A5 /* TTAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAuthInfo.m; sourceTree = "<group>"; };
 		1527C0F91E8217A300E828A5 /* ShareContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentInfo.h; sourceTree = "<group>"; };
@@ -374,49 +402,15 @@
 		15A1AF241E8284FE0082A6A3 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		15A1AF251E8284FE0082A6A3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		15A1AF261E8284FE0082A6A3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		15A1B06B1E8292AB0082A6A3 /* TTMoreFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMoreFooterView.h; sourceTree = "<group>"; };
-		15A1B06C1E8292AB0082A6A3 /* TTMoreFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMoreFooterView.m; sourceTree = "<group>"; };
-		15A1B06E1E8292B30082A6A3 /* TTMoreFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMoreFooterView.xib; sourceTree = "<group>"; };
-		15A1B0701E8292CD0082A6A3 /* TTRefreshHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTRefreshHeaderView.xib; sourceTree = "<group>"; };
-		15A1B0721E8292DC0082A6A3 /* TTRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRefreshHeaderView.h; sourceTree = "<group>"; };
-		15A1B0731E8292DC0082A6A3 /* TTRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRefreshHeaderView.m; sourceTree = "<group>"; };
 		15A1B0831E829BD30082A6A3 /* TestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCell.h; sourceTree = "<group>"; };
 		15A1B0841E829BD30082A6A3 /* TestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCell.m; sourceTree = "<group>"; };
 		15A1B0851E829BD30082A6A3 /* TestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
-		15A1B08A1E82A12B0082A6A3 /* TTTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTableView.h; sourceTree = "<group>"; };
-		15A1B08B1E82A12B0082A6A3 /* TTTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableView.m; sourceTree = "<group>"; };
-		15A1B08C1E82A12B0082A6A3 /* TTTableViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTableViewBaseCell.h; sourceTree = "<group>"; };
-		15A1B08D1E82A12B0082A6A3 /* TTTableViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTableViewBaseCell.m; sourceTree = "<group>"; };
-		15A1B0901E82A1300082A6A3 /* TTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollectionView.h; sourceTree = "<group>"; };
-		15A1B0911E82A1300082A6A3 /* TTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionView.m; sourceTree = "<group>"; };
-		15A1B0921E82A1300082A6A3 /* TTCollectionViewBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollectionViewBaseCell.h; sourceTree = "<group>"; };
-		15A1B0931E82A1300082A6A3 /* TTCollectionViewBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionViewBaseCell.m; sourceTree = "<group>"; };
-		15A1B09A1E82A2620082A6A3 /* Annotation_TTTableView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTTableView.strings; sourceTree = "<group>"; };
-		15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTCollectionView.strings; sourceTree = "<group>"; };
-		15A1B0AE1E837C5B0082A6A3 /* HyperlinkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkButton.h; sourceTree = "<group>"; };
-		15A1B0AF1E837C5B0082A6A3 /* HyperlinkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkButton.m; sourceTree = "<group>"; };
-		15A1B0B21E837C800082A6A3 /* TTAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAlertView.h; sourceTree = "<group>"; };
-		15A1B0B31E837C800082A6A3 /* TTAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAlertView.m; sourceTree = "<group>"; };
-		15A1B0B61E837CC10082A6A3 /* TTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTextView.h; sourceTree = "<group>"; };
-		15A1B0B71E837CC10082A6A3 /* TTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTextView.m; sourceTree = "<group>"; };
-		15A1B0CB1E83809B0082A6A3 /* WaterfallCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallCollectionViewLayout.h; sourceTree = "<group>"; };
-		15A1B0CC1E83809B0082A6A3 /* WaterfallCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallCollectionViewLayout.m; sourceTree = "<group>"; };
-		15A1B0CD1E83809B0082A6A3 /* WaterfallDecorationReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfallDecorationReusableView.h; sourceTree = "<group>"; };
-		15A1B0CE1E83809B0082A6A3 /* WaterfallDecorationReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfallDecorationReusableView.m; sourceTree = "<group>"; };
-		15A1B0D51E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		15A1B0D61E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		15A1B0D91E83812E0082A6A3 /* MLImageCrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLImageCrop.h; sourceTree = "<group>"; };
 		15A1B0DA1E83812E0082A6A3 /* MLImageCrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLImageCrop.m; sourceTree = "<group>"; };
 		15A1B0DD1E83813D0082A6A3 /* NSArray+PrintChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PrintChinese.h"; sourceTree = "<group>"; };
 		15A1B0DE1E83813D0082A6A3 /* NSArray+PrintChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PrintChinese.m"; sourceTree = "<group>"; };
 		15A1B0DF1E83813D0082A6A3 /* NSDictionary+PrintChinese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+PrintChinese.h"; sourceTree = "<group>"; };
 		15A1B0E01E83813D0082A6A3 /* NSDictionary+PrintChinese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+PrintChinese.m"; sourceTree = "<group>"; };
-		15A1B0E41E8381670082A6A3 /* AlertViewRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewRecorder.h; sourceTree = "<group>"; };
-		15A1B0E51E8381670082A6A3 /* AlertViewRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewRecorder.m; sourceTree = "<group>"; };
-		15A1B0E61E8381670082A6A3 /* FRAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRAlertView.h; sourceTree = "<group>"; };
-		15A1B0E71E8381670082A6A3 /* FRAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRAlertView.m; sourceTree = "<group>"; };
-		15A1B0E81E8381670082A6A3 /* UIAlertView+MyAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MyAlertView.h"; sourceTree = "<group>"; };
-		15A1B0E91E8381670082A6A3 /* UIAlertView+MyAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MyAlertView.m"; sourceTree = "<group>"; };
 		15A1B0EF1E83A7DF0082A6A3 /* WHUCalendarCal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUCalendarCal.h; sourceTree = "<group>"; };
 		15A1B0F01E83A7DF0082A6A3 /* WHUCalendarCal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHUCalendarCal.m; sourceTree = "<group>"; };
 		15A1B0F11E83A7DF0082A6A3 /* WHUCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUCalendarCell.h; sourceTree = "<group>"; };
@@ -590,87 +584,211 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1501842B1E8D18BC00788E47 /* TTButton */ = {
+		1501846A1E8D1A3000788E47 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1501842C1E8D18BC00788E47 /* HyperlinkButton.h */,
-				1501842D1E8D18BC00788E47 /* HyperlinkButton.m */,
+				150184C51E8D1C3800788E47 /* Carousel */,
+				150184CC1E8D1C3800788E47 /* TTBottomBarView */,
+				150184CF1E8D1C3800788E47 /* TTStarView */,
+				1501846F1E8D1A3000788E47 /* TableViewAndCollection */,
+				1501848D1E8D1A3000788E47 /* TTAlertView */,
+				150184991E8D1A3000788E47 /* TTButton */,
+				1501849C1E8D1A3000788E47 /* TTScrollView */,
+				150184A51E8D1A3000788E47 /* TTTextView */,
+				150184A81E8D1A3000788E47 /* TTWebView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1501846F1E8D1A3000788E47 /* TableViewAndCollection */ = {
+			isa = PBXGroup;
+			children = (
+				150184701E8D1A3000788E47 /* Footer */,
+				150184741E8D1A3000788E47 /* Header */,
+				150184781E8D1A3000788E47 /* TTCollectionView */,
+				150184871E8D1A3000788E47 /* TTTableView */,
+			);
+			path = TableViewAndCollection;
+			sourceTree = "<group>";
+		};
+		150184701E8D1A3000788E47 /* Footer */ = {
+			isa = PBXGroup;
+			children = (
+				150184711E8D1A3000788E47 /* TTMoreFooterView.h */,
+				150184721E8D1A3000788E47 /* TTMoreFooterView.m */,
+				150184731E8D1A3000788E47 /* TTMoreFooterView.xib */,
+			);
+			path = Footer;
+			sourceTree = "<group>";
+		};
+		150184741E8D1A3000788E47 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				150184751E8D1A3000788E47 /* TTRefreshHeaderView.h */,
+				150184761E8D1A3000788E47 /* TTRefreshHeaderView.m */,
+				150184771E8D1A3000788E47 /* TTRefreshHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		150184781E8D1A3000788E47 /* TTCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				150184791E8D1A3000788E47 /* Annotation_TTCollectionView.strings */,
+				1501847A1E8D1A3000788E47 /* CustomLayout */,
+				150184831E8D1A3000788E47 /* TTCollectionView.h */,
+				150184841E8D1A3000788E47 /* TTCollectionView.m */,
+				150184851E8D1A3000788E47 /* TTCollectionViewBaseCell.h */,
+				150184861E8D1A3000788E47 /* TTCollectionViewBaseCell.m */,
+			);
+			path = TTCollectionView;
+			sourceTree = "<group>";
+		};
+		1501847A1E8D1A3000788E47 /* CustomLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1501847B1E8D1A3000788E47 /* SortLayout */,
+				1501847E1E8D1A3000788E47 /* WaterFall */,
+			);
+			path = CustomLayout;
+			sourceTree = "<group>";
+		};
+		1501847B1E8D1A3000788E47 /* SortLayout */ = {
+			isa = PBXGroup;
+			children = (
+				1501847C1E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.h */,
+				1501847D1E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.m */,
+			);
+			path = SortLayout;
+			sourceTree = "<group>";
+		};
+		1501847E1E8D1A3000788E47 /* WaterFall */ = {
+			isa = PBXGroup;
+			children = (
+				1501847F1E8D1A3000788E47 /* WaterfallCollectionViewLayout.h */,
+				150184801E8D1A3000788E47 /* WaterfallCollectionViewLayout.m */,
+				150184811E8D1A3000788E47 /* WaterfallDecorationReusableView.h */,
+				150184821E8D1A3000788E47 /* WaterfallDecorationReusableView.m */,
+			);
+			path = WaterFall;
+			sourceTree = "<group>";
+		};
+		150184871E8D1A3000788E47 /* TTTableView */ = {
+			isa = PBXGroup;
+			children = (
+				150184881E8D1A3000788E47 /* Annotation_TTTableView.strings */,
+				150184891E8D1A3000788E47 /* TTTableView.h */,
+				1501848A1E8D1A3000788E47 /* TTTableView.m */,
+				1501848B1E8D1A3000788E47 /* TTTableViewBaseCell.h */,
+				1501848C1E8D1A3000788E47 /* TTTableViewBaseCell.m */,
+			);
+			path = TTTableView;
+			sourceTree = "<group>";
+		};
+		1501848D1E8D1A3000788E47 /* TTAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				1501848E1E8D1A3000788E47 /* FRAlertView */,
+				150184951E8D1A3000788E47 /* TTAlertView.h */,
+				150184961E8D1A3000788E47 /* TTAlertView.m */,
+			);
+			path = TTAlertView;
+			sourceTree = "<group>";
+		};
+		1501848E1E8D1A3000788E47 /* FRAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				1501848F1E8D1A3000788E47 /* AlertViewRecorder.h */,
+				150184901E8D1A3000788E47 /* AlertViewRecorder.m */,
+				150184911E8D1A3000788E47 /* FRAlertView.h */,
+				150184921E8D1A3000788E47 /* FRAlertView.m */,
+				150184931E8D1A3000788E47 /* UIAlertView+MyAlertView.h */,
+				150184941E8D1A3000788E47 /* UIAlertView+MyAlertView.m */,
+			);
+			path = FRAlertView;
+			sourceTree = "<group>";
+		};
+		150184991E8D1A3000788E47 /* TTButton */ = {
+			isa = PBXGroup;
+			children = (
+				1501849A1E8D1A3000788E47 /* HyperlinkButton.h */,
+				1501849B1E8D1A3000788E47 /* HyperlinkButton.m */,
 			);
 			path = TTButton;
 			sourceTree = "<group>";
 		};
-		1501842E1E8D18BC00788E47 /* TTScrollView */ = {
+		1501849C1E8D1A3000788E47 /* TTScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				1501842F1E8D18BC00788E47 /* TTContentScrollView.h */,
-				150184301E8D18BC00788E47 /* TTContentScrollView.m */,
-				150184311E8D18BC00788E47 /* TTScrollView.h */,
-				150184321E8D18BC00788E47 /* TTScrollView.m */,
-				150184331E8D18BC00788E47 /* TTTopScrollView.h */,
-				150184341E8D18BC00788E47 /* TTTopScrollView.m */,
+				1501849D1E8D1A3000788E47 /* TTContentScrollView.h */,
+				1501849E1E8D1A3000788E47 /* TTContentScrollView.m */,
+				1501849F1E8D1A3000788E47 /* TTScrollView.h */,
+				150184A01E8D1A3000788E47 /* TTScrollView.m */,
+				150184A11E8D1A3000788E47 /* TTTopScrollView.h */,
+				150184A21E8D1A3000788E47 /* TTTopScrollView.m */,
 			);
 			path = TTScrollView;
 			sourceTree = "<group>";
 		};
-		150184381E8D18BC00788E47 /* TTTextView */ = {
+		150184A51E8D1A3000788E47 /* TTTextView */ = {
 			isa = PBXGroup;
 			children = (
-				150184391E8D18BC00788E47 /* TTTextView.h */,
-				1501843A1E8D18BC00788E47 /* TTTextView.m */,
+				150184A61E8D1A3000788E47 /* TTTextView.h */,
+				150184A71E8D1A3000788E47 /* TTTextView.m */,
 			);
 			path = TTTextView;
 			sourceTree = "<group>";
 		};
-		1501843B1E8D18BC00788E47 /* TTWebView */ = {
+		150184A81E8D1A3000788E47 /* TTWebView */ = {
 			isa = PBXGroup;
 			children = (
-				1501843C1E8D18BC00788E47 /* TTWebView.h */,
-				1501843D1E8D18BC00788E47 /* TTWebView.m */,
+				150184A91E8D1A3000788E47 /* TTWebView.h */,
+				150184AA1E8D1A3000788E47 /* TTWebView.m */,
 			);
 			path = TTWebView;
 			sourceTree = "<group>";
 		};
-		150184591E8D19A800788E47 /* Carousel */ = {
+		150184C51E8D1C3800788E47 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				1501845A1E8D19A800788E47 /* CarouselManager.h */,
-				1501845B1E8D19A800788E47 /* CarouselManager.m */,
-				1501845C1E8D19A800788E47 /* Support */,
+				150184C61E8D1C3800788E47 /* CarouselManager.h */,
+				150184C71E8D1C3800788E47 /* CarouselManager.m */,
+				150184C81E8D1C3800788E47 /* Support */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
 		};
-		1501845C1E8D19A800788E47 /* Support */ = {
+		150184C81E8D1C3800788E47 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				1501845D1E8D19A800788E47 /* iCarousel */,
+				150184C91E8D1C3800788E47 /* iCarousel */,
 			);
 			path = Support;
 			sourceTree = "<group>";
 		};
-		1501845D1E8D19A800788E47 /* iCarousel */ = {
+		150184C91E8D1C3800788E47 /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				1501845E1E8D19A800788E47 /* iCarousel.h */,
-				1501845F1E8D19A800788E47 /* iCarousel.m */,
+				150184CA1E8D1C3800788E47 /* iCarousel.h */,
+				150184CB1E8D1C3800788E47 /* iCarousel.m */,
 			);
 			path = iCarousel;
 			sourceTree = "<group>";
 		};
-		150184601E8D19A800788E47 /* TTBottomBarView */ = {
+		150184CC1E8D1C3800788E47 /* TTBottomBarView */ = {
 			isa = PBXGroup;
 			children = (
-				150184611E8D19A800788E47 /* TTBottomBarView.h */,
-				150184621E8D19A800788E47 /* TTBottomBarView.m */,
+				150184CD1E8D1C3800788E47 /* TTBottomBarView.h */,
+				150184CE1E8D1C3800788E47 /* TTBottomBarView.m */,
 			);
 			path = TTBottomBarView;
 			sourceTree = "<group>";
 		};
-		150184631E8D19A800788E47 /* TTStarView */ = {
+		150184CF1E8D1C3800788E47 /* TTStarView */ = {
 			isa = PBXGroup;
 			children = (
-				150184641E8D19A800788E47 /* TTStarView.h */,
-				150184651E8D19A800788E47 /* TTStarView.m */,
+				150184D01E8D1C3800788E47 /* TTStarView.h */,
+				150184D11E8D1C3800788E47 /* TTStarView.m */,
 			);
 			path = TTStarView;
 			sourceTree = "<group>";
@@ -842,8 +960,8 @@
 		153955B41E6427C900A20FB9 /* TTFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				1501846A1E8D1A3000788E47 /* View */,
 				15A1B0ED1E83A4340082A6A3 /* Controller */,
-				15A1B04C1E8285650082A6A3 /* View */,
 				15A0D9391E816B26003A109E /* TTShare */,
 				15A0D8C51E81681F003A109E /* Model */,
 				15A0D8741E8162D2003A109E /* Common */,
@@ -1047,137 +1165,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		15A1B04C1E8285650082A6A3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				150184591E8D19A800788E47 /* Carousel */,
-				150184601E8D19A800788E47 /* TTBottomBarView */,
-				150184631E8D19A800788E47 /* TTStarView */,
-				1501842B1E8D18BC00788E47 /* TTButton */,
-				1501842E1E8D18BC00788E47 /* TTScrollView */,
-				150184381E8D18BC00788E47 /* TTTextView */,
-				1501843B1E8D18BC00788E47 /* TTWebView */,
-				15A1B0B51E837CAB0082A6A3 /* TTTextView */,
-				15A1B0B11E837C670082A6A3 /* TTAlertView */,
-				15A1B0AD1E837C390082A6A3 /* TTButton */,
-				15A1B0611E8291DE0082A6A3 /* TableViewAndCollection */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		15A1B0611E8291DE0082A6A3 /* TableViewAndCollection */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0891E82A1140082A6A3 /* TTCollectionView */,
-				15A1B0881E82A1070082A6A3 /* TTTableView */,
-				15A1B06A1E82928D0082A6A3 /* Footer */,
-				15A1B0681E8292660082A6A3 /* Header */,
-			);
-			path = TableViewAndCollection;
-			sourceTree = "<group>";
-		};
-		15A1B0681E8292660082A6A3 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0721E8292DC0082A6A3 /* TTRefreshHeaderView.h */,
-				15A1B0731E8292DC0082A6A3 /* TTRefreshHeaderView.m */,
-				15A1B0701E8292CD0082A6A3 /* TTRefreshHeaderView.xib */,
-			);
-			path = Header;
-			sourceTree = "<group>";
-		};
-		15A1B06A1E82928D0082A6A3 /* Footer */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B06B1E8292AB0082A6A3 /* TTMoreFooterView.h */,
-				15A1B06C1E8292AB0082A6A3 /* TTMoreFooterView.m */,
-				15A1B06E1E8292B30082A6A3 /* TTMoreFooterView.xib */,
-			);
-			path = Footer;
-			sourceTree = "<group>";
-		};
-		15A1B0881E82A1070082A6A3 /* TTTableView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B09A1E82A2620082A6A3 /* Annotation_TTTableView.strings */,
-				15A1B08A1E82A12B0082A6A3 /* TTTableView.h */,
-				15A1B08B1E82A12B0082A6A3 /* TTTableView.m */,
-				15A1B08C1E82A12B0082A6A3 /* TTTableViewBaseCell.h */,
-				15A1B08D1E82A12B0082A6A3 /* TTTableViewBaseCell.m */,
-			);
-			path = TTTableView;
-			sourceTree = "<group>";
-		};
-		15A1B0891E82A1140082A6A3 /* TTCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0C61E837FBA0082A6A3 /* CustomLayout */,
-				15A1B09C1E82AF720082A6A3 /* Annotation_TTCollectionView.strings */,
-				15A1B0901E82A1300082A6A3 /* TTCollectionView.h */,
-				15A1B0911E82A1300082A6A3 /* TTCollectionView.m */,
-				15A1B0921E82A1300082A6A3 /* TTCollectionViewBaseCell.h */,
-				15A1B0931E82A1300082A6A3 /* TTCollectionViewBaseCell.m */,
-			);
-			path = TTCollectionView;
-			sourceTree = "<group>";
-		};
-		15A1B0AD1E837C390082A6A3 /* TTButton */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0AE1E837C5B0082A6A3 /* HyperlinkButton.h */,
-				15A1B0AF1E837C5B0082A6A3 /* HyperlinkButton.m */,
-			);
-			path = TTButton;
-			sourceTree = "<group>";
-		};
-		15A1B0B11E837C670082A6A3 /* TTAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0E31E8381670082A6A3 /* FRAlertView */,
-				15A1B0B21E837C800082A6A3 /* TTAlertView.h */,
-				15A1B0B31E837C800082A6A3 /* TTAlertView.m */,
-			);
-			path = TTAlertView;
-			sourceTree = "<group>";
-		};
-		15A1B0B51E837CAB0082A6A3 /* TTTextView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0B61E837CC10082A6A3 /* TTTextView.h */,
-				15A1B0B71E837CC10082A6A3 /* TTTextView.m */,
-			);
-			path = TTTextView;
-			sourceTree = "<group>";
-		};
-		15A1B0C61E837FBA0082A6A3 /* CustomLayout */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0D41E8380F70082A6A3 /* SortLayout */,
-				15A1B0CA1E83809B0082A6A3 /* WaterFall */,
-			);
-			path = CustomLayout;
-			sourceTree = "<group>";
-		};
-		15A1B0CA1E83809B0082A6A3 /* WaterFall */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0CB1E83809B0082A6A3 /* WaterfallCollectionViewLayout.h */,
-				15A1B0CC1E83809B0082A6A3 /* WaterfallCollectionViewLayout.m */,
-				15A1B0CD1E83809B0082A6A3 /* WaterfallDecorationReusableView.h */,
-				15A1B0CE1E83809B0082A6A3 /* WaterfallDecorationReusableView.m */,
-			);
-			path = WaterFall;
-			sourceTree = "<group>";
-		};
-		15A1B0D41E8380F70082A6A3 /* SortLayout */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0D51E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.h */,
-				15A1B0D61E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m */,
-			);
-			path = SortLayout;
-			sourceTree = "<group>";
-		};
 		15A1B0D81E83812E0082A6A3 /* MLImageCrop */ = {
 			isa = PBXGroup;
 			children = (
@@ -1196,19 +1183,6 @@
 				15A1B0E01E83813D0082A6A3 /* NSDictionary+PrintChinese.m */,
 			);
 			path = PrintToolsChinese;
-			sourceTree = "<group>";
-		};
-		15A1B0E31E8381670082A6A3 /* FRAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				15A1B0E41E8381670082A6A3 /* AlertViewRecorder.h */,
-				15A1B0E51E8381670082A6A3 /* AlertViewRecorder.m */,
-				15A1B0E61E8381670082A6A3 /* FRAlertView.h */,
-				15A1B0E71E8381670082A6A3 /* FRAlertView.m */,
-				15A1B0E81E8381670082A6A3 /* UIAlertView+MyAlertView.h */,
-				15A1B0E91E8381670082A6A3 /* UIAlertView+MyAlertView.m */,
-			);
-			path = FRAlertView;
 			sourceTree = "<group>";
 		};
 		15A1B0ED1E83A4340082A6A3 /* Controller */ = {
@@ -1602,14 +1576,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150184B01E8D1A3000788E47 /* Annotation_TTCollectionView.strings in Resources */,
 				1527C1231E8217B900E828A5 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				2DEEE9051E73DCA00089CE1F /* hud_error@2x.png in Resources */,
 				15A1B1361E83C14E0082A6A3 /* SMS_SDKLocalizable.strings in Resources */,
 				2DEEE90A1E73DCA00089CE1F /* refresh_header_loading.png in Resources */,
-				15A1B09B1E82A2620082A6A3 /* Annotation_TTTableView.strings in Resources */,
-				15A1B06F1E8292B30082A6A3 /* TTMoreFooterView.xib in Resources */,
 				1527C11F1E8217B800E828A5 /* WeiboSDK.bundle in Resources */,
-				15A1B09D1E82AF720082A6A3 /* Annotation_TTCollectionView.strings in Resources */,
 				15A1B1781E83C2FF0082A6A3 /* Info.plist in Resources */,
 				2DEEE9081E73DCA00089CE1F /* ratingbar_bgstar.png in Resources */,
 				2DEEE9041E73DCA00089CE1F /* hud_error.png in Resources */,
@@ -1620,8 +1592,10 @@
 				2DEEE90B1E73DCA00089CE1F /* autoResizeAllImage.js in Resources */,
 				2DEEE9061E73DCA00089CE1F /* hud_info.png in Resources */,
 				2DEEE9021E73DCA00089CE1F /* hud_completed.png in Resources */,
-				15A1B0711E8292CD0082A6A3 /* TTRefreshHeaderView.xib in Resources */,
+				150184AF1E8D1A3000788E47 /* TTRefreshHeaderView.xib in Resources */,
+				150184AD1E8D1A3000788E47 /* TTMoreFooterView.xib in Resources */,
 				15A1B1451E83C2120082A6A3 /* Annotation_SMS.strings in Resources */,
+				150184B61E8D1A3000788E47 /* Annotation_TTTableView.strings in Resources */,
 				153954391E64272B00A20FB9 /* Assets.xcassets in Resources */,
 				2DEEE9031E73DCA00089CE1F /* hud_completed@2x.png in Resources */,
 				2DEEE9091E73DCA00089CE1F /* ratingbar_fgstar.png in Resources */,
@@ -1652,6 +1626,7 @@
 			files = (
 				15A1B0FF1E83A7DF0082A6A3 /* WHUCalendarCell.m in Sources */,
 				15A1AF2A1E8284FE0082A6A3 /* SDImageCache.m in Sources */,
+				150184B41E8D1A3000788E47 /* TTCollectionView.m in Sources */,
 				15A1AF311E8284FE0082A6A3 /* SDWebImagePrefetcher.m in Sources */,
 				15A1B1831E83C3CF0082A6A3 /* TTSMSManager.m in Sources */,
 				2DEEE9211E73DCF10089CE1F /* AFHTTPRequestOperation.m in Sources */,
@@ -1659,46 +1634,38 @@
 				15A0D8E51E81681F003A109E /* MJFoundation.m in Sources */,
 				153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */,
 				2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */,
-				150184661E8D19A800788E47 /* CarouselManager.m in Sources */,
 				15A1B17C1E83C2FF0082A6A3 /* zip.c in Sources */,
-				15A1B0EC1E8381670082A6A3 /* UIAlertView+MyAlertView.m in Sources */,
 				15A1AF2C1E8284FE0082A6A3 /* SDWebImageCompat.m in Sources */,
+				150184B81E8D1A3000788E47 /* TTTableViewBaseCell.m in Sources */,
 				15A1B1001E83A7DF0082A6A3 /* WHUCalendarFlowLayout.m in Sources */,
 				15A1B0DB1E83812E0082A6A3 /* MLImageCrop.m in Sources */,
+				150184C31E8D1A3000788E47 /* TTTextView.m in Sources */,
+				150184C11E8D1A3000788E47 /* TTTopScrollView.m in Sources */,
 				153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */,
 				15A1B1181E83A9020082A6A3 /* TAPageControl.m in Sources */,
 				1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */,
 				15A1B0E21E83813D0082A6A3 /* NSDictionary+PrintChinese.m in Sources */,
-				15A1B08F1E82A12B0082A6A3 /* TTTableViewBaseCell.m in Sources */,
 				15A0D8EC1E81681F003A109E /* NSObject+MJProperty.m in Sources */,
 				15A1AF2D1E8284FE0082A6A3 /* SDWebImageDecoder.m in Sources */,
 				1527C1271E8217B900E828A5 /* WXAuthRequest.m in Sources */,
-				15A1B0EA1E8381670082A6A3 /* AlertViewRecorder.m in Sources */,
 				15A1B1291E83AA730082A6A3 /* PopView.m in Sources */,
-				150184541E8D18BC00788E47 /* TTScrollView.m in Sources */,
 				15A1B1701E83C2FF0082A6A3 /* aeskey.c in Sources */,
 				15A1B1041E83A7DF0082A6A3 /* WHUCalendarYMSelectView.m in Sources */,
+				150184B91E8D1A3000788E47 /* AlertViewRecorder.m in Sources */,
 				153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */,
 				15A1AF331E8284FE0082A6A3 /* UIImage+GIF.m in Sources */,
-				150184671E8D19A800788E47 /* iCarousel.m in Sources */,
 				15A0D8C11E8162D2003A109E /* TTKit.m in Sources */,
 				15A1B16F1E83C2FF0082A6A3 /* aescrypt.c in Sources */,
 				1527C1201E8217B800E828A5 /* SinaAuthRequest.m in Sources */,
 				15A1B11F1E83A9AE0082A6A3 /* NetWorkReachability.m in Sources */,
-				15A1B0B81E837CC10082A6A3 /* TTTextView.m in Sources */,
 				15A1AF381E8284FE0082A6A3 /* UIView+WebCache.m in Sources */,
 				2DEEE9231E73DCF10089CE1F /* AFHTTPSessionManager.m in Sources */,
 				15A0D8E71E81681F003A109E /* MJPropertyKey.m in Sources */,
 				1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */,
 				15A1B1271E83AA730082A6A3 /* FourPingTransition.m in Sources */,
-				15A1B0741E8292DC0082A6A3 /* TTRefreshHeaderView.m in Sources */,
-				150184691E8D19A800788E47 /* TTStarView.m in Sources */,
+				150184B11E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.m in Sources */,
 				15A1B1011E83A7DF0082A6A3 /* WHUCalendarItem.m in Sources */,
-				15A1B08E1E82A12B0082A6A3 /* TTTableView.m in Sources */,
-				150184531E8D18BC00788E47 /* TTContentScrollView.m in Sources */,
 				15A1AF371E8284FE0082A6A3 /* UIImageView+WebCache.m in Sources */,
-				15A1B0B01E837C5B0082A6A3 /* HyperlinkButton.m in Sources */,
-				15A1B0D71E8381070082A6A3 /* TTReorderableCollectionViewFlowLayout.m in Sources */,
 				153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */,
 				15A1B1191E83A9020082A6A3 /* SDCollectionViewCell.m in Sources */,
 				15A1B1731E83C2FF0082A6A3 /* fileenc.c in Sources */,
@@ -1708,23 +1675,24 @@
 				153954341E64272B00A20FB9 /* ViewController.m in Sources */,
 				2DEEE9251E73DCF10089CE1F /* AFSecurityPolicy.m in Sources */,
 				15A1B0FE1E83A7DF0082A6A3 /* WHUCalendarCal.m in Sources */,
-				150184681E8D19A800788E47 /* TTBottomBarView.m in Sources */,
 				15A1B0E11E83813D0082A6A3 /* NSArray+PrintChinese.m in Sources */,
 				15A1B1711E83C2FF0082A6A3 /* aestab.c in Sources */,
+				150184B51E8D1A3000788E47 /* TTCollectionViewBaseCell.m in Sources */,
 				2DEEE9281E73DCF10089CE1F /* AFURLResponseSerialization.m in Sources */,
 				15A1B1161E83A9020082A6A3 /* TAAnimatedDotView.m in Sources */,
-				150184571E8D18BC00788E47 /* TTTextView.m in Sources */,
 				15A1B0861E829BD30082A6A3 /* TestCell.m in Sources */,
 				15A1B17B1E83C2FF0082A6A3 /* unzip.c in Sources */,
 				15A1B1281E83AA730082A6A3 /* PopAnimationView.m in Sources */,
-				15A1B0D21E83809B0082A6A3 /* WaterfallDecorationReusableView.m in Sources */,
 				15A0D8EA1E81681F003A109E /* NSObject+MJCoding.m in Sources */,
+				150184D41E8D1C3800788E47 /* TTBottomBarView.m in Sources */,
+				150184D21E8D1C3800788E47 /* CarouselManager.m in Sources */,
 				15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */,
 				153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */,
 				15A1B1751E83C2FF0082A6A3 /* prng.c in Sources */,
+				150184C01E8D1A3000788E47 /* TTScrollView.m in Sources */,
 				2DEEE9261E73DCF10089CE1F /* AFURLConnectionOperation.m in Sources */,
-				15A1B0EB1E8381670082A6A3 /* FRAlertView.m in Sources */,
 				15A1B1801E83C3A70082A6A3 /* TTAliyunOSSManager.m in Sources */,
+				150184AE1E8D1A3000788E47 /* TTRefreshHeaderView.m in Sources */,
 				15A0D8E31E81681F003A109E /* MJDictionaryCache.m in Sources */,
 				153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */,
 				2DEEE9271E73DCF10089CE1F /* AFURLRequestSerialization.m in Sources */,
@@ -1732,56 +1700,60 @@
 				153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */,
 				15A1B17A1E83C2FF0082A6A3 /* mztools.c in Sources */,
 				15A1B1791E83C2FF0082A6A3 /* ioapi.c in Sources */,
-				15A1B0D11E83809B0082A6A3 /* WaterfallCollectionViewLayout.m in Sources */,
 				15A0D8E91E81681F003A109E /* NSObject+MJClass.m in Sources */,
 				15A1B11B1E83A9020082A6A3 /* UIView+SDExtension.m in Sources */,
+				150184D31E8D1C3800788E47 /* iCarousel.m in Sources */,
 				15A1B1171E83A9020082A6A3 /* TADotView.m in Sources */,
 				15A1B11A1E83A9020082A6A3 /* SDCycleScrollView.m in Sources */,
+				150184C41E8D1A3000788E47 /* TTWebView.m in Sources */,
 				15A0D8E81E81681F003A109E /* MJPropertyType.m in Sources */,
+				150184B71E8D1A3000788E47 /* TTTableView.m in Sources */,
 				2DEEE9241E73DCF10089CE1F /* AFNetworkReachabilityManager.m in Sources */,
-				150184581E8D18BC00788E47 /* TTWebView.m in Sources */,
+				150184BC1E8D1A3000788E47 /* TTAlertView.m in Sources */,
 				15A1AF341E8284FE0082A6A3 /* UIImage+MultiFormat.m in Sources */,
+				150184AC1E8D1A3000788E47 /* TTMoreFooterView.m in Sources */,
 				15A1B1761E83C2FF0082A6A3 /* pwd2key.c in Sources */,
+				150184BA1E8D1A3000788E47 /* FRAlertView.m in Sources */,
 				1527C1241E8217B900E828A5 /* TTTencentCenter.m in Sources */,
 				15A1B1741E83C2FF0082A6A3 /* hmac.c in Sources */,
 				15A1B1021E83A7DF0082A6A3 /* WHUCalendarPopView.m in Sources */,
 				15A1AF2E1E8284FE0082A6A3 /* SDWebImageDownloader.m in Sources */,
+				150184B21E8D1A3000788E47 /* WaterfallCollectionViewLayout.m in Sources */,
 				153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */,
 				15A1AF321E8284FE0082A6A3 /* UIButton+WebCache.m in Sources */,
-				15A1B0B41E837C800082A6A3 /* TTAlertView.m in Sources */,
 				15A1AF281E8284FE0082A6A3 /* NSData+ImageContentType.m in Sources */,
+				150184BF1E8D1A3000788E47 /* TTContentScrollView.m in Sources */,
 				15A1B1771E83C2FF0082A6A3 /* sha1.c in Sources */,
 				15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */,
-				15A1B0941E82A1300082A6A3 /* TTCollectionView.m in Sources */,
-				150184521E8D18BC00788E47 /* HyperlinkButton.m in Sources */,
 				153954311E64272B00A20FB9 /* AppDelegate.m in Sources */,
 				15A1AF2F1E8284FE0082A6A3 /* SDWebImageDownloaderOperation.m in Sources */,
 				15A1B1861E83C4E60082A6A3 /* TTLogManager.m in Sources */,
 				1527C1211E8217B800E828A5 /* TTSinaCenter.m in Sources */,
+				150184BB1E8D1A3000788E47 /* UIAlertView+MyAlertView.m in Sources */,
 				15A0D8E41E81681F003A109E /* MJExtensionConst.m in Sources */,
 				15A1B1151E83A9020082A6A3 /* TAAbstractDotView.m in Sources */,
+				150184D51E8D1C3800788E47 /* TTStarView.m in Sources */,
 				15A0D8EB1E81681F003A109E /* NSObject+MJKeyValue.m in Sources */,
 				15A1AF271E8284FE0082A6A3 /* MKAnnotationView+WebCache.m in Sources */,
 				15A0D8C01E8162D2003A109E /* TTBinaryData.m in Sources */,
+				150184B31E8D1A3000788E47 /* WaterfallDecorationReusableView.m in Sources */,
 				15A1AF351E8284FE0082A6A3 /* UIImage+WebP.m in Sources */,
 				15A1AF361E8284FE0082A6A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				15A0D96B1E816B26003A109E /* TTBaseShareCenter.m in Sources */,
 				15A1B1721E83C2FF0082A6A3 /* entropy.c in Sources */,
+				150184BE1E8D1A3000788E47 /* HyperlinkButton.m in Sources */,
 				15A0D8ED1E81681F003A109E /* NSString+MJExtension.m in Sources */,
 				153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */,
 				15A1B17D1E83C2FF0082A6A3 /* SSZipArchive.m in Sources */,
-				15A1B06D1E8292AB0082A6A3 /* TTMoreFooterView.m in Sources */,
 				15A1AF291E8284FE0082A6A3 /* NSImage+WebCache.m in Sources */,
 				15A0D8EE1E81681F003A109E /* TTBaseModel.m in Sources */,
 				15A0D8E61E81681F003A109E /* MJProperty.m in Sources */,
 				15A0D8BF1E8162D2003A109E /* TTAudioTool.m in Sources */,
 				15A1AF2B1E8284FE0082A6A3 /* SDImageCacheConfig.m in Sources */,
-				150184551E8D18BC00788E47 /* TTTopScrollView.m in Sources */,
 				1527C1261E8217B900E828A5 /* TTWeChatCenter.m in Sources */,
 				2DEEE92C1E73E76C0089CE1F /* TTRequest.m in Sources */,
 				1539542E1E64272B00A20FB9 /* main.m in Sources */,
 				15A1B1031E83A7DF0082A6A3 /* WHUCalendarView.m in Sources */,
-				15A1B0951E82A1300082A6A3 /* TTCollectionViewBaseCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
