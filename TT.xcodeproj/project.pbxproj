@@ -38,6 +38,7 @@
 		1507F91A1E9634BD003B5AFE /* TTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9191E9634BD003B5AFE /* TTTabBarController.m */; };
 		1507F91F1E9648A0003B5AFE /* AppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */; };
 		1507F9221E964B60003B5AFE /* TTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9211E964B60003B5AFE /* TTTools.m */; };
+		1507F9251E965283003B5AFE /* AutoLayoutLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */; };
 		1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0F61E82175200E828A5 /* TTAuthInfo.m */; };
 		1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0FA1E8217A300E828A5 /* ShareContentInfo.m */; };
 		1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1527C0FE1E8217B800E828A5 /* libWeiboSDK.a */; };
@@ -264,6 +265,8 @@
 		1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPurchaseManager.m; sourceTree = "<group>"; };
 		1507F9201E964B60003B5AFE /* TTTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTools.h; sourceTree = "<group>"; };
 		1507F9211E964B60003B5AFE /* TTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTools.m; sourceTree = "<group>"; };
+		1507F9231E965283003B5AFE /* AutoLayoutLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutLabelView.h; sourceTree = "<group>"; };
+		1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutLabelView.m; sourceTree = "<group>"; };
 		1527C0F51E82175200E828A5 /* TTAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAuthInfo.h; sourceTree = "<group>"; };
 		1527C0F61E82175200E828A5 /* TTAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAuthInfo.m; sourceTree = "<group>"; };
 		1527C0F91E8217A300E828A5 /* ShareContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentInfo.h; sourceTree = "<group>"; };
@@ -1052,6 +1055,8 @@
 				15A1B1851E83C4E60082A6A3 /* TTLogManager.m */,
 				1507F91D1E9648A0003B5AFE /* AppPurchaseManager.h */,
 				1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */,
+				1507F9231E965283003B5AFE /* AutoLayoutLabelView.h */,
+				1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1729,6 +1734,7 @@
 				150184D31E8D1C3800788E47 /* iCarousel.m in Sources */,
 				15A1B1171E83A9020082A6A3 /* TADotView.m in Sources */,
 				15A1B11A1E83A9020082A6A3 /* SDCycleScrollView.m in Sources */,
+				1507F9251E965283003B5AFE /* AutoLayoutLabelView.m in Sources */,
 				150184C41E8D1A3000788E47 /* TTWebView.m in Sources */,
 				15A0D8E81E81681F003A109E /* MJPropertyType.m in Sources */,
 				150184B71E8D1A3000788E47 /* TTTableView.m in Sources */,
