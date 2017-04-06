@@ -36,6 +36,7 @@
 		150184D51E8D1C3800788E47 /* TTStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150184D11E8D1C3800788E47 /* TTStarView.m */; };
 		1507F9171E962B58003B5AFE /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9161E962B58003B5AFE /* TTBaseViewController.m */; };
 		1507F91A1E9634BD003B5AFE /* TTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9191E9634BD003B5AFE /* TTTabBarController.m */; };
+		1507F91F1E9648A0003B5AFE /* AppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */; };
 		1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0F61E82175200E828A5 /* TTAuthInfo.m */; };
 		1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0FA1E8217A300E828A5 /* ShareContentInfo.m */; };
 		1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1527C0FE1E8217B800E828A5 /* libWeiboSDK.a */; };
@@ -258,6 +259,8 @@
 		1507F9161E962B58003B5AFE /* TTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseViewController.m; sourceTree = "<group>"; };
 		1507F9181E9634BD003B5AFE /* TTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTabBarController.h; sourceTree = "<group>"; };
 		1507F9191E9634BD003B5AFE /* TTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTabBarController.m; sourceTree = "<group>"; };
+		1507F91D1E9648A0003B5AFE /* AppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPurchaseManager.h; sourceTree = "<group>"; };
+		1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPurchaseManager.m; sourceTree = "<group>"; };
 		1527C0F51E82175200E828A5 /* TTAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAuthInfo.h; sourceTree = "<group>"; };
 		1527C0F61E82175200E828A5 /* TTAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAuthInfo.m; sourceTree = "<group>"; };
 		1527C0F91E8217A300E828A5 /* ShareContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentInfo.h; sourceTree = "<group>"; };
@@ -1042,6 +1045,8 @@
 				15A0D8A21E8162D2003A109E /* TTBinaryData.m */,
 				15A0D8A31E8162D2003A109E /* TTKit.h */,
 				15A0D8A41E8162D2003A109E /* TTKit.m */,
+				1507F91D1E9648A0003B5AFE /* AppPurchaseManager.h */,
+				1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1704,6 +1709,7 @@
 				150184C01E8D1A3000788E47 /* TTScrollView.m in Sources */,
 				2DEEE9261E73DCF10089CE1F /* AFURLConnectionOperation.m in Sources */,
 				15A1B1801E83C3A70082A6A3 /* TTAliyunOSSManager.m in Sources */,
+				1507F91F1E9648A0003B5AFE /* AppPurchaseManager.m in Sources */,
 				150184AE1E8D1A3000788E47 /* TTRefreshHeaderView.m in Sources */,
 				15A0D8E31E81681F003A109E /* MJDictionaryCache.m in Sources */,
 				153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */,
