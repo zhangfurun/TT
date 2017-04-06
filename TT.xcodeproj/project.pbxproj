@@ -40,6 +40,7 @@
 		1507F9221E964B60003B5AFE /* TTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9211E964B60003B5AFE /* TTTools.m */; };
 		1507F9251E965283003B5AFE /* AutoLayoutLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */; };
 		1507F9281E965384003B5AFE /* CleanLoaclCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9271E965384003B5AFE /* CleanLoaclCache.m */; };
+		1507F92B1E965613003B5AFE /* AllowMobileNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F92A1E965613003B5AFE /* AllowMobileNetManager.m */; };
 		1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0F61E82175200E828A5 /* TTAuthInfo.m */; };
 		1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0FA1E8217A300E828A5 /* ShareContentInfo.m */; };
 		1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1527C0FE1E8217B800E828A5 /* libWeiboSDK.a */; };
@@ -270,6 +271,8 @@
 		1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutLabelView.m; sourceTree = "<group>"; };
 		1507F9261E965384003B5AFE /* CleanLoaclCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanLoaclCache.h; sourceTree = "<group>"; };
 		1507F9271E965384003B5AFE /* CleanLoaclCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanLoaclCache.m; sourceTree = "<group>"; };
+		1507F9291E965613003B5AFE /* AllowMobileNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllowMobileNetManager.h; sourceTree = "<group>"; };
+		1507F92A1E965613003B5AFE /* AllowMobileNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllowMobileNetManager.m; sourceTree = "<group>"; };
 		1527C0F51E82175200E828A5 /* TTAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAuthInfo.h; sourceTree = "<group>"; };
 		1527C0F61E82175200E828A5 /* TTAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAuthInfo.m; sourceTree = "<group>"; };
 		1527C0F91E8217A300E828A5 /* ShareContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentInfo.h; sourceTree = "<group>"; };
@@ -1062,6 +1065,8 @@
 				1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */,
 				1507F9261E965384003B5AFE /* CleanLoaclCache.h */,
 				1507F9271E965384003B5AFE /* CleanLoaclCache.m */,
+				1507F9291E965613003B5AFE /* AllowMobileNetManager.h */,
+				1507F92A1E965613003B5AFE /* AllowMobileNetManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1691,6 +1696,7 @@
 				15A1B11F1E83A9AE0082A6A3 /* NetWorkReachability.m in Sources */,
 				1507F9171E962B58003B5AFE /* TTBaseViewController.m in Sources */,
 				15A1AF381E8284FE0082A6A3 /* UIView+WebCache.m in Sources */,
+				1507F92B1E965613003B5AFE /* AllowMobileNetManager.m in Sources */,
 				2DEEE9231E73DCF10089CE1F /* AFHTTPSessionManager.m in Sources */,
 				15A0D8E71E81681F003A109E /* MJPropertyKey.m in Sources */,
 				1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */,
