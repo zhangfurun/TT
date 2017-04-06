@@ -9,12 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (TTString)
-
-/**
- 字符串的判断
- */
-- (BOOL)isNilOrEmpty;
-
 /**
  字符串的MD5加密
  */

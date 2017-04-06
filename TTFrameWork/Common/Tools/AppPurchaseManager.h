@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
 
-@class RechargePrice;
-
 @interface AppPurchaseManager : NSObject
+
+/**
+ 判断当前是不是正在支付
+ */
 @property (assign, nonatomic, getter=isPurchaseing) BOOL purchaseing;
 
 + (instancetype)sharedInstance;

@@ -13,17 +13,6 @@
 #import <AdSupport/ASIdentifierManager.h>
 
 @implementation NSString (TTString)
-- (BOOL)isNilOrEmpty {
-    if (!self) {
-        return YES;
-    }
-    NSString *temp = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if (!temp || temp.length == 0) {
-        return YES;
-    }
-    return NO;
-}
-
 - (NSString *)md5Str {
     const char *original_str = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];

@@ -37,6 +37,7 @@
 		1507F9171E962B58003B5AFE /* TTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9161E962B58003B5AFE /* TTBaseViewController.m */; };
 		1507F91A1E9634BD003B5AFE /* TTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9191E9634BD003B5AFE /* TTTabBarController.m */; };
 		1507F91F1E9648A0003B5AFE /* AppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */; };
+		1507F9221E964B60003B5AFE /* TTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9211E964B60003B5AFE /* TTTools.m */; };
 		1527C0F71E82175200E828A5 /* TTAuthInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0F61E82175200E828A5 /* TTAuthInfo.m */; };
 		1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C0FA1E8217A300E828A5 /* ShareContentInfo.m */; };
 		1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1527C0FE1E8217B800E828A5 /* libWeiboSDK.a */; };
@@ -261,6 +262,8 @@
 		1507F9191E9634BD003B5AFE /* TTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTabBarController.m; sourceTree = "<group>"; };
 		1507F91D1E9648A0003B5AFE /* AppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPurchaseManager.h; sourceTree = "<group>"; };
 		1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPurchaseManager.m; sourceTree = "<group>"; };
+		1507F9201E964B60003B5AFE /* TTTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTools.h; sourceTree = "<group>"; };
+		1507F9211E964B60003B5AFE /* TTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTools.m; sourceTree = "<group>"; };
 		1527C0F51E82175200E828A5 /* TTAuthInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAuthInfo.h; sourceTree = "<group>"; };
 		1527C0F61E82175200E828A5 /* TTAuthInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTAuthInfo.m; sourceTree = "<group>"; };
 		1527C0F91E8217A300E828A5 /* ShareContentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareContentInfo.h; sourceTree = "<group>"; };
@@ -969,15 +972,15 @@
 		153955B41E6427C900A20FB9 /* TTFrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				1501846A1E8D1A3000788E47 /* View */,
-				15A1B0ED1E83A4340082A6A3 /* Controller */,
 				15A0D9391E816B26003A109E /* TTShare */,
-				15A0D8C51E81681F003A109E /* Model */,
 				15A0D8741E8162D2003A109E /* Common */,
 				2DEEE8F21E73DC950089CE1F /* ReasourceFiles */,
 				2DEEE8CA1E73D4C90089CE1F /* NetWork */,
 				15C7BF1F1E69078C001636DA /* TTHUDMessage */,
 				153955B51E6427DC00A20FB9 /* Category */,
+				15A0D8C51E81681F003A109E /* Model */,
+				1501846A1E8D1A3000788E47 /* View */,
+				15A1B0ED1E83A4340082A6A3 /* Controller */,
 			);
 			path = TTFrameWork;
 			sourceTree = "<group>";
@@ -1037,14 +1040,16 @@
 		15A0D89E1E8162D2003A109E /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				15A1B1841E83C4E60082A6A3 /* TTLogManager.h */,
-				15A1B1851E83C4E60082A6A3 /* TTLogManager.m */,
+				15A0D8A31E8162D2003A109E /* TTKit.h */,
+				15A0D8A41E8162D2003A109E /* TTKit.m */,
+				1507F9201E964B60003B5AFE /* TTTools.h */,
+				1507F9211E964B60003B5AFE /* TTTools.m */,
 				15A0D89F1E8162D2003A109E /* TTAudioTool.h */,
 				15A0D8A01E8162D2003A109E /* TTAudioTool.m */,
 				15A0D8A11E8162D2003A109E /* TTBinaryData.h */,
 				15A0D8A21E8162D2003A109E /* TTBinaryData.m */,
-				15A0D8A31E8162D2003A109E /* TTKit.h */,
-				15A0D8A41E8162D2003A109E /* TTKit.m */,
+				15A1B1841E83C4E60082A6A3 /* TTLogManager.h */,
+				15A1B1851E83C4E60082A6A3 /* TTLogManager.m */,
 				1507F91D1E9648A0003B5AFE /* AppPurchaseManager.h */,
 				1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */,
 			);
@@ -1650,6 +1655,7 @@
 				153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */,
 				2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */,
 				15A1B17C1E83C2FF0082A6A3 /* zip.c in Sources */,
+				1507F9221E964B60003B5AFE /* TTTools.m in Sources */,
 				15A1AF2C1E8284FE0082A6A3 /* SDWebImageCompat.m in Sources */,
 				150184B81E8D1A3000788E47 /* TTTableViewBaseCell.m in Sources */,
 				15A1B1001E83A7DF0082A6A3 /* WHUCalendarFlowLayout.m in Sources */,
