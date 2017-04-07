@@ -13,13 +13,6 @@
 @interface TTTools : NSObject
 
 /**
- 判断字符串是不是空
-
- @param string 判断的字符串
- */
-+ (BOOL)isNilOrEmpty:(NSString *)string;
-
-/**
  去除字符串首尾空格换行
 
  @param str 处理的字符串

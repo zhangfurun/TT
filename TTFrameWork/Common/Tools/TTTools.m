@@ -13,17 +13,6 @@
 
 @implementation TTTools
 #pragma mark - 基本
-+ (BOOL)isNilOrEmpty:(NSString *)string {
-    if (!self) {
-        return YES;
-    }
-    NSString *temp = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if (!temp || temp.length == 0) {
-        return YES;
-    }
-    return NO;
-}
-
 + (NSString *)trimmedString:(NSString *)str {
     return [str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }

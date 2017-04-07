@@ -10,6 +10,13 @@
 
 @interface NSString (TTString)
 /**
+ 字符串的判空
+
+ @param str 判断的字符串
+ */
++ (BOOL)isNilOrEmpty:(NSString *)str;
+
+/**
  字符串的MD5加密
  */
 - (NSString *)md5Str;
