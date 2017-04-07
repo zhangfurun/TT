@@ -56,6 +56,15 @@
 		1527C1261E8217B900E828A5 /* TTWeChatCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C11B1E8217B800E828A5 /* TTWeChatCenter.m */; };
 		1527C1271E8217B900E828A5 /* WXAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C11D1E8217B800E828A5 /* WXAuthRequest.m */; };
 		1527C12A1E8217FE00E828A5 /* TTShareUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1527C1291E8217FE00E828A5 /* TTShareUser.m */; };
+		152A21FC1E973FEF008E1513 /* NSBundle+TTBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21EB1E973FEF008E1513 /* NSBundle+TTBundle.m */; };
+		152A21FD1E973FEF008E1513 /* NSDate+TTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21ED1E973FEF008E1513 /* NSDate+TTDate.m */; };
+		152A21FE1E973FEF008E1513 /* NSFileManager+TTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21EF1E973FEF008E1513 /* NSFileManager+TTFileManager.m */; };
+		152A21FF1E973FEF008E1513 /* NSString+TTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21F11E973FEF008E1513 /* NSString+TTString.m */; };
+		152A22001E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21F31E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.m */; };
+		152A22011E973FEF008E1513 /* UIDevice+TTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21F51E973FEF008E1513 /* UIDevice+TTDevice.m */; };
+		152A22021E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21F71E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.m */; };
+		152A22031E973FEF008E1513 /* UIView+TTSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21F91E973FEF008E1513 /* UIView+TTSuperView.m */; };
+		152A22041E973FEF008E1513 /* UIWindow+TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 152A21FB1E973FEF008E1513 /* UIWindow+TTWindow.m */; };
 		1539542E1E64272B00A20FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1539542D1E64272B00A20FB9 /* main.m */; };
 		153954311E64272B00A20FB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954301E64272B00A20FB9 /* AppDelegate.m */; };
 		153954341E64272B00A20FB9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954331E64272B00A20FB9 /* ViewController.m */; };
@@ -64,15 +73,6 @@
 		1539543C1E64272B00A20FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539543A1E64272B00A20FB9 /* LaunchScreen.storyboard */; };
 		153954471E64272C00A20FB9 /* TTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954461E64272C00A20FB9 /* TTTests.m */; };
 		153954521E64272C00A20FB9 /* TTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954511E64272C00A20FB9 /* TTUITests.m */; };
-		153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955BA1E64288600A20FB9 /* UIDevice+TTDevice.m */; };
-		153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955BD1E6428ED00A20FB9 /* NSDate+TTDate.m */; };
-		153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C01E64298600A20FB9 /* NSFileManager+TTFileManager.m */; };
-		153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C31E642A1A00A20FB9 /* NSString+TTString.m */; };
-		153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C61E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m */; };
-		153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955C91E642FDA00A20FB9 /* UIView+TTSuperView.m */; };
-		153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */; };
-		153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */; };
-		153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 153955D51E643BF900A20FB9 /* NSBundle+TTBundle.m */; };
 		15A0D8731E816283003A109E /* TTAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D8721E816283003A109E /* TTAnnotation.strings */; };
 		15A0D8C01E8162D2003A109E /* TTBinaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A21E8162D2003A109E /* TTBinaryData.m */; };
 		15A0D8C11E8162D2003A109E /* TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A41E8162D2003A109E /* TTKit.m */; };
@@ -312,6 +312,24 @@
 		1527C11D1E8217B800E828A5 /* WXAuthRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAuthRequest.m; sourceTree = "<group>"; };
 		1527C1281E8217FE00E828A5 /* TTShareUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTShareUser.h; sourceTree = "<group>"; };
 		1527C1291E8217FE00E828A5 /* TTShareUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTShareUser.m; sourceTree = "<group>"; };
+		152A21EA1E973FEF008E1513 /* NSBundle+TTBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TTBundle.h"; sourceTree = "<group>"; };
+		152A21EB1E973FEF008E1513 /* NSBundle+TTBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TTBundle.m"; sourceTree = "<group>"; };
+		152A21EC1E973FEF008E1513 /* NSDate+TTDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TTDate.h"; sourceTree = "<group>"; };
+		152A21ED1E973FEF008E1513 /* NSDate+TTDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TTDate.m"; sourceTree = "<group>"; };
+		152A21EE1E973FEF008E1513 /* NSFileManager+TTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+TTFileManager.h"; sourceTree = "<group>"; };
+		152A21EF1E973FEF008E1513 /* NSFileManager+TTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+TTFileManager.m"; sourceTree = "<group>"; };
+		152A21F01E973FEF008E1513 /* NSString+TTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTString.h"; sourceTree = "<group>"; };
+		152A21F11E973FEF008E1513 /* NSString+TTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTString.m"; sourceTree = "<group>"; };
+		152A21F21E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+TTUserDefaults.h"; sourceTree = "<group>"; };
+		152A21F31E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+TTUserDefaults.m"; sourceTree = "<group>"; };
+		152A21F41E973FEF008E1513 /* UIDevice+TTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TTDevice.h"; sourceTree = "<group>"; };
+		152A21F51E973FEF008E1513 /* UIDevice+TTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TTDevice.m"; sourceTree = "<group>"; };
+		152A21F61E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TTFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		152A21F71E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TTFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		152A21F81E973FEF008E1513 /* UIView+TTSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTSuperView.h"; sourceTree = "<group>"; };
+		152A21F91E973FEF008E1513 /* UIView+TTSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTSuperView.m"; sourceTree = "<group>"; };
+		152A21FA1E973FEF008E1513 /* UIWindow+TTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TTWindow.h"; sourceTree = "<group>"; };
+		152A21FB1E973FEF008E1513 /* UIWindow+TTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TTWindow.m"; sourceTree = "<group>"; };
 		153954291E64272B00A20FB9 /* TT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1539542D1E64272B00A20FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1539542F1E64272B00A20FB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -328,24 +346,6 @@
 		1539544D1E64272C00A20FB9 /* TTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		153954511E64272C00A20FB9 /* TTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTUITests.m; sourceTree = "<group>"; };
 		153954531E64272C00A20FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		153955B91E64288600A20FB9 /* UIDevice+TTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+TTDevice.h"; sourceTree = "<group>"; };
-		153955BA1E64288600A20FB9 /* UIDevice+TTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+TTDevice.m"; sourceTree = "<group>"; };
-		153955BC1E6428ED00A20FB9 /* NSDate+TTDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TTDate.h"; sourceTree = "<group>"; };
-		153955BD1E6428ED00A20FB9 /* NSDate+TTDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TTDate.m"; sourceTree = "<group>"; };
-		153955BF1E64298600A20FB9 /* NSFileManager+TTFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+TTFileManager.h"; sourceTree = "<group>"; };
-		153955C01E64298600A20FB9 /* NSFileManager+TTFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+TTFileManager.m"; sourceTree = "<group>"; };
-		153955C21E642A1A00A20FB9 /* NSString+TTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TTString.h"; sourceTree = "<group>"; };
-		153955C31E642A1A00A20FB9 /* NSString+TTString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TTString.m"; sourceTree = "<group>"; };
-		153955C51E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+TTUserDefaults.h"; sourceTree = "<group>"; };
-		153955C61E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+TTUserDefaults.m"; sourceTree = "<group>"; };
-		153955C81E642FDA00A20FB9 /* UIView+TTSuperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TTSuperView.h"; sourceTree = "<group>"; };
-		153955C91E642FDA00A20FB9 /* UIView+TTSuperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTSuperView.m"; sourceTree = "<group>"; };
-		153955CE1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TTFullscreenPopGesture.h"; sourceTree = "<group>"; };
-		153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TTFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		153955D11E64365B00A20FB9 /* UIWindow+TTWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TTWindow.h"; sourceTree = "<group>"; };
-		153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TTWindow.m"; sourceTree = "<group>"; };
-		153955D41E643BF900A20FB9 /* NSBundle+TTBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TTBundle.h"; sourceTree = "<group>"; };
-		153955D51E643BF900A20FB9 /* NSBundle+TTBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TTBundle.m"; sourceTree = "<group>"; };
 		15A0D8721E816283003A109E /* TTAnnotation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TTAnnotation.strings; sourceTree = "<group>"; };
 		15A0D8A11E8162D2003A109E /* TTBinaryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBinaryData.h; sourceTree = "<group>"; };
 		15A0D8A21E8162D2003A109E /* TTBinaryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBinaryData.m; sourceTree = "<group>"; };
@@ -913,6 +913,31 @@
 			path = SDK_1_6_2;
 			sourceTree = "<group>";
 		};
+		152A21E91E973FEF008E1513 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				152A21EA1E973FEF008E1513 /* NSBundle+TTBundle.h */,
+				152A21EB1E973FEF008E1513 /* NSBundle+TTBundle.m */,
+				152A21EC1E973FEF008E1513 /* NSDate+TTDate.h */,
+				152A21ED1E973FEF008E1513 /* NSDate+TTDate.m */,
+				152A21EE1E973FEF008E1513 /* NSFileManager+TTFileManager.h */,
+				152A21EF1E973FEF008E1513 /* NSFileManager+TTFileManager.m */,
+				152A21F01E973FEF008E1513 /* NSString+TTString.h */,
+				152A21F11E973FEF008E1513 /* NSString+TTString.m */,
+				152A21F21E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.h */,
+				152A21F31E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.m */,
+				152A21F41E973FEF008E1513 /* UIDevice+TTDevice.h */,
+				152A21F51E973FEF008E1513 /* UIDevice+TTDevice.m */,
+				152A21F61E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.h */,
+				152A21F71E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.m */,
+				152A21F81E973FEF008E1513 /* UIView+TTSuperView.h */,
+				152A21F91E973FEF008E1513 /* UIView+TTSuperView.m */,
+				152A21FA1E973FEF008E1513 /* UIWindow+TTWindow.h */,
+				152A21FB1E973FEF008E1513 /* UIWindow+TTWindow.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		153954201E64272B00A20FB9 = {
 			isa = PBXGroup;
 			children = (
@@ -989,7 +1014,6 @@
 				2DEEE8F21E73DC950089CE1F /* ReasourceFiles */,
 				2DEEE8CA1E73D4C90089CE1F /* NetWork */,
 				15C7BF1F1E69078C001636DA /* TTHUDMessage */,
-				153955B51E6427DC00A20FB9 /* Category */,
 				15A0D8C51E81681F003A109E /* Model */,
 				1501846A1E8D1A3000788E47 /* View */,
 				15A1B0ED1E83A4340082A6A3 /* Controller */,
@@ -997,34 +1021,10 @@
 			path = TTFrameWork;
 			sourceTree = "<group>";
 		};
-		153955B51E6427DC00A20FB9 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				153955B91E64288600A20FB9 /* UIDevice+TTDevice.h */,
-				153955BA1E64288600A20FB9 /* UIDevice+TTDevice.m */,
-				153955BC1E6428ED00A20FB9 /* NSDate+TTDate.h */,
-				153955BD1E6428ED00A20FB9 /* NSDate+TTDate.m */,
-				153955BF1E64298600A20FB9 /* NSFileManager+TTFileManager.h */,
-				153955C01E64298600A20FB9 /* NSFileManager+TTFileManager.m */,
-				153955C21E642A1A00A20FB9 /* NSString+TTString.h */,
-				153955C31E642A1A00A20FB9 /* NSString+TTString.m */,
-				153955C51E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.h */,
-				153955C61E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m */,
-				153955C81E642FDA00A20FB9 /* UIView+TTSuperView.h */,
-				153955C91E642FDA00A20FB9 /* UIView+TTSuperView.m */,
-				153955CE1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.h */,
-				153955CF1E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m */,
-				153955D11E64365B00A20FB9 /* UIWindow+TTWindow.h */,
-				153955D21E64365B00A20FB9 /* UIWindow+TTWindow.m */,
-				153955D41E643BF900A20FB9 /* NSBundle+TTBundle.h */,
-				153955D51E643BF900A20FB9 /* NSBundle+TTBundle.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		15A0D8741E8162D2003A109E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				152A21E91E973FEF008E1513 /* Category */,
 				15A0D9731E816DFF003A109E /* TTConst.h */,
 				15A0D8751E8162D2003A109E /* Libs */,
 				15A0D89E1E8162D2003A109E /* Tools */,
@@ -1665,24 +1665,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A1B0FF1E83A7DF0082A6A3 /* WHUCalendarCell.m in Sources */,
+				152A21FD1E973FEF008E1513 /* NSDate+TTDate.m in Sources */,
 				15A1AF2A1E8284FE0082A6A3 /* SDImageCache.m in Sources */,
 				150184B41E8D1A3000788E47 /* TTCollectionView.m in Sources */,
 				15A1AF311E8284FE0082A6A3 /* SDWebImagePrefetcher.m in Sources */,
 				15A1B1831E83C3CF0082A6A3 /* TTSMSManager.m in Sources */,
+				152A22001E973FEF008E1513 /* NSUserDefaults+TTUserDefaults.m in Sources */,
 				2DEEE9211E73DCF10089CE1F /* AFHTTPRequestOperation.m in Sources */,
 				15A1AF391E8284FE0082A6A3 /* UIView+WebCacheOperation.m in Sources */,
 				15A0D8E51E81681F003A109E /* MJFoundation.m in Sources */,
-				153955CA1E642FDA00A20FB9 /* UIView+TTSuperView.m in Sources */,
 				2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */,
 				15A1B17C1E83C2FF0082A6A3 /* zip.c in Sources */,
 				1507F9221E964B60003B5AFE /* TTTools.m in Sources */,
 				15A1AF2C1E8284FE0082A6A3 /* SDWebImageCompat.m in Sources */,
 				150184B81E8D1A3000788E47 /* TTTableViewBaseCell.m in Sources */,
+				152A21FE1E973FEF008E1513 /* NSFileManager+TTFileManager.m in Sources */,
 				15A1B1001E83A7DF0082A6A3 /* WHUCalendarFlowLayout.m in Sources */,
+				152A22011E973FEF008E1513 /* UIDevice+TTDevice.m in Sources */,
 				15A1B0DB1E83812E0082A6A3 /* MLImageCrop.m in Sources */,
 				150184C31E8D1A3000788E47 /* TTTextView.m in Sources */,
 				150184C11E8D1A3000788E47 /* TTTopScrollView.m in Sources */,
-				153955D31E64365B00A20FB9 /* UIWindow+TTWindow.m in Sources */,
 				15A1B1181E83A9020082A6A3 /* TAPageControl.m in Sources */,
 				1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */,
 				15A1B0E21E83813D0082A6A3 /* NSDictionary+PrintChinese.m in Sources */,
@@ -1693,10 +1695,10 @@
 				15A1B1701E83C2FF0082A6A3 /* aeskey.c in Sources */,
 				15A1B1041E83A7DF0082A6A3 /* WHUCalendarYMSelectView.m in Sources */,
 				150184B91E8D1A3000788E47 /* AlertViewRecorder.m in Sources */,
-				153955D61E643BF900A20FB9 /* NSBundle+TTBundle.m in Sources */,
 				15A1AF331E8284FE0082A6A3 /* UIImage+GIF.m in Sources */,
 				15A0D8C11E8162D2003A109E /* TTKit.m in Sources */,
 				15A1B16F1E83C2FF0082A6A3 /* aescrypt.c in Sources */,
+				152A21FC1E973FEF008E1513 /* NSBundle+TTBundle.m in Sources */,
 				1527C1201E8217B800E828A5 /* SinaAuthRequest.m in Sources */,
 				15A1B11F1E83A9AE0082A6A3 /* NetWorkReachability.m in Sources */,
 				1507F9171E962B58003B5AFE /* TTBaseViewController.m in Sources */,
@@ -1710,7 +1712,6 @@
 				150184B11E8D1A3000788E47 /* TTReorderableCollectionViewFlowLayout.m in Sources */,
 				15A1B1011E83A7DF0082A6A3 /* WHUCalendarItem.m in Sources */,
 				15A1AF371E8284FE0082A6A3 /* UIImageView+WebCache.m in Sources */,
-				153955BE1E6428ED00A20FB9 /* NSDate+TTDate.m in Sources */,
 				15A1B1191E83A9020082A6A3 /* SDCollectionViewCell.m in Sources */,
 				1507F9281E965384003B5AFE /* CleanLoaclCache.m in Sources */,
 				15A1B1731E83C2FF0082A6A3 /* fileenc.c in Sources */,
@@ -1733,7 +1734,6 @@
 				150184D41E8D1C3800788E47 /* TTBottomBarView.m in Sources */,
 				150184D21E8D1C3800788E47 /* CarouselManager.m in Sources */,
 				15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */,
-				153955C11E64298600A20FB9 /* NSFileManager+TTFileManager.m in Sources */,
 				15A1B1751E83C2FF0082A6A3 /* prng.c in Sources */,
 				150184C01E8D1A3000788E47 /* TTScrollView.m in Sources */,
 				2DEEE9261E73DCF10089CE1F /* AFURLConnectionOperation.m in Sources */,
@@ -1741,10 +1741,8 @@
 				1507F91F1E9648A0003B5AFE /* AppPurchaseManager.m in Sources */,
 				150184AE1E8D1A3000788E47 /* TTRefreshHeaderView.m in Sources */,
 				15A0D8E31E81681F003A109E /* MJDictionaryCache.m in Sources */,
-				153955BB1E64288600A20FB9 /* UIDevice+TTDevice.m in Sources */,
 				2DEEE9271E73DCF10089CE1F /* AFURLRequestSerialization.m in Sources */,
 				2DEEE9221E73DCF10089CE1F /* AFHTTPRequestOperationManager.m in Sources */,
-				153955C71E642B2100A20FB9 /* NSUserDefaults+TTUserDefaults.m in Sources */,
 				15A1B17A1E83C2FF0082A6A3 /* mztools.c in Sources */,
 				15A1B1791E83C2FF0082A6A3 /* ioapi.c in Sources */,
 				15A0D8E91E81681F003A109E /* NSObject+MJClass.m in Sources */,
@@ -1754,8 +1752,11 @@
 				15A1B11A1E83A9020082A6A3 /* SDCycleScrollView.m in Sources */,
 				1507F9311E9665B9003B5AFE /* XTimer.m in Sources */,
 				1507F9251E965283003B5AFE /* AutoLayoutLabelView.m in Sources */,
+				152A22021E973FEF008E1513 /* UINavigationController+TTFullscreenPopGesture.m in Sources */,
 				150184C41E8D1A3000788E47 /* TTWebView.m in Sources */,
 				15A0D8E81E81681F003A109E /* MJPropertyType.m in Sources */,
+				152A22041E973FEF008E1513 /* UIWindow+TTWindow.m in Sources */,
+				152A22031E973FEF008E1513 /* UIView+TTSuperView.m in Sources */,
 				150184B71E8D1A3000788E47 /* TTTableView.m in Sources */,
 				2DEEE9241E73DCF10089CE1F /* AFNetworkReachabilityManager.m in Sources */,
 				150184BC1E8D1A3000788E47 /* TTAlertView.m in Sources */,
@@ -1768,7 +1769,6 @@
 				15A1B1021E83A7DF0082A6A3 /* WHUCalendarPopView.m in Sources */,
 				15A1AF2E1E8284FE0082A6A3 /* SDWebImageDownloader.m in Sources */,
 				150184B21E8D1A3000788E47 /* WaterfallCollectionViewLayout.m in Sources */,
-				153955D01E6431DE00A20FB9 /* UINavigationController+TTFullscreenPopGesture.m in Sources */,
 				15A1AF321E8284FE0082A6A3 /* UIButton+WebCache.m in Sources */,
 				15A1AF281E8284FE0082A6A3 /* NSData+ImageContentType.m in Sources */,
 				150184BF1E8D1A3000788E47 /* TTContentScrollView.m in Sources */,
@@ -1779,6 +1779,7 @@
 				15A1B1861E83C4E60082A6A3 /* TTLogManager.m in Sources */,
 				1527C1211E8217B800E828A5 /* TTSinaCenter.m in Sources */,
 				150184BB1E8D1A3000788E47 /* UIAlertView+MyAlertView.m in Sources */,
+				152A21FF1E973FEF008E1513 /* NSString+TTString.m in Sources */,
 				15A0D8E41E81681F003A109E /* MJExtensionConst.m in Sources */,
 				15A1B1151E83A9020082A6A3 /* TAAbstractDotView.m in Sources */,
 				150184D51E8D1C3800788E47 /* TTStarView.m in Sources */,
@@ -1792,7 +1793,6 @@
 				15A1B1721E83C2FF0082A6A3 /* entropy.c in Sources */,
 				150184BE1E8D1A3000788E47 /* HyperlinkButton.m in Sources */,
 				15A0D8ED1E81681F003A109E /* NSString+MJExtension.m in Sources */,
-				153955C41E642A1A00A20FB9 /* NSString+TTString.m in Sources */,
 				15A1B17D1E83C2FF0082A6A3 /* SSZipArchive.m in Sources */,
 				15A1AF291E8284FE0082A6A3 /* NSImage+WebCache.m in Sources */,
 				15A0D8EE1E81681F003A109E /* TTBaseModel.m in Sources */,
