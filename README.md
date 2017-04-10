@@ -12,7 +12,7 @@
 这里是项目中常用的View,如TTAlert弹框,TTTextView(占位符)</br>
 ## Controller</br>
 这里可以作为项目的ViewController的基类</br>
-## Category</br>
+## Category(目前已经归入Common中)</br>
 这里主要是针对苹果自带的控件的功能的拓展,如获取View的高度,宽度,动画设置等等</br>
 
 ## NetWork</br>
