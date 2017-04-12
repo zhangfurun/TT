@@ -104,8 +104,6 @@ typedef void(^DismissBlock)();
 
 /**
  当前页面名称
-
- @return <#return value description#>
  */
 + (NSString *)classStr;
 
