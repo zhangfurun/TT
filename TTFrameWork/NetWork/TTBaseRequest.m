@@ -14,7 +14,7 @@
 
 #import "AFNetworking.h"
 
-#import "TTTools.h"
+#import "NSString+TTString.h"
 
 @interface TTBaseRequest(){
     void(^_successBlock)(TTBaseRequest *);
@@ -95,7 +95,7 @@ static NSMutableArray *requests;
     
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     NSString *uaHeaderStr = [self getUserAgent];
-    if (![TTTools isNilOrEmpty:uaHeaderStr]) {
+    if (![NSString isNilOrEmpty:uaHeaderStr]) {
         [mgr.requestSerializer setValue:uaHeaderStr forHTTPHeaderField:@"User-Agent"];
     }
     NSDictionary *reqHeaderDict = [self getCustomHeaders];

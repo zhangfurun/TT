@@ -8,14 +8,14 @@
 
 #import "TTSMSManager.h"
 
-#import "TTTools.h"
+#import "NSString+TTString.h"
 
 #import <SMS_SDK/SMSSDK.h>
 
 @implementation TTSMSManager
 
 + (BOOL)getVerificationCodeByPhoneNum:(NSString *)phoneNum resultBlock:(SMSResultBlock)resultBlock {
-    if ([TTTools isNilOrEmpty:phoneNum]) {
+    if ([NSString isNilOrEmpty:phoneNum]) {
         return NO;
     }
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:phoneNum zone:@"86" customIdentifier:nil result:resultBlock];
@@ -23,10 +23,10 @@
 }
 
 + (BOOL)commitVerificationCode:(NSString *)code phoneNum:(NSString *)phoneNum resultBlock:(SMSResultBlock)resultBlock {
-    if ([TTTools isNilOrEmpty:code]) {
+    if ([NSString isNilOrEmpty:code]) {
         return NO;
     }
-    if ([TTTools isNilOrEmpty:phoneNum]) {
+    if ([NSString isNilOrEmpty:phoneNum]) {
         return NO;
     }
     [SMSSDK commitVerificationCode:code phoneNumber:phoneNum zone:@"86" result:resultBlock];

@@ -63,13 +63,13 @@ static TTHUDMessage *instance;
 }
 
 + (void)showInView:(UIView *)view showText:(NSString *)text detailsText:(NSString *)detailsText{
-    //    dispatch_async(dispatch_get_main_queue(), ^{
-    //        [self hideHUD];
-    //        HUD =[MBProgressHUD showHUDAddedTo:view animated:YES];
-    //        HUD.labelText = text;
-    //        HUD.detailsLabelText = detailsText;
-    //    });
-    [self showCustomViewInView:view showText:text detailText:detailsText];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self hideHUD];
+            HUD =[MBProgressHUD showHUDAddedTo:view animated:YES];
+            HUD.labelText = text;
+            HUD.detailsLabelText = detailsText;
+        });
+//    [self showCustomViewInView:view showText:text detailText:detailsText];
 }
 
 + (void)showCustomViewInView:(UIView *)view showText:(NSString *)text detailText:(NSString *)detailText {
