@@ -28,6 +28,17 @@
  */
 @property (nonatomic, strong) NSArray *dataArray;
 
+
+/**
+ 记录实际数组中存在的个数
+ 说明:这个必须要设置,不然pageControl不显示
+ 考虑到iCarouselTypeRotary样式的圆形3D样式,需要在
+ dataArray == 1 -> dataCount == 3
+ dataArray == 2 -> dataCount == 4 or 6
+ dataArray >= 3 -> dataCount == dataArray.count
+ */
+@property (assign, nonatomic) NSInteger dataCount;
+
 /**
  设置iCarousel的类型
  默认:iCarouselTypeRotary

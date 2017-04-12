@@ -179,7 +179,22 @@
 
 #pragma marl - Scroll Delegate
 - (void)carouselDidScroll:(iCarousel *)carousel; {
-    self.pageControl.currentPage = carousel.currentItemIndex;
+    switch (self.dataCount) {
+        case 0:
+            break;
+        case 1:{
+            self.pageControl.currentPage = 0;
+        }
+            break;
+        case 2:{
+            self.pageControl.currentPage = carousel.currentItemIndex % self.dataCount;
+        }
+            break;
+        default:{
+            self.pageControl.currentPage = carousel.currentItemIndex;
+        }
+            break;
+    }
 }
 
 - (void)carouselWillBeginDragging:(iCarousel *)carousel{
