@@ -1,5 +1,5 @@
 //
-//  CleanLoaclCache.h
+//  CleanLocalCache.h
 //  TT
 //
 //  Created by 张福润 on 2017/4/6.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CleanLoaclCache : NSObject
+@interface CleanLocalCache : NSObject
 + (NSString *)getLoaclCacheSize;
 + (void)clean;
 @end

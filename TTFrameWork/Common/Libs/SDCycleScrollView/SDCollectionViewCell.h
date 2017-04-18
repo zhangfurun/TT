@@ -10,6 +10,8 @@
  
  *********************************************************************************
  *
+ * 🌟🌟🌟 新建SDCycleScrollView交流QQ群：185534916 🌟🌟🌟
+ *
  * 在您使用此自动轮播库的过程中如果出现bug请及时以以下任意一种方式联系我们，我们会及时修复bug并
  * 帮您解决问题。
  * 新浪微博:GSD_iOS
@@ -39,7 +41,11 @@
 @property (nonatomic, strong) UIFont *titleLabelTextFont;
 @property (nonatomic, strong) UIColor *titleLabelBackgroundColor;
 @property (nonatomic, assign) CGFloat titleLabelHeight;
+@property (nonatomic, assign) NSTextAlignment titleLabelTextAlignment;
 
 @property (nonatomic, assign) BOOL hasConfigured;
+
+/** 只展示文字轮播 */
+@property (nonatomic, assign) BOOL onlyDisplayText;
 
 @end

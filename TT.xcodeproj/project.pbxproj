@@ -39,7 +39,7 @@
 		1507F91F1E9648A0003B5AFE /* AppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */; };
 		1507F9221E964B60003B5AFE /* TTTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9211E964B60003B5AFE /* TTTools.m */; };
 		1507F9251E965283003B5AFE /* AutoLayoutLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */; };
-		1507F9281E965384003B5AFE /* CleanLoaclCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9271E965384003B5AFE /* CleanLoaclCache.m */; };
+		1507F9281E965384003B5AFE /* CleanLocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9271E965384003B5AFE /* CleanLocalCache.m */; };
 		1507F92B1E965613003B5AFE /* AllowMobileNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F92A1E965613003B5AFE /* AllowMobileNetManager.m */; };
 		1507F92E1E96656C003B5AFE /* TTAudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F92D1E96656C003B5AFE /* TTAudioTool.m */; };
 		1507F9311E9665B9003B5AFE /* XTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1507F9301E9665B9003B5AFE /* XTimer.m */; };
@@ -270,8 +270,8 @@
 		1507F9211E964B60003B5AFE /* TTTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTools.m; sourceTree = "<group>"; };
 		1507F9231E965283003B5AFE /* AutoLayoutLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutLabelView.h; sourceTree = "<group>"; };
 		1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutLabelView.m; sourceTree = "<group>"; };
-		1507F9261E965384003B5AFE /* CleanLoaclCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanLoaclCache.h; sourceTree = "<group>"; };
-		1507F9271E965384003B5AFE /* CleanLoaclCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanLoaclCache.m; sourceTree = "<group>"; };
+		1507F9261E965384003B5AFE /* CleanLocalCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanLocalCache.h; sourceTree = "<group>"; };
+		1507F9271E965384003B5AFE /* CleanLocalCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanLocalCache.m; sourceTree = "<group>"; };
 		1507F9291E965613003B5AFE /* AllowMobileNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllowMobileNetManager.h; sourceTree = "<group>"; };
 		1507F92A1E965613003B5AFE /* AllowMobileNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllowMobileNetManager.m; sourceTree = "<group>"; };
 		1507F92C1E96656C003B5AFE /* TTAudioTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTAudioTool.h; sourceTree = "<group>"; };
@@ -1064,8 +1064,8 @@
 				1507F91E1E9648A0003B5AFE /* AppPurchaseManager.m */,
 				1507F9231E965283003B5AFE /* AutoLayoutLabelView.h */,
 				1507F9241E965283003B5AFE /* AutoLayoutLabelView.m */,
-				1507F9261E965384003B5AFE /* CleanLoaclCache.h */,
-				1507F9271E965384003B5AFE /* CleanLoaclCache.m */,
+				1507F9261E965384003B5AFE /* CleanLocalCache.h */,
+				1507F9271E965384003B5AFE /* CleanLocalCache.m */,
 				1507F9291E965613003B5AFE /* AllowMobileNetManager.h */,
 				1507F92A1E965613003B5AFE /* AllowMobileNetManager.m */,
 				1507F92C1E96656C003B5AFE /* TTAudioTool.h */,
@@ -1713,7 +1713,7 @@
 				15A1B1011E83A7DF0082A6A3 /* WHUCalendarItem.m in Sources */,
 				15A1AF371E8284FE0082A6A3 /* UIImageView+WebCache.m in Sources */,
 				15A1B1191E83A9020082A6A3 /* SDCollectionViewCell.m in Sources */,
-				1507F9281E965384003B5AFE /* CleanLoaclCache.m in Sources */,
+				1507F9281E965384003B5AFE /* CleanLocalCache.m in Sources */,
 				15A1B1731E83C2FF0082A6A3 /* fileenc.c in Sources */,
 				15A1AF301E8284FE0082A6A3 /* SDWebImageManager.m in Sources */,
 				1527C12A1E8217FE00E828A5 /* TTShareUser.m in Sources */,

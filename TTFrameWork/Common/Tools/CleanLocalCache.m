@@ -1,12 +1,12 @@
 //
-//  CleanLoaclCache.m
+//  CleanLocalCache.m
 //  TT
 //
 //  Created by 张福润 on 2017/4/6.
 //  Copyright © 2017年 张福润. All rights reserved.
 //
 
-#import "CleanLoaclCache.h"
+#import "CleanLocalCache.h"
 
 #import "SDImageCache.h"
 
@@ -17,7 +17,7 @@
 
 NSString *const CacheCleanSuccess = @"CacheCleanSuccess";
 
-@implementation CleanLoaclCache
+@implementation CleanLocalCache
 
 + (NSString *)getLoaclCacheSize {
     float imageCache = [[SDImageCache sharedImageCache] getSize] / 1024.00 / 1024.00;
