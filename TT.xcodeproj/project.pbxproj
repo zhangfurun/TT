@@ -73,6 +73,8 @@
 		1539543C1E64272B00A20FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539543A1E64272B00A20FB9 /* LaunchScreen.storyboard */; };
 		153954471E64272C00A20FB9 /* TTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954461E64272C00A20FB9 /* TTTests.m */; };
 		153954521E64272C00A20FB9 /* TTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954511E64272C00A20FB9 /* TTUITests.m */; };
+		15902CC61EA75F9D00B28ADE /* UIColor+TTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */; };
+		15902CC71EA75F9D00B28ADE /* UILabel+TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */; };
 		15A0D8731E816283003A109E /* TTAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D8721E816283003A109E /* TTAnnotation.strings */; };
 		15A0D8C01E8162D2003A109E /* TTBinaryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A21E8162D2003A109E /* TTBinaryData.m */; };
 		15A0D8C11E8162D2003A109E /* TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A0D8A41E8162D2003A109E /* TTKit.m */; };
@@ -346,6 +348,10 @@
 		1539544D1E64272C00A20FB9 /* TTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		153954511E64272C00A20FB9 /* TTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTUITests.m; sourceTree = "<group>"; };
 		153954531E64272C00A20FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15902CC21EA75F9C00B28ADE /* UIColor+TTHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TTHex.h"; sourceTree = "<group>"; };
+		15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TTHex.m"; sourceTree = "<group>"; };
+		15902CC41EA75F9D00B28ADE /* UILabel+TTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TTLabel.h"; sourceTree = "<group>"; };
+		15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+TTLabel.m"; sourceTree = "<group>"; };
 		15A0D8721E816283003A109E /* TTAnnotation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TTAnnotation.strings; sourceTree = "<group>"; };
 		15A0D8A11E8162D2003A109E /* TTBinaryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBinaryData.h; sourceTree = "<group>"; };
 		15A0D8A21E8162D2003A109E /* TTBinaryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBinaryData.m; sourceTree = "<group>"; };
@@ -934,6 +940,10 @@
 				152A21F91E973FEF008E1513 /* UIView+TTSuperView.m */,
 				152A21FA1E973FEF008E1513 /* UIWindow+TTWindow.h */,
 				152A21FB1E973FEF008E1513 /* UIWindow+TTWindow.m */,
+				15902CC21EA75F9C00B28ADE /* UIColor+TTHex.h */,
+				15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */,
+				15902CC41EA75F9D00B28ADE /* UILabel+TTLabel.h */,
+				15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1688,6 +1698,7 @@
 				15A1B1181E83A9020082A6A3 /* TAPageControl.m in Sources */,
 				1527C0FB1E8217A300E828A5 /* ShareContentInfo.m in Sources */,
 				15A1B0E21E83813D0082A6A3 /* NSDictionary+PrintChinese.m in Sources */,
+				15902CC71EA75F9D00B28ADE /* UILabel+TTLabel.m in Sources */,
 				15A0D8EC1E81681F003A109E /* NSObject+MJProperty.m in Sources */,
 				15A1AF2D1E8284FE0082A6A3 /* SDWebImageDecoder.m in Sources */,
 				1527C1271E8217B900E828A5 /* WXAuthRequest.m in Sources */,
@@ -1785,6 +1796,7 @@
 				150184D51E8D1C3800788E47 /* TTStarView.m in Sources */,
 				15A0D8EB1E81681F003A109E /* NSObject+MJKeyValue.m in Sources */,
 				15A1AF271E8284FE0082A6A3 /* MKAnnotationView+WebCache.m in Sources */,
+				15902CC61EA75F9D00B28ADE /* UIColor+TTHex.m in Sources */,
 				15A0D8C01E8162D2003A109E /* TTBinaryData.m in Sources */,
 				150184B31E8D1A3000788E47 /* WaterfallDecorationReusableView.m in Sources */,
 				15A1AF351E8284FE0082A6A3 /* UIImage+WebP.m in Sources */,

@@ -114,7 +114,6 @@ static AppPurchaseManager *instance = nil;
     }
     SKPayment *payment = [SKPayment paymentWithProduct:purchasePro];
     [payment applicationUsername];
-    [payment ]
     [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 
