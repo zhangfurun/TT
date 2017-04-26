@@ -82,6 +82,8 @@
 		157384A21EB0818D00525275 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157384A11EB0818D00525275 /* CoreMotion.framework */; };
 		1573852A1EB08C3C00525275 /* Annotation_TTOtherPayManager.strings in Resources */ = {isa = PBXBuildFile; fileRef = 157385271EB08C3C00525275 /* Annotation_TTOtherPayManager.strings */; };
 		1573852B1EB08C3C00525275 /* TTPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 157385291EB08C3C00525275 /* TTPayManager.m */; };
+		157385331EB08C7C00525275 /* WeChatSignManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1573852F1EB08C7C00525275 /* WeChatSignManager.m */; };
+		157385341EB08C7C00525275 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 157385321EB08C7C00525275 /* XMLDictionary.m */; };
 		15902CC61EA75F9D00B28ADE /* UIColor+TTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */; };
 		15902CC71EA75F9D00B28ADE /* UILabel+TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */; };
 		15A0D8731E816283003A109E /* TTAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D8721E816283003A109E /* TTAnnotation.strings */; };
@@ -367,6 +369,11 @@
 		157385271EB08C3C00525275 /* Annotation_TTOtherPayManager.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTOtherPayManager.strings; sourceTree = "<group>"; };
 		157385281EB08C3C00525275 /* TTPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPayManager.h; sourceTree = "<group>"; };
 		157385291EB08C3C00525275 /* TTPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPayManager.m; sourceTree = "<group>"; };
+		1573852D1EB08C7C00525275 /* WeChatPayManagerHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatPayManagerHeader.h; sourceTree = "<group>"; };
+		1573852E1EB08C7C00525275 /* WeChatSignManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeChatSignManager.h; sourceTree = "<group>"; };
+		1573852F1EB08C7C00525275 /* WeChatSignManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeChatSignManager.m; sourceTree = "<group>"; };
+		157385311EB08C7C00525275 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		157385321EB08C7C00525275 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		15902CC21EA75F9C00B28ADE /* UIColor+TTHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TTHex.h"; sourceTree = "<group>"; };
 		15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TTHex.m"; sourceTree = "<group>"; };
 		15902CC41EA75F9D00B28ADE /* UILabel+TTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TTLabel.h"; sourceTree = "<group>"; };
@@ -1061,11 +1068,32 @@
 		157385261EB08C3C00525275 /* TTOtherPayManager */ = {
 			isa = PBXGroup;
 			children = (
+				1573852C1EB08C7C00525275 /* WeChatPayTool */,
 				157385271EB08C3C00525275 /* Annotation_TTOtherPayManager.strings */,
 				157385281EB08C3C00525275 /* TTPayManager.h */,
 				157385291EB08C3C00525275 /* TTPayManager.m */,
 			);
 			path = TTOtherPayManager;
+			sourceTree = "<group>";
+		};
+		1573852C1EB08C7C00525275 /* WeChatPayTool */ = {
+			isa = PBXGroup;
+			children = (
+				1573852D1EB08C7C00525275 /* WeChatPayManagerHeader.h */,
+				1573852E1EB08C7C00525275 /* WeChatSignManager.h */,
+				1573852F1EB08C7C00525275 /* WeChatSignManager.m */,
+				157385301EB08C7C00525275 /* XMLDictionary */,
+			);
+			path = WeChatPayTool;
+			sourceTree = "<group>";
+		};
+		157385301EB08C7C00525275 /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				157385311EB08C7C00525275 /* XMLDictionary.h */,
+				157385321EB08C7C00525275 /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
 			sourceTree = "<group>";
 		};
 		15A0D8741E8162D2003A109E /* Common */ = {
@@ -1789,6 +1817,7 @@
 				15A1B1281E83AA730082A6A3 /* PopAnimationView.m in Sources */,
 				15A0D8EA1E81681F003A109E /* NSObject+MJCoding.m in Sources */,
 				150184D41E8D1C3800788E47 /* TTBottomBarView.m in Sources */,
+				157385331EB08C7C00525275 /* WeChatSignManager.m in Sources */,
 				150184D21E8D1C3800788E47 /* CarouselManager.m in Sources */,
 				15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */,
 				15A1B1751E83C2FF0082A6A3 /* prng.c in Sources */,
@@ -1835,6 +1864,7 @@
 				15A1AF2F1E8284FE0082A6A3 /* SDWebImageDownloaderOperation.m in Sources */,
 				15A1B1861E83C4E60082A6A3 /* TTLogManager.m in Sources */,
 				1527C1211E8217B800E828A5 /* TTSinaCenter.m in Sources */,
+				157385341EB08C7C00525275 /* XMLDictionary.m in Sources */,
 				150184BB1E8D1A3000788E47 /* UIAlertView+MyAlertView.m in Sources */,
 				152A21FF1E973FEF008E1513 /* NSString+TTString.m in Sources */,
 				15A0D8E41E81681F003A109E /* MJExtensionConst.m in Sources */,
