@@ -17,7 +17,7 @@
  3.appledelegate中的设置
  - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
-    return [PAY_MANAGER handleUrl:url];
+    return [TTPAY_MANAGER handleUrl:url];
  }
  
  4.使用
