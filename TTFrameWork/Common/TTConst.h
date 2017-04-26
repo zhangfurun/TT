@@ -79,5 +79,18 @@ static NSString *YYMMdd = @"YY.MM.dd";
 static NSString *YYYYMMdd = @"YYYY.MM.dd";
 static NSString *YYYYMMddHHmmss = @"YYYY.MM.dd HH:mm:ss";
 
+// 第三方
+#define WECHATAPPIDKEY              @"" // id
+#define WECHATAPPSECRETKEY          @"" // SECRETKEY
+#define WECHATPARTNERID             @"" // 商户号
+#define WECHATPARTNERKEY            @"" // 密钥
+
+#define SINAAPPIDKEY                @"" //key
+#define SINAREDIRECTURIKEY          @""
+
+#define BAIDUAPPIDKEY               @"" // key
+
+#define ALIPAYAPPID                 @"" // appid
+#define ALIPAYPRIVATEKEY            @"" // 私钥(这个对于阿里支付的私钥,建议放到服务器端去做)
 
 #endif /* TTConst_h */

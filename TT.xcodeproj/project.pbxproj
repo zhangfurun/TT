@@ -73,6 +73,13 @@
 		1539543C1E64272B00A20FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1539543A1E64272B00A20FB9 /* LaunchScreen.storyboard */; };
 		153954471E64272C00A20FB9 /* TTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954461E64272C00A20FB9 /* TTTests.m */; };
 		153954521E64272C00A20FB9 /* TTUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 153954511E64272C00A20FB9 /* TTUITests.m */; };
+		157384961EB0815100525275 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 157384951EB0815100525275 /* libz.tbd */; };
+		157384981EB0816300525275 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157384971EB0816300525275 /* QuartzCore.framework */; };
+		1573849A1EB0816900525275 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157384991EB0816900525275 /* CoreText.framework */; };
+		1573849C1EB0817300525275 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1573849B1EB0817300525275 /* CoreGraphics.framework */; };
+		1573849E1EB0817900525275 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1573849D1EB0817900525275 /* UIKit.framework */; };
+		157384A01EB0818600525275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1573849F1EB0818600525275 /* Foundation.framework */; };
+		157384A21EB0818D00525275 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157384A11EB0818D00525275 /* CoreMotion.framework */; };
 		15902CC61EA75F9D00B28ADE /* UIColor+TTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */; };
 		15902CC71EA75F9D00B28ADE /* UILabel+TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */; };
 		15A0D8731E816283003A109E /* TTAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D8721E816283003A109E /* TTAnnotation.strings */; };
@@ -348,6 +355,13 @@
 		1539544D1E64272C00A20FB9 /* TTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		153954511E64272C00A20FB9 /* TTUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTUITests.m; sourceTree = "<group>"; };
 		153954531E64272C00A20FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		157384951EB0815100525275 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		157384971EB0816300525275 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		157384991EB0816900525275 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		1573849B1EB0817300525275 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1573849D1EB0817900525275 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1573849F1EB0818600525275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		157384A11EB0818D00525275 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		15902CC21EA75F9C00B28ADE /* UIColor+TTHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TTHex.h"; sourceTree = "<group>"; };
 		15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TTHex.m"; sourceTree = "<group>"; };
 		15902CC41EA75F9D00B28ADE /* UILabel+TTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TTLabel.h"; sourceTree = "<group>"; };
@@ -575,15 +589,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A0D9341E8169E5003A109E /* CFNetwork.framework in Frameworks */,
+				157384A21EB0818D00525275 /* CoreMotion.framework in Frameworks */,
+				157384A01EB0818600525275 /* Foundation.framework in Frameworks */,
+				1573849E1EB0817900525275 /* UIKit.framework in Frameworks */,
+				1573849C1EB0817300525275 /* CoreGraphics.framework in Frameworks */,
+				1573849A1EB0816900525275 /* CoreText.framework in Frameworks */,
+				157384981EB0816300525275 /* QuartzCore.framework in Frameworks */,
+				15A0D9321E8169DF003A109E /* CoreTelephony.framework in Frameworks */,
+				15A0D9281E8169A9003A109E /* SystemConfiguration.framework in Frameworks */,
+				157384961EB0815100525275 /* libz.tbd in Frameworks */,
+				15A0D9361E816A3E003A109E /* libc++.tbd in Frameworks */,
 				15A1B1431E83C1E90082A6A3 /* AdSupport.framework in Frameworks */,
 				15A1B1411E83C1E10082A6A3 /* libstdc++.6.0.9.tbd in Frameworks */,
 				15A1B13F1E83C1DA0082A6A3 /* JavaScriptCore.framework in Frameworks */,
 				15A1B13D1E83C1D50082A6A3 /* MessageUI.framework in Frameworks */,
 				15A1B13B1E83C1CD0082A6A3 /* libicucore.A.tbd in Frameworks */,
-				15A0D9361E816A3E003A109E /* libc++.tbd in Frameworks */,
 				15A1B1371E83C14E0082A6A3 /* MOBFoundation.framework in Frameworks */,
-				15A0D9341E8169E5003A109E /* CFNetwork.framework in Frameworks */,
-				15A0D9321E8169DF003A109E /* CoreTelephony.framework in Frameworks */,
 				15A0D9301E8169C7003A109E /* Security.framework in Frameworks */,
 				15A1B1351E83C14E0082A6A3 /* AliyunOSSiOS.framework in Frameworks */,
 				1527C11E1E8217B800E828A5 /* libWeiboSDK.a in Frameworks */,
@@ -593,7 +615,6 @@
 				15A0D92C1E8169B8003A109E /* libsqlite3.0.tbd in Frameworks */,
 				15A1B1381E83C14E0082A6A3 /* SMS_SDK.framework in Frameworks */,
 				15A0D92A1E8169B2003A109E /* libz.1.2.8.tbd in Frameworks */,
-				15A0D9281E8169A9003A109E /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1034,8 +1055,8 @@
 		15A0D8741E8162D2003A109E /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				152A21E91E973FEF008E1513 /* Category */,
 				15A0D9731E816DFF003A109E /* TTConst.h */,
+				152A21E91E973FEF008E1513 /* Category */,
 				15A0D8751E8162D2003A109E /* Libs */,
 				15A0D89E1E8162D2003A109E /* Tools */,
 			);
@@ -1137,6 +1158,13 @@
 		15A0D9261E8169A9003A109E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				157384A11EB0818D00525275 /* CoreMotion.framework */,
+				1573849F1EB0818600525275 /* Foundation.framework */,
+				1573849D1EB0817900525275 /* UIKit.framework */,
+				1573849B1EB0817300525275 /* CoreGraphics.framework */,
+				157384991EB0816900525275 /* CoreText.framework */,
+				157384971EB0816300525275 /* QuartzCore.framework */,
+				157384951EB0815100525275 /* libz.tbd */,
 				15A1B1421E83C1E90082A6A3 /* AdSupport.framework */,
 				15A1B1401E83C1E10082A6A3 /* libstdc++.6.0.9.tbd */,
 				15A1B13E1E83C1DA0082A6A3 /* JavaScriptCore.framework */,
@@ -1978,7 +2006,10 @@
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/AliyunOSS",
 					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/SMS_SDK",
+					"$(PROJECT_DIR)/TTFrameWork/OtherPayManager/AliPayTool/Support/AliPaySDK",
+					"$(PROJECT_DIR)/TTFrameWork/TTOtherPayManager/AliPayTool/Support/AliPaySDK",
 				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/TTFrameWork/TTOtherPayManager/AliPayTool/Support";
 				INFOPLIST_FILE = TT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1988,9 +2019,11 @@
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/WeChatCenter/SDK_1_6_2",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/SinaCenter/SDK_3_1_1",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/WeChatCenter/SDK_1_6_2",
+					"$(PROJECT_DIR)/TTFrameWork/OtherPayManager/AliPayTool/Support/AliPaySDK",
+					"$(PROJECT_DIR)/TTFrameWork/TTOtherPayManager/AliPayTool/Support/AliPaySDK",
 				);
 				OTHER_LDFLAGS = (
-					"-Objc",
+					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangfurun.TT;
@@ -2008,7 +2041,10 @@
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/TencentCenter/SDK_2_9_3",
 					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/AliyunOSS",
 					"$(PROJECT_DIR)/TTFrameWork/Common/Libs/SMS_SDK",
+					"$(PROJECT_DIR)/TTFrameWork/OtherPayManager/AliPayTool/Support/AliPaySDK",
+					"$(PROJECT_DIR)/TTFrameWork/TTOtherPayManager/AliPayTool/Support/AliPaySDK",
 				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/TTFrameWork/TTOtherPayManager/AliPayTool/Support";
 				INFOPLIST_FILE = TT/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2018,9 +2054,11 @@
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/WeChatCenter/SDK_1_6_2",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/SinaCenter/SDK_3_1_1",
 					"$(PROJECT_DIR)/TTFrameWork/TTShare/ShareDataSource/WeChatCenter/SDK_1_6_2",
+					"$(PROJECT_DIR)/TTFrameWork/OtherPayManager/AliPayTool/Support/AliPaySDK",
+					"$(PROJECT_DIR)/TTFrameWork/TTOtherPayManager/AliPayTool/Support/AliPaySDK",
 				);
 				OTHER_LDFLAGS = (
-					"-Objc",
+					"-ObjC",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhangfurun.TT;
