@@ -80,6 +80,8 @@
 		1573849E1EB0817900525275 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1573849D1EB0817900525275 /* UIKit.framework */; };
 		157384A01EB0818600525275 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1573849F1EB0818600525275 /* Foundation.framework */; };
 		157384A21EB0818D00525275 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 157384A11EB0818D00525275 /* CoreMotion.framework */; };
+		1573852A1EB08C3C00525275 /* Annotation_TTOtherPayManager.strings in Resources */ = {isa = PBXBuildFile; fileRef = 157385271EB08C3C00525275 /* Annotation_TTOtherPayManager.strings */; };
+		1573852B1EB08C3C00525275 /* TTPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 157385291EB08C3C00525275 /* TTPayManager.m */; };
 		15902CC61EA75F9D00B28ADE /* UIColor+TTHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */; };
 		15902CC71EA75F9D00B28ADE /* UILabel+TTLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */; };
 		15A0D8731E816283003A109E /* TTAnnotation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A0D8721E816283003A109E /* TTAnnotation.strings */; };
@@ -362,6 +364,9 @@
 		1573849D1EB0817900525275 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1573849F1EB0818600525275 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		157384A11EB0818D00525275 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		157385271EB08C3C00525275 /* Annotation_TTOtherPayManager.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Annotation_TTOtherPayManager.strings; sourceTree = "<group>"; };
+		157385281EB08C3C00525275 /* TTPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPayManager.h; sourceTree = "<group>"; };
+		157385291EB08C3C00525275 /* TTPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPayManager.m; sourceTree = "<group>"; };
 		15902CC21EA75F9C00B28ADE /* UIColor+TTHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TTHex.h"; sourceTree = "<group>"; };
 		15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TTHex.m"; sourceTree = "<group>"; };
 		15902CC41EA75F9D00B28ADE /* UILabel+TTLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+TTLabel.h"; sourceTree = "<group>"; };
@@ -1040,6 +1045,7 @@
 		153955B41E6427C900A20FB9 /* TTFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				157385261EB08C3C00525275 /* TTOtherPayManager */,
 				15A0D9391E816B26003A109E /* TTShare */,
 				15A0D8741E8162D2003A109E /* Common */,
 				2DEEE8F21E73DC950089CE1F /* ReasourceFiles */,
@@ -1050,6 +1056,16 @@
 				15A1B0ED1E83A4340082A6A3 /* Controller */,
 			);
 			path = TTFrameWork;
+			sourceTree = "<group>";
+		};
+		157385261EB08C3C00525275 /* TTOtherPayManager */ = {
+			isa = PBXGroup;
+			children = (
+				157385271EB08C3C00525275 /* Annotation_TTOtherPayManager.strings */,
+				157385281EB08C3C00525275 /* TTPayManager.h */,
+				157385291EB08C3C00525275 /* TTPayManager.m */,
+			);
+			path = TTOtherPayManager;
 			sourceTree = "<group>";
 		};
 		15A0D8741E8162D2003A109E /* Common */ = {
@@ -1663,6 +1679,7 @@
 				15A1B1781E83C2FF0082A6A3 /* Info.plist in Resources */,
 				2DEEE9081E73DCA00089CE1F /* ratingbar_bgstar.png in Resources */,
 				2DEEE9041E73DCA00089CE1F /* hud_error.png in Resources */,
+				1573852A1EB08C3C00525275 /* Annotation_TTOtherPayManager.strings in Resources */,
 				1539543C1E64272B00A20FB9 /* LaunchScreen.storyboard in Resources */,
 				15A1B0871E829BD30082A6A3 /* TestCell.xib in Resources */,
 				15A0D8731E816283003A109E /* TTAnnotation.strings in Resources */,
@@ -1758,6 +1775,7 @@
 				1527C12A1E8217FE00E828A5 /* TTShareUser.m in Sources */,
 				2DEEE9291E73DCF10089CE1F /* AFURLSessionManager.m in Sources */,
 				153954341E64272B00A20FB9 /* ViewController.m in Sources */,
+				1573852B1EB08C3C00525275 /* TTPayManager.m in Sources */,
 				2DEEE9251E73DCF10089CE1F /* AFSecurityPolicy.m in Sources */,
 				1507F91A1E9634BD003B5AFE /* TTTabBarController.m in Sources */,
 				15A1B0FE1E83A7DF0082A6A3 /* WHUCalendarCal.m in Sources */,

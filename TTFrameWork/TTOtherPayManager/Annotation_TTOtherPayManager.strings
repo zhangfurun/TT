@@ -1,0 +1,45 @@
+/* 
+  Annotation_TTOtherPayManager.strings
+  TT
+
+  Created by 张福润 on 2017/4/26.
+  Copyright © 2017年 张福润. All rights reserved.
+*/
+
+
+/*
+ 1.导入库,关于相关的库的导入,请参考微信和支付宝sdk,那里比较详细
+ ps:导入库会出现很多问题,后续,我会在我的简书,推出相关的解决方案
+ 
+ 2.设置相关的注册的信息:
+ 在TTConst中进行设置
+ 
+ 3.appledelegate中的设置
+ - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    return [PAY_MANAGER handleUrl:url];
+ }
+ 
+ 4.使用
+ 
+ 1).首先,先创建微信和支付宝对应的数据Model,记住,数据均不为空,如果考虑服务器返回数据为空的情况,可以在model的属性的get方法中,进行重写,防止为空的情况,因为为空的话,会导致不跳转等等意外情况
+ 2).下面拿阿里(支付宝)支付进行说明:
+ 
+ // 创建Model,进行赋值:
+ AliPayModel *model = [AliPayModel new];
+ model.notifyUrl = item.aliPayNotifyUrl;
+ model.price = self.orderItem.originalPrice;
+ model.orderNo = item.orderCode;
+ model.payTitle = @"title";
+ model.body = @"description";
+ 
+ // 传入model就行,接下来会有相关的状态进行回调
+ [TTPAY_MANAGER payWithOrderMessage:model successBlock:^{
+ NSLog(@"----成功了");
+ } cancelBlock:^{
+ NSLog(@"----取消了了");
+ } failureBlock:^(NSString *errStr) {
+ NSLog(@"----失败了了");
+ }];
+
+*/
