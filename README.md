@@ -4,7 +4,7 @@
 
 <br>更新时间:2017.4.19</br>
 ### 目前进度:</br>
-主要:优化,更新(Add UILabel+TTlabel and UIColor+TTHex)</br>
+主要:上传TTOtherPayManager(微信支付和阿里(支付宝)支付)</br>
 辅助:正在准备实现Cocoapods</br>
 
 <br>如果有问题可以通过以下联系方式,我们一起交流:
