@@ -44,7 +44,7 @@
 + (NSString *)secondFormatTime:(NSInteger)totalSecond hasHour:(BOOL)hasHour;
 
 /**
- 时间合适转换
+ 时间格式转换
  
  @param dateStr 当前时间
  @param dateFormat 原格式
