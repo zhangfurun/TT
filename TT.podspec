@@ -19,7 +19,7 @@ s.ios.deployment_target = "8.0"
 
 s.source       = { :git => "https://github.com/zhangfurun/TT.git", :commit => "b99ac90cd5676fcf0c4b21860bb537625254f317" }
 
-s.source_files  = "TTFrameWork", "TT/TTFrameWork/**/*.{h,m}"
+s.source_files  = "TTFrameWork", "TT/TTFrameWork/**/*.{h,m,strings,a}"
 
 
 s.requires_arc = true
