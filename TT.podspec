@@ -10,8 +10,8 @@ s.summary      = 'Test File'
 s.homepage     = 'https://github.com/zhangfurun/TT'
 s.license      = 'MIT'
 s.author       = { 'zhangfurun' => '122674287@qq.com' }
-s.platform     = :ios, '8.0'
-s.ios.deployment_target = '8.0'
+s.platform     = :ios, '7.0'
+
 s.source       = { :git => 'https://github.com/zhangfurun/TT.git', :tag => s.version }
 s.requires_arc = true
 s.libraries = 'z', 'c++', 'stdc++.6.0.9', 'icucore','c++.1','sqlite3.0','z.1.2.8'
