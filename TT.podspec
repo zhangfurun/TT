@@ -1,18 +1,18 @@
 
 Pod::Spec.new do |s|
 
-s.name         = "TT"
-s.version      = "1.0"
-s.summary      = "Test File"
+s.name         = 'TT'
+s.version      = '1.0'
+s.summary      = 'Test File'
 #s.description  = <<-DESC
 #Testing TTFrameWork
 #DESC
-s.homepage     = "https://github.com/zhangfurun/TT"
-s.license      = "MIT"
-s.author       = { "zhangfurun" => "122674287@qq.com" }
-s.platform     = :ios, "8.0"
-s.ios.deployment_target = "8.0"
-s.source       = { :git => "https://github.com/zhangfurun/TT.git", :tag => s.version }
+s.homepage     = 'https://github.com/zhangfurun/TT'
+s.license      = 'MIT'
+s.author       = { 'zhangfurun' => '122674287@qq.com' }
+s.platform     = :ios, '8.0'
+s.ios.deployment_target = '8.0'
+s.source       = { :git => 'https://github.com/zhangfurun/TT.git', :tag => s.version }
 s.requires_arc = true
 s.libraries = 'z', 'c++', 'stdc++.6.0.9', 'icucore','c++.1','sqlite3.0','z.1.2.8'
 
@@ -39,3 +39,4 @@ s.vendored_libraries = ['TTFrameWork/TTOtherPayManager/AliPayTool/Support/AliPay
                         'TTFrameWork/TTShare/ShareDataSource/SinaCenter/SDK_3_1_1/libWeiboSDK.a',
                         'TTFrameWork/TTShare/ShareDataSource/WeChatCenter/SDK_1_6_2/libWeChatSDK.a']
 end
+
