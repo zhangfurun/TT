@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/zhangfurun/TT.svg?branch=master)](https://travis-ci.org/zhangfurun/TT)
 
 ---
-##版本内容
+## 版本内容
 ### 1.1 Version (2017-07-24)
 * [更新]Aliyun SDK, SMS SDK
 * [修改]AliyunManager上传多个数据的bug,并优化了上传
@@ -18,7 +18,7 @@
 * [上传]上传初期项目
 
 ---
-##目录
+## 目录
 #### TTOtherPayManager
 第三方支付,整合了微信支付和支付宝支付,目前采用的是客户端集成方案,建议将签名方案放到服务端去做,安全
 #### Models
@@ -46,7 +46,7 @@
 TTFrameWork中涉及到的资源选项
 
 ---
-##联系
+## 联系
 如果有问题可以通过以下联系方式,我们一起交流:
 * 邮箱:122674287@qq.com(QQ)
 * 微博:单细胞的逻辑
