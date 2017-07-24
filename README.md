@@ -2,14 +2,20 @@
 ### 大家好,我是一个努力的程序员,目前,对自己日常开发中用到的一个功能性的部分进行了整理,名为TTFrameWork,希望大家多多支持,多多指教</br>
 #### 要是喜欢的,多点点星星
 
-<br>更新时间:2017.4.26</br>
+<br>更新时间:2017.7.24</br>
 ### 目前进度:</br>
-主要:上传TTOtherPayManager(微信支付和阿里(支付宝)支付)</br>
-辅助:正在准备实现Cocoapods</br>
+1.1 版本发布</br>
 
 <br>如果有问题可以通过以下联系方式,我们一起交流:
 * 邮箱:122674287@qq.com(QQ)
 * 微博:单细胞的逻辑
+<br>1.1 Version</br>
+1.更新Aliyun SDK, SMS SDK
+2.修改AliyunManager上传多个数据的bug,并优化了上传
+3.优化AppPurchaseManager,实现请求失败重试,并优化验证流程
+4.添加TTBaseDownloadRequest,进行先关的下载请求.
+5.添加TTSeverManager,可以在开发模式下,进行服务器的切换,这个需要手动设置相关参数
+6.添加TTBaseReqCommon,将网络数据请求情况进行统一管理
 
 <br>根据日常开发需求,基本分为一下内容</br>
 ## TTOtherPayManager</br>
