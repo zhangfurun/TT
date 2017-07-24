@@ -53,5 +53,5 @@ TTFrameWork中涉及到的资源选项
 
 ---
 ## 版权
-CopyRight 2015-2017</br>
+Copyright © zhanfurun 2015-2017</br>
 本开源项目版权归zhangfurun作者所有,如有转载,请提前联系作者
