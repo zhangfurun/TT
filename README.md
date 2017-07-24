@@ -10,7 +10,7 @@
 * 邮箱:122674287@qq.com(QQ)
 * 微博:单细胞的逻辑
 
-<br>1.1 Version</br>
+<br>### 1.1 Version</br>
 * 1.更新Aliyun SDK, SMS SDK
 * 2.修改AliyunManager上传多个数据的bug,并优化了上传
 * 3.优化AppPurchaseManager,实现请求失败重试,并优化验证流程
