@@ -2,6 +2,8 @@
 ### 大家好,我是一个努力的程序员,目前,对自己日常开发中用到的一个功能性的部分进行了整理,名为TTFrameWork,希望大家多多支持,多多指教</br>
 #### 要是喜欢的,多点点星星
 
+[![Build Status](https://travis-ci.org/zhangfurun/TT.svg?branch=master)](https://travis-ci.org/zhangfurun/TT)
+
 <br>如果有问题可以通过以下联系方式,我们一起交流:
 * 邮箱:122674287@qq.com(QQ)
 * 微博:单细胞的逻辑
