@@ -8,26 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "TTBaseReqCommon.h"
+
 @class UIImage;
 @class TTBaseRequest;
-
-typedef enum : NSUInteger {
-    TTRequestTypeGet, // Default
-    TTRequestTypePost,
-    TTRequestTypePut,
-    TTRequestTypeDelete
-} TTRequestType;
-
-typedef enum : NSUInteger {
-    TTNetworkReachabilityStatusUnknown = -1,
-    TTNetworkReachabilityStatusNoNetWork = 0,
-    TTNetworkReachabilityStatusMobileNet = 1,
-    TTNetworkReachabilityStatusWIFI = 2,
-} TTNetworkReachabilityStatus;
-
-typedef NS_ENUM(NSUInteger, TTRequestError) {
-    TTRequestErrorNetwork = 0
-};
 
 static NSString *Key_Model = @"Key_Model";
 
@@ -132,7 +116,7 @@ typedef void(^reqUploadBlock)(TTBaseRequest *request, NSUInteger bytesWritten, l
  PS:这个的主要是针对实际的单个数据请求,进行重写
  针对四个主流的请求类型,默认为Get,在进行Get数据请求的时候,不需要进行重写
  */
-- (TTRequestType)getRequestMethod;
+- (TTRequestMethod)getRequestMethod;
 
 /**
  请求参数

@@ -15,7 +15,7 @@
 typedef void(^OSSMCompletedBlock)(BOOL isSuccess, NSError *error);
 typedef void(^OSSMProgressUploadBlock)(OSSObjectModel *ossObj, int64_t bytesSent, int64_t totalByteSent, int64_t totalBytesExpectedToSend);
 
-extern NSString * const AliyunCompletedErrorInfoKey;
+extern NSString * const ALIYUN_OSSMANAGER_UPLOAD_COMPLETED_ERROR_KEY;
 
 typedef enum : NSUInteger {
     OSSObjectTypeBinary,
@@ -23,6 +23,7 @@ typedef enum : NSUInteger {
 } OSSObjectType;
 
 @interface TTAliyunOSSManager : NSObject
+@property (nonatomic, copy, readonly) NSArray<OSSObjectModel *> *allUploadModels;
 @property (nonatomic, assign, readonly, getter=isAllCompleted) BOOL allCompleted;
 @property (nonatomic, assign, readonly, getter=isCancelled) BOOL cancelled;
 

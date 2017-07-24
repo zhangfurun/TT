@@ -109,12 +109,12 @@ static NSMutableArray *requests;
     if ([TTLogManager logStatus]) {
         TTLog(@"%@",_requestUrl);
     }
-    TTRequestType reqMethod = [self getRequestMethod];
+    TTRequestMethod reqMethod = [self getRequestMethod];
     switch (reqMethod) {
-        case TTRequestTypeGet:
+        case TTRequestMethodGet:
             _requestOperation = [mgr GET:_requestUrl parameters:nil success:successBlock failure:failureBlock];
             break;
-        case TTRequestTypePost: {
+        case TTRequestMethodPost: {
             _requestOperation = [mgr POST:_requestUrl parameters:[self getRequestParamDict] constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
                 if (_binaryParameterArray) {
                     for (id item in _binaryParameterArray) {
@@ -131,10 +131,10 @@ static NSMutableArray *requests;
             }];
         }
             break;
-        case TTRequestTypePut:
+        case TTRequestMethodPut:
             _requestOperation = [mgr PUT:_requestUrl parameters:[self getRequestParamDict] success:successBlock failure:failureBlock];
             break;
-        case TTRequestTypeDelete:
+        case TTRequestMethodDelete:
             _requestOperation = [mgr DELETE:_requestUrl parameters:[self getRequestParamDict] success:successBlock failure:failureBlock];
             break;
     }
@@ -228,21 +228,21 @@ static NSMutableArray *requests;
 
 - (NSString *)getRequestUrlHasParameters {
     NSMutableString *requestUrlString = [NSMutableString stringWithFormat:@"%@%@",[self getRequestHost],[self getRequestQuery]];
-    TTRequestType reqMethod = [self getRequestMethod];
+    TTRequestMethod reqMethod = [self getRequestMethod];
     switch (reqMethod) {
-        case TTRequestTypeGet:
+        case TTRequestMethodGet:
             [requestUrlString appendString:[self getRequestParametersString]];
             return requestUrlString;
-        case TTRequestTypePost:
-        case TTRequestTypePut:
-        case TTRequestTypeDelete:
+        case TTRequestMethodPost:
+        case TTRequestMethodPut:
+        case TTRequestMethodDelete:
             return requestUrlString;
     }
     return EMPTY_STR;
 }
 
 - (NSString *)getRequestParametersString {
-    if ([self getRequestMethod] != TTRequestTypeGet) {
+    if ([self getRequestMethod] != TTRequestMethodGet) {
         return EMPTY_STR;
     }
     NSDictionary *defaultParameterDict = [self getDefaultParameters];
@@ -311,8 +311,8 @@ static NSMutableArray *requests;
 - (NSString *)errorMsg {return EMPTY_STR;}
 - (NSInteger)totalCount{return 0;}
 - (BOOL)hasMoreData {return NO;}
-- (TTRequestType)getRequestMethod{
-    return TTRequestTypeGet;
+- (TTRequestMethod)getRequestMethod{
+    return TTRequestMethodGet;
 }
 @end
 

@@ -8,22 +8,28 @@
 
 #import "TTAliyunOSSManager.h"
 
+#import "TTConst.h"
+#import "TTBaseReqCommon.h"
+#import "TTServerManager.h"
+
 #import <AliyunOSSiOS/OSSService.h>
 
 NSString * const AliyunAccessKey = @"";
 NSString * const AliyunSecretKey = @"";
 NSString * const AliyunEndpoint  = @"";
 
-// 正式：storybook 测试：ttest2
-NSString * const AliyunBucketName= @"";
+// 服务器
+NSString * const TEST_BUCKET_NAME = @"";    // 测试
+NSString * const FORMAL_BUCKET_NAME = @"";  // 正式
 
-NSString * const AliyunCompletedErrorInfoKey = @"AliyunCompletedErrorInfoKey";
+NSString * const ALIYUN_OSSMANAGER_UPLOAD_COMPLETED_ERROR_KEY = @"ALIYUN_OSSMANAGER_UPLOAD_COMPLETED_ERROR_KEY";
 
 static TTAliyunOSSManager *instance = nil;
 
 @interface TTAliyunOSSManager () {
     BOOL _cancelled;
 }
+@property (nonatomic, copy) NSString *bucketName;
 @property (nonatomic, strong) OSSClient *client;
 @property (nonatomic, copy) OSSMProgressUploadBlock progressBlock;
 @property (nonatomic, copy) OSSMCompletedBlock completedBlock;
@@ -31,14 +37,34 @@ static TTAliyunOSSManager *instance = nil;
 @end
 
 @implementation TTAliyunOSSManager
-
 #pragma mark - Property Method
+- (NSString *)bucketName {
+    if (STR_ISNULL_OR_EMPTY(_bucketName)) {
+        switch (TTServerManager.reqServerType) {
+            case TTReqServerTypeFormal:
+            case TTReqServerTypeBeta:
+            case TTReqServerTypeUnKnown:
+            default:
+                _bucketName = FORMAL_BUCKET_NAME;
+                break;
+            case TTReqServerTypeTest:
+            case TTReqServerTypeLocal:
+                _bucketName = TEST_BUCKET_NAME;
+        }
+    }
+    return _bucketName;
+}
+
 - (OSSClient *)client {
     if (!_client) {
         id<OSSCredentialProvider> credentialPro = [[OSSPlainTextAKSKPairCredentialProvider alloc] initWithPlainTextAccessKey:AliyunAccessKey secretKey:AliyunSecretKey];
         _client = [[OSSClient alloc] initWithEndpoint:AliyunEndpoint credentialProvider:credentialPro];
     }
     return _client;
+}
+
+- (NSArray<OSSObjectModel *> *)allUploadModels {
+    return [self.objects copy];
 }
 
 - (BOOL)isAllCompleted {
@@ -58,8 +84,9 @@ static TTAliyunOSSManager *instance = nil;
 
 #pragma mark - Method
 - (void)uploadFileWithOSSObject:(OSSObjectModel *)ossObjModel hasError:(BOOL **)hasError {
+    self.objects = [NSArray arrayWithObject:ossObjModel];
     OSSPutObjectRequest *putReq = [OSSPutObjectRequest new];
-    putReq.bucketName = AliyunBucketName;
+    putReq.bucketName = self.bucketName;
     putReq.objectKey = ossObjModel.fileName;
     switch (ossObjModel.objType) {
         case OSSObjectTypeBinary:
@@ -76,7 +103,8 @@ static TTAliyunOSSManager *instance = nil;
         }
     };
     
-    __block BOOL *result = hasError == nil ? NO : *hasError;
+    BOOL defaultResult = NO;
+    __block BOOL *result = hasError == nil ? &defaultResult : *hasError;
     OSSTask *putTask = [self.client putObject:putReq];
     [putTask continueWithBlock:^id(OSSTask *task) {
         if (!task.error) {
@@ -88,7 +116,7 @@ static TTAliyunOSSManager *instance = nil;
             _cancelled = YES;
             *result = YES;
             if (WS.completedBlock) {
-                NSError *error = [NSError errorWithDomain:@"AliyunOSSManager" code:task.error.code userInfo:@{AliyunCompletedErrorInfoKey: task.error.localizedDescription}];
+                NSError *error = [NSError errorWithDomain:@"AliyunOSSManager" code:task.error.code userInfo:@{ALIYUN_OSSMANAGER_UPLOAD_COMPLETED_ERROR_KEY: task.error.localizedDescription}];
                 WS.completedBlock(NO, error);
             }
         }
@@ -118,5 +146,16 @@ static TTAliyunOSSManager *instance = nil;
 @end
 
 @implementation OSSObjectModel
+
+- (id)copy {
+    OSSObjectModel *ossObj = [OSSObjectModel new];
+    ossObj.fileName = [self.fileName copy];
+    ossObj.objData = [self.objData copy];
+    ossObj.fileUrl = [self.fileUrl copy];
+    ossObj.objType = self.objType;
+    ossObj.tag = [self.tag copy];
+    ossObj.uploadCompleted = self.uploadCompleted;
+    return ossObj;
+}
 
 @end

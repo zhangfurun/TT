@@ -28,19 +28,21 @@ static AppPurchaseManager *instance = nil;
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             instance = [AppPurchaseManager new];
-            [[SKPaymentQueue defaultQueue] addTransactionObserver:instance];
         });
     }
     return instance;
 }
 
 - (void)dealloc {
-    
+    [self removeTransaction];
 }
 
 #pragma mark - Request
 - (void)serverVerifyRequest:(NSString *)verifyCode isSandBox:(NSString *)isSandBox {
-   // 购买完成,跟自己的服务器进行数据请求验证
+    // 与自己的服务器验证
+#warning 重要
+    // 这里需要注意的是,在验证结果后,调用下面方法,记住,无论结果如何
+    // [self removeTransaction]
 }
 
 #pragma mark - Method
@@ -50,41 +52,80 @@ static AppPurchaseManager *instance = nil;
 }
 
 - (void)requestProductData:(NSString *)productId addCurrentView:(UIView *)view {
+    if (productId == nil) {
+        [TTHUDMessage showCompletedText:@" 商品信息错误！ " withCompletedType:HUDShowCompletedTypeError];
+        return;
+    }
     self.productId = productId;
     self.purchaseing = YES;
     self.currentView = view;
+    
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:instance];
     NSSet *productIdentifiers = [NSSet setWithObject:self.productId];
     SKProductsRequest* productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
     productsRequest.delegate = self;
     [productsRequest start];
-    
     [TTHUDMessage showInView:self.currentView showText:@"正在加载商品信息，请稍后..."];
 }
 
 - (void)completeTransactions:(SKPaymentTransaction *)transaction {
+    [self verificationAppleSeverWithIsSandBox:NO tryCount:0];
+    
+    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+}
+
+// 苹果服务器验证
+- (void)verificationAppleSeverWithIsSandBox:(BOOL)isSandBox tryCount:(NSInteger)tryCount {
+    __weak typeof(self) WS = self;
     NSURL *url = [[NSBundle mainBundle] appStoreReceiptURL];
     NSData *receiptData = [NSData dataWithContentsOfURL:url];
     [TTHUDMessage showInView:self.currentView];
     
     NSString *encodeStr = [receiptData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:@{@"receipt-data":encodeStr} options:0 error:nil];
-    NSURL *storeUrl = [NSURL URLWithString:BUY_PATH];
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:storeUrl];
+    NSURL *storeUrl = [NSURL URLWithString:isSandBox ? SANDBOX_PATH : BUY_PATH];
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:storeUrl cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.f];
     req.HTTPMethod = @"POST";
     req.HTTPBody = jsonData;
-    __weak typeof(self) WS = self;
+    
     [NSURLConnection sendAsynchronousRequest:req queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         if (data) {
             NSDictionary *responseDic = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSInteger status = [responseDic[@"status"] integerValue];
-            [WS serverVerifyRequest:encodeStr isSandBox:status == 21007 ? @"1" : @"0"];
+            if (status == 0) {
+                [WS serverVerifyRequest:encodeStr isSandBox:isSandBox ? @"1" : @"0"];
+            }else {
+                if (status == 21007) {
+                    //                    [WS verificationAppleSeverWithIsSandBox:YES tryCount:0];
+                    [WS serverVerifyRequest:encodeStr isSandBox:@"1"];
+                }else {
+                    WS.purchaseing = NO;
+                    if (tryCount > 3) {
+                        [TTHUDMessage showCompletedText:@"验证失败,请联系客服!" withCompletedType:HUDShowCompletedTypeError];
+                    }else {
+                        [TTHUDMessage showInView:KEY_WINDOW showCompletedText:@"验证失败，正在重试..." withCompletedType:HUDShowCompletedTypeError completedBlock:^{
+                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                [TTHUDMessage showInView:KEY_WINDOW];
+                                [WS verificationAppleSeverWithIsSandBox:isSandBox tryCount:tryCount + 1];
+                            });
+                        }];
+                    }
+                }
+            }
         } else {
             WS.purchaseing = NO;
-            [TTHUDMessage showCompletedText:@"验证失败，请重试!" withCompletedType:HUDShowCompletedTypeError];
+            if (tryCount > 3) {
+                [TTHUDMessage showCompletedText:@"验证失败,请联系客服!" withCompletedType:HUDShowCompletedTypeError];
+            }else {
+                [TTHUDMessage showInView:KEY_WINDOW showCompletedText:@"验证失败，正在重试..." withCompletedType:HUDShowCompletedTypeError completedBlock:^{
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [TTHUDMessage showInView:KEY_WINDOW];
+                        [WS verificationAppleSeverWithIsSandBox:isSandBox tryCount:tryCount + 1];
+                    });
+                }];
+            }
         }
     }];
-    
-    [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
 }
 
 - (void)failedTransactions:(SKPaymentTransaction *)transaction {
@@ -94,6 +135,10 @@ static AppPurchaseManager *instance = nil;
     }
     [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
     self.purchaseing = NO;
+}
+
+- (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error {
+    
 }
 
 #pragma mark - SKProductsRequestDelegate
@@ -113,7 +158,6 @@ static AppPurchaseManager *instance = nil;
         }
     }
     SKPayment *payment = [SKPayment paymentWithProduct:purchasePro];
-    [payment applicationUsername];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 
@@ -138,13 +182,16 @@ static AppPurchaseManager *instance = nil;
             }
                 break;
             case SKPaymentTransactionStatePurchasing:
+                
                 break;
             case SKPaymentTransactionStateRestored:
+                //                [ZZHUDMessage showCompletedText:@"恢复购买" withCompletedType:HUDShowCompletedTypeError];
                 break;
             case SKPaymentTransactionStateFailed:
                 [self failedTransactions:trans];
                 break;
             case SKPaymentTransactionStateDeferred:
+                //                [ZZHUDMessage showCompletedText:@"最终状态未确定" withCompletedType:HUDShowCompletedTypeError];
                 break;
                 
             default:
@@ -153,4 +200,3 @@ static AppPurchaseManager *instance = nil;
     }
 }
 @end
-
