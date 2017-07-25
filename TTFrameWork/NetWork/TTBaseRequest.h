@@ -13,7 +13,8 @@
 @class UIImage;
 @class TTBaseRequest;
 
-static NSString *Key_Model = @"Key_Model";
+extern const NSInteger REQUEST_DEFAULT_ERROR_CODE;
+extern NSString * const Key_Model;
 
 typedef void(^reqSuccessBlock)(TTBaseRequest *request);
 typedef void(^reqCancelBlock)(TTBaseRequest *request);
@@ -112,6 +113,13 @@ typedef void(^reqUploadBlock)(TTBaseRequest *request, NSUInteger bytesWritten, l
 - (NSDictionary<NSString *, NSString *> *)getCustomHeaders;
 
 /**
+ 获取请求超时时间 默认是60.0秒
+ 
+ @return 超时时间
+ */
+- (NSTimeInterval)getTimeoutInterval;
+
+/**
  设置当前的数据请求类型
  PS:这个的主要是针对实际的单个数据请求,进行重写
  针对四个主流的请求类型,默认为Get,在进行Get数据请求的时候,不需要进行重写
@@ -146,9 +154,14 @@ typedef void(^reqUploadBlock)(TTBaseRequest *request, NSUInteger bytesWritten, l
 - (BOOL)success;
 
 /**
+ 请求结果的状态,请求码
+ */
+- (NSInteger)statusCode;
+
+/**
  获取数据请求的失败信息
  */
-- (NSString *)errorMsg;
+- (NSString *)msg;
 
 /**
  数据请求的全部个数

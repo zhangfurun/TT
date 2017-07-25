@@ -25,6 +25,9 @@
 }
 @end
 
+const NSTimeInterval REQUEST_DEFAULT_TIMEOUT_INTERVAL = 60.0;
+const NSInteger REQUEST_DEFAULT_ERROR_CODE = -1;
+NSString * const Key_Model = @"Key_Model";
 static NSMutableArray *requests;
 
 @implementation TTBaseRequest
@@ -305,12 +308,14 @@ static NSMutableArray *requests;
 - (NSString *)getRequestQuery{return EMPTY_STR;}
 - (NSString *)getUserAgent{return EMPTY_STR;}
 - (NSDictionary<NSString *, NSString *> *)getCustomHeaders{return nil;}
+- (NSTimeInterval)getTimeoutInterval { return REQUEST_DEFAULT_TIMEOUT_INTERVAL;}
 - (NSDictionary *)getDefaultParameters{return nil;}
 - (void)processResult{};
 - (BOOL)success{ return YES;}
-- (NSString *)errorMsg {return EMPTY_STR;}
-- (NSInteger)totalCount{return 0;}
-- (BOOL)hasMoreData {return NO;}
+- (NSInteger)statusCode { return REQUEST_DEFAULT_ERROR_CODE;};
+- (NSString *)msg { return EMPTY_STR;}
+- (NSInteger)totalCount{ return 0;}
+- (BOOL)hasMoreData { return NO;}
 - (TTRequestMethod)getRequestMethod{
     return TTRequestMethodGet;
 }
