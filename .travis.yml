@@ -1,2 +1,5 @@
 
 language: objective-c
+xcode_project: TT.xcodeproj # 项目文件相对于.travis.yml文件的路径
+
+xcode_scheme: TTTests #你需要集成测试的scheme
