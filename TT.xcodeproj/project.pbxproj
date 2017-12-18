@@ -205,6 +205,10 @@
 		15C7BF231E6907BA001636DA /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF221E6907BA001636DA /* MBProgressHUD.m */; };
 		15C7BF261E690831001636DA /* TTHUDMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 15C7BF251E690831001636DA /* TTHUDMessage.m */; };
 		15E91B4C1EE55EB100195498 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E91B4B1EE55EB100195498 /* libicucore.tbd */; };
+		2D8F26231FE7A4E90021085A /* NSTimer+TTTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F261F1FE7A4E80021085A /* NSTimer+TTTimer.m */; };
+		2D8F26241FE7A4E90021085A /* UIImage+TTResize.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F26211FE7A4E80021085A /* UIImage+TTResize.m */; };
+		2D8F26271FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F26261FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.m */; };
+		2D8F262A1FE7A51B0021085A /* UIImage+TTImageMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D8F26291FE7A51B0021085A /* UIImage+TTImageMask.m */; };
 		2DEEE8CD1E73D4E20089CE1F /* TTBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEEE8CC1E73D4E20089CE1F /* TTBaseRequest.m */; };
 		2DEEE9021E73DCA00089CE1F /* hud_completed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DEEE8F51E73DCA00089CE1F /* hud_completed.png */; };
 		2DEEE9031E73DCA00089CE1F /* hud_completed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DEEE8F61E73DCA00089CE1F /* hud_completed@2x.png */; };
@@ -697,6 +701,14 @@
 		15C7BF241E690831001636DA /* TTHUDMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTHUDMessage.h; sourceTree = "<group>"; };
 		15C7BF251E690831001636DA /* TTHUDMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTHUDMessage.m; sourceTree = "<group>"; };
 		15E91B4B1EE55EB100195498 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		2D8F261F1FE7A4E80021085A /* NSTimer+TTTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+TTTimer.m"; sourceTree = "<group>"; };
+		2D8F26201FE7A4E80021085A /* NSTimer+TTTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+TTTimer.h"; sourceTree = "<group>"; };
+		2D8F26211FE7A4E80021085A /* UIImage+TTResize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TTResize.m"; sourceTree = "<group>"; };
+		2D8F26221FE7A4E80021085A /* UIImage+TTResize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TTResize.h"; sourceTree = "<group>"; };
+		2D8F26251FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImagePickerController+TTPadLandscape.h"; sourceTree = "<group>"; };
+		2D8F26261FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImagePickerController+TTPadLandscape.m"; sourceTree = "<group>"; };
+		2D8F26281FE7A51B0021085A /* UIImage+TTImageMask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+TTImageMask.h"; sourceTree = "<group>"; };
+		2D8F26291FE7A51B0021085A /* UIImage+TTImageMask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TTImageMask.m"; sourceTree = "<group>"; };
 		2DEEE8CB1E73D4E20089CE1F /* TTBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseRequest.h; sourceTree = "<group>"; };
 		2DEEE8CC1E73D4E20089CE1F /* TTBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseRequest.m; sourceTree = "<group>"; };
 		2DEEE8F51E73DCA00089CE1F /* hud_completed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_completed.png; sourceTree = "<group>"; };
@@ -1075,6 +1087,10 @@
 		152A21E91E973FEF008E1513 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				2D8F26201FE7A4E80021085A /* NSTimer+TTTimer.h */,
+				2D8F261F1FE7A4E80021085A /* NSTimer+TTTimer.m */,
+				2D8F26221FE7A4E80021085A /* UIImage+TTResize.h */,
+				2D8F26211FE7A4E80021085A /* UIImage+TTResize.m */,
 				152A21EA1E973FEF008E1513 /* NSBundle+TTBundle.h */,
 				152A21EB1E973FEF008E1513 /* NSBundle+TTBundle.m */,
 				152A21EC1E973FEF008E1513 /* NSDate+TTDate.h */,
@@ -1097,6 +1113,10 @@
 				15902CC31EA75F9C00B28ADE /* UIColor+TTHex.m */,
 				15902CC41EA75F9D00B28ADE /* UILabel+TTLabel.h */,
 				15902CC51EA75F9D00B28ADE /* UILabel+TTLabel.m */,
+				2D8F26251FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.h */,
+				2D8F26261FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.m */,
+				2D8F26281FE7A51B0021085A /* UIImage+TTImageMask.h */,
+				2D8F26291FE7A51B0021085A /* UIImage+TTImageMask.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -2058,6 +2078,7 @@
 				15A0D8EC1E81681F003A109E /* NSObject+MJProperty.m in Sources */,
 				15A1AF2D1E8284FE0082A6A3 /* SDWebImageDecoder.m in Sources */,
 				1527C1271E8217B900E828A5 /* WXAuthRequest.m in Sources */,
+				2D8F26241FE7A4E90021085A /* UIImage+TTResize.m in Sources */,
 				1554E5C31F25A57E00EEBA53 /* AFHTTPRequestOperationManager.m in Sources */,
 				15A1B1291E83AA730082A6A3 /* PopView.m in Sources */,
 				15A1B1701E83C2FF0082A6A3 /* aeskey.c in Sources */,
@@ -2096,6 +2117,7 @@
 				15A1B0E11E83813D0082A6A3 /* NSArray+PrintChinese.m in Sources */,
 				15A1B1711E83C2FF0082A6A3 /* aestab.c in Sources */,
 				150184B51E8D1A3000788E47 /* TTCollectionViewBaseCell.m in Sources */,
+				2D8F262A1FE7A51B0021085A /* UIImage+TTImageMask.m in Sources */,
 				15A1B1161E83A9020082A6A3 /* TAAnimatedDotView.m in Sources */,
 				15A1B0861E829BD30082A6A3 /* TestCell.m in Sources */,
 				15A1B17B1E83C2FF0082A6A3 /* unzip.c in Sources */,
@@ -2167,6 +2189,7 @@
 				15A1AF361E8284FE0082A6A3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				15A0D96B1E816B26003A109E /* TTBaseShareCenter.m in Sources */,
 				15A1B1721E83C2FF0082A6A3 /* entropy.c in Sources */,
+				2D8F26231FE7A4E90021085A /* NSTimer+TTTimer.m in Sources */,
 				150184BE1E8D1A3000788E47 /* HyperlinkButton.m in Sources */,
 				15A0D8ED1E81681F003A109E /* NSString+MJExtension.m in Sources */,
 				15A1B17D1E83C2FF0082A6A3 /* SSZipArchive.m in Sources */,
@@ -2178,6 +2201,7 @@
 				15A1AF2B1E8284FE0082A6A3 /* SDImageCacheConfig.m in Sources */,
 				1527C1261E8217B900E828A5 /* TTWeChatCenter.m in Sources */,
 				2DEEE92C1E73E76C0089CE1F /* TTRequest.m in Sources */,
+				2D8F26271FE7A4F20021085A /* UIImagePickerController+TTPadLandscape.m in Sources */,
 				1539542E1E64272B00A20FB9 /* main.m in Sources */,
 				15A1B1031E83A7DF0082A6A3 /* WHUCalendarView.m in Sources */,
 			);

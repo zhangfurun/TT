@@ -47,7 +47,7 @@ static AllowMobileNetManager *standardManager = nil;
         // 带弹框的
         __block BOOL userChooseFlag = NO;
         [TTAlertView alertViewTitle:@"提示"
-                            message:@"是否允许移动网络下载绘本?"
+                            message:@"message?"
                         cancelTitle:@"不允许"
                        confirmTitle:@"允许"
                         cancelBlock:^{
