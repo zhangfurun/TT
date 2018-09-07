@@ -66,8 +66,8 @@ static TTHUDMessage *instance;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self hideHUD];
             HUD =[MBProgressHUD showHUDAddedTo:view animated:YES];
-            HUD.labelText = text;
-            HUD.detailsLabelText = detailsText;
+            HUD.label.text = text;
+            HUD.detailsLabel.text = detailsText;
         });
 //    [self showCustomViewInView:view showText:text detailText:detailsText];
 }
