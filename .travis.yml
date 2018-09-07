@@ -1,4 +1,3 @@
-
 language: objective-c
-xcode_project: TT.xcodeproj # 项目文件相对于.travis.yml文件的路径
-
+xcode_project: URLHelper.xcodeproj
+script: xcodebuild -project URLHelper.xcodeproj -scheme "URLHelper" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=latest'
