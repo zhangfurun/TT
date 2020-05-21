@@ -18,14 +18,25 @@
 #import "NSFileManager+TTFileManager.h"
 #import "NSUserDefaults+TTUserDefaults.h"
 
+#import <objc/runtime.h>
+
 static NSString *TTDownloadErrorDomain = @"TTDownloadErrorDomain";
 NSString * const TTDownloadErrorReasonKey = @"TTDownloadErrorReasonKey";
 NSString * const TTDownloadDoDownloadBlockKey = @"TTDownloadDoDownloadBlockKey";
 NSString * const TTDownloadAllowUseMobileNetworkKey = @"TTDownloadAllowUseMobileNetworkKey";
 NSString * const TTDownloadAllowUseMobileNetworkNotification = @"TTDownloadAllowUseMobileNetworkNotification";
 
-static NSString *TTOperationKey = @"operation";
-static NSString *TTPathKey = @"path";
+typedef void(^DownloadProgressBlock)(NSProgress * _Nonnull downloadProgress);
+typedef NSURL * (^DownloadDestinationBlock)(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response);
+typedef void(^DownloadCompletionBlock)(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error);
+
+typedef enum : NSUInteger {
+    TTDownloadTaskStatus_None,
+    TTDownloadTaskStatus_Downloading,
+    TTDownloadTaskStatus_Pause,
+    TTDownloadTaskStatus_Cancel,
+    TTDownloadTaskStatus_Finish,
+} TTDownloadTaskStatus;
 
 @interface TTDownloadRequest () {
     SuccessBlock    _successBlock;
@@ -36,11 +47,13 @@ static NSString *TTPathKey = @"path";
     NSString        *_downloadPath;
     NSString        *_fileName;
     NSString        *_filePath;
-    NSHTTPURLResponse *_response;
+    CGFloat         _progress;
+    BOOL            _isUseAllNetDownload;
 }
-@property (nonatomic, strong) NSMutableArray *paths;
-@property (nonatomic, strong) AFHTTPRequestOperation *operation;
-@property (nonatomic, assign, getter=isCancelDownload) BOOL cancelDownload;
+
+@property (nonatomic, strong) AFURLSessionManager *sessionManager;
+@property (nonatomic, strong) NSURLSessionDownloadTask *downloadTask;
+@property (nonatomic, assign) TTDownloadTaskStatus taskStatus;
 @end
 
 @implementation TTDownloadRequest
@@ -61,8 +74,7 @@ static NSString *TTPathKey = @"path";
         _failureBlock   = failureBlock;
         _urlString = urlString;
         NSURL *url = [NSURL URLWithString:urlString];
-        NSURLRequest *urlReqeust = [NSURLRequest requestWithURL:url];
-        _operation = [[AFHTTPRequestOperation alloc] initWithRequest:urlReqeust];
+        _sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
         
         downloadPath = downloadPath ?: kCachePath;
         _downloadPath = downloadPath;
@@ -83,13 +95,6 @@ static NSString *TTPathKey = @"path";
 }
 
 #pragma mark - Property Method
-- (NSMutableArray *)paths {
-    if (!_paths) {
-        _paths = [NSMutableArray array];
-    }
-    return _paths;
-}
-
 - (NSString *)downloadPath {
     return _downloadPath;
 }
@@ -102,8 +107,12 @@ static NSString *TTPathKey = @"path";
     return _filePath;
 }
 
-- (NSHTTPURLResponse *)response {
-    return _response;
+- (NSString *)urlString {
+    return _urlString;
+}
+
+- (CGFloat)progress {
+    return _progress;
 }
 
 #pragma mark - Method
@@ -121,9 +130,9 @@ static NSString *TTPathKey = @"path";
 }
 
 + (TTDownloadRequest *)downloadFileWithURLString:(NSString *)URLStirng
-                                        fileName:(NSString *)fileName
-                                   progressBlock:(ProgressBlock)progressBlock
-                                    successBlock:(SuccessBlock)successBlock
+                                    fileName:(NSString *)fileName
+                               progressBlock:(ProgressBlock)progressBlock
+                                successBlock:(SuccessBlock)successBlock
                                      cancelBlock:(CancelBlock)cancelBlock
                                     failureBlock:(FailureBlock)failureBlock {
     return [self downloadFileWithURLString:URLStirng
@@ -166,68 +175,99 @@ static NSString *TTPathKey = @"path";
 }
 
 - (void)doDownloadWithPath:(NSString *)downloadPath fileName:(NSString *)fileName {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_urlString]];
-    unsigned long long downloadedBytes = 0;
-    if (![NSFileManager isDirectoryExist:downloadPath]) {
-        [NSFileManager createDirectorysAtPath:downloadPath];
-    } else if ([NSFileManager isFileExistAtPath:_filePath]) {
-        //获取已下载的文件长度
-        downloadedBytes = [self fileSizeForPath:_filePath];
-        //检查文件是否已经下载了一部分
-        if (downloadedBytes > 0) {
-            NSMutableURLRequest *mutableURLRequest = [request mutableCopy];
-            NSString *requestRange = [NSString stringWithFormat:@"bytes=%llu-",downloadedBytes];
-            [mutableURLRequest setValue:requestRange forHTTPHeaderField:@"Range"];
-            request = mutableURLRequest;
-        }
-    }
-    [[NSURLCache sharedURLCache] removeCachedResponseForRequest:request];
-    //下载请求
-    _operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    //检查是否已经有该下载任务，如果有，释放掉...
-    for (NSDictionary *dict in self.paths) {
-        if ([_filePath isEqualToString:dict[TTPathKey]] && ![(AFHTTPRequestOperation *)dict[TTOperationKey] isPaused]) {
-            
-        } else {
-            [(AFHTTPRequestOperation *)dict[TTOperationKey] cancel];
-        }
-    }
-    NSDictionary *dictNew = @{TTPathKey : fileName,
-                              TTOperationKey : _operation};
-    [self.paths addObject:dictNew];
-    //下载路径
-    self.operation.outputStream = [NSOutputStream outputStreamToFileAtPath:_filePath append:YES];
+   NSString *url = self.urlString;
+    
+    
     __block typeof(self) WS = self;
-    //下载进度回调
-    [self.operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+    DownloadProgressBlock progressBlock = ^(NSProgress * _Nonnull downloadProgress) {
         //下载进度
         if (WS->_progressBlock) {
-            float downloadMB = (totalBytesRead + downloadedBytes) / 1024 / 1024.0f;
-            float totalMB = (totalBytesExpectedToRead + downloadedBytes) / 1024 / 1024.0f;
-            float progress = ((float)totalBytesRead + downloadedBytes) / (totalBytesExpectedToRead + downloadedBytes);
-            WS->_progressBlock(progress, downloadMB, totalMB, totalBytesExpectedToRead);
+            float downloadMB = (downloadProgress.completedUnitCount) / 1024.f / 1024.0f;
+            float totalMB = (downloadProgress.totalUnitCount) / 1024.f / 1024.0f;
+            float progress = (1.f * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
+            _progress = progress;
+            NSLog(@"==> %lf", progress);
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                WS->_progressBlock(progress, downloadMB, totalMB);
+            });
         }
-    }];
+    };
     
-    [self.operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        WS->_response = operation.response;
-        if (WS->_successBlock) {
-            WS->_successBlock(WS, responseObject);
-        }
-    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
-        WS->_response = operation.response;
-        if (WS.isCancelDownload) {
-            if (WS->_cancelBlock) {
-                WS->_cancelBlock(WS);
+    
+    DownloadDestinationBlock destinationBlock = ^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        return [NSURL fileURLWithPath:_filePath];
+    };
+    
+    DownloadCompletionBlock completionBlock = ^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        if (error) {
+            
+            if (error.code == -999 || error.code == -1001) {
+                // 取消请求 或者 请求超时, 如果处于暂停状态, 不做处理
+                if (WS.taskStatus == TTDownloadTaskStatus_Pause) {
+                    return;
+                }
             }
-            WS.cancelDownload = NO;
+            
+            NSData *resumeData = error.userInfo[NSURLSessionDownloadTaskResumeData];
+            [self saveResumeData:resumeData withUrl:response.URL.absoluteString];
+            // 下载失败
+            
+            WS.taskStatus = TTDownloadTaskStatus_None;
+            if (WS.taskStatus == TTDownloadTaskStatus_Cancel) {
+                if (WS->_cancelBlock) {
+                    WS->_cancelBlock(WS);
+                }
+            } else {
+                if (WS->_failureBlock) {
+                    WS->_failureBlock(WS, error);
+                }
+            }
         } else {
-            if (WS->_failureBlock) {
-                WS->_failureBlock(WS, error);
+            // 下载成功
+            WS.taskStatus = TTDownloadTaskStatus_Finish;
+            [self removeResumeInfoWithUrl:response.URL.absoluteString];
+            [self removeTempFileInfoWithUrl:response.URL.absoluteString];
+            if (WS->_successBlock) {
+                WS->_successBlock(WS);
             }
         }
-    }];
-    [self.operation start];
+    };
+    
+    // 参数
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    
+    //下载请求
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.timeoutIntervalForRequest = 60000;
+    configuration.timeoutIntervalForResource = 60000;
+
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    self.sessionManager = manager;
+    
+    // 1. 生成任务
+    NSData *resumeData = [self getResumeDataWithUrl:url];
+    
+    if (resumeData) {
+        // 1.1 有断点信息，走断点下载
+        self.downloadTask = [manager downloadTaskWithResumeData:resumeData
+                                                       progress:progressBlock
+                                                    destination:destinationBlock
+                                              completionHandler:completionBlock];
+        // 删除历史恢复信息，重新下载后该信息内容已不正确，不使用，
+        [self removeResumeInfoWithUrl:url];
+    } else {
+        // 1.2 普通下载
+        self.downloadTask = [manager downloadTaskWithRequest:request
+                                                    progress:progressBlock
+                                                 destination:destinationBlock
+                                           completionHandler:completionBlock];
+        
+        // 1.3 保存临时文件名
+        NSString *tempFileName = [self getTempFileNameWithDownloadTask:self.downloadTask];
+        [self saveTempFileName:tempFileName withUrl:url];
+    }
+
+    [self.downloadTask resume];
 }
 
 + (void)pauseWithDownloadRequest:(TTDownloadRequest *)downloadRequest {
@@ -239,29 +279,271 @@ static NSString *TTPathKey = @"path";
 }
 
 - (void)pauseDownload {
-    [self.operation pause];
+    __weak typeof(self) WS = self;
+    WS.taskStatus = TTDownloadTaskStatus_Pause;
+    [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+        [WS saveResumeData:resumeData withUrl:WS.downloadTask.currentRequest.URL.absoluteString];
+    }];
 }
 
 - (void)resumeDownload {
-    [self.operation resume];
+    [self doDownloadWithPath:_downloadPath fileName:_fileName];
 }
 
 - (void)cancelDownload {
-    [_operation cancel];
-    self.cancelDownload = YES;
+    __weak typeof(self) WS = self;
+    self.taskStatus = TTDownloadTaskStatus_Cancel;
+    [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+        [WS saveResumeData:resumeData withUrl:WS.downloadTask.currentRequest.URL.absoluteString];
+    }];
 }
 
+// 取消
+- (void)cancleDownloadTask {
+   
+}
+
+
 - (BOOL)isDownloading {
-    return [_operation isExecuting];
+    return self.downloadTask && self.downloadTask.state == NSURLSessionTaskStateRunning;
 }
 
 - (BOOL)finished {
-    return [_operation isFinished];
+    return self.downloadTask && self.downloadTask.state == NSURLSessionTaskStateCompleted;
 }
 
 + (void)removeAllCache {
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 }
 
+
+#pragma mark - tempFile
+
+/// 获取临时文件名
+- (NSString *)getTempFileNameWithDownloadTask:(NSURLSessionDownloadTask *)downloadTask {
+    //NSURLSessionDownloadTask --> 属性downloadFile：__NSCFLocalDownloadFile --> 属性path
+    NSString *tempFileName = nil;
+    
+    // downloadTask的属性(NSURLSessionDownloadTask) dt
+    unsigned int dtpCount;
+    objc_property_t *dtps = class_copyPropertyList([downloadTask class], &dtpCount);
+    for (int i = 0; i<dtpCount; i++) {
+        objc_property_t dtp = dtps[i];
+        const char *dtpc = property_getName(dtp);
+        NSString *dtpName = [NSString stringWithUTF8String:dtpc];
+        
+        // downloadFile的属性(__NSCFLocalDownloadFile) df
+        if ([dtpName isEqualToString:@"downloadFile"]) {
+            id downloadFile = [downloadTask valueForKey:dtpName];
+            unsigned int dfpCount;
+            objc_property_t *dfps = class_copyPropertyList([downloadFile class], &dfpCount);
+            for (int i = 0; i<dfpCount; i++) {
+                objc_property_t dfp = dfps[i];
+                const char *dfpc = property_getName(dfp);
+                NSString *dfpName = [NSString stringWithUTF8String:dfpc];
+                // 下载文件的临时地址
+                if ([dfpName isEqualToString:@"path"]) {
+                    id pathValue = [downloadFile valueForKey:dfpName];
+                    NSString *tempPath = [NSString stringWithFormat:@"%@",pathValue];
+                    tempFileName = tempPath.lastPathComponent;
+                    break;
+                }
+            }
+            free(dfps);
+            break;
+        }
+    }
+    free(dtps);
+    
+    return tempFileName;
+}
+
+/// 保存临时文件名
+- (void)saveTempFileName:(NSString *)name withUrl:(NSString *)url {
+    if (url.length < 1 || name.length < 1) {
+        return;
+    }
+    
+    NSString *mapPath = [self tempFileMapPath];
+    NSMutableDictionary *tempFileMap = [NSMutableDictionary dictionaryWithContentsOfFile:mapPath];
+    if([tempFileMap[url] length] > 0){
+        [[NSFileManager defaultManager] removeItemAtPath:[self tempFilePathWithName:tempFileMap[url]] error:nil];
+    }
+    if (!tempFileMap) {
+        tempFileMap = [NSMutableDictionary dictionary];
+    }
+    tempFileMap[url] = name;
+    [tempFileMap writeToFile:mapPath atomically:YES];
+}
+
+/// 移除临时文件相关信息
+- (void)removeTempFileInfoWithUrl:(NSString *)url {
+    if (url.length < 1) {
+        return;
+    }
+    
+    NSString *mapPath = [self tempFileMapPath];
+    NSMutableDictionary *tempFileMap = [NSMutableDictionary dictionaryWithContentsOfFile:mapPath];
+    if([tempFileMap[url] length] > 0){
+        [[NSFileManager defaultManager] removeItemAtPath:[self tempFilePathWithName:tempFileMap[url]] error:nil];
+        [tempFileMap removeObjectForKey:url];
+        [tempFileMap writeToFile:mapPath atomically:YES];
+    }
+}
+
+/// 手动创建resume信息
+- (NSData *)createResumeDataWithUrl:(NSString *)url {
+    if (url.length < 1) {
+        return nil;
+    }
+    
+    // 1. 从map文件中获取resumeData的name
+    NSMutableDictionary *resumeMap = [NSMutableDictionary dictionaryWithContentsOfFile:[self resumeDataMapPath]];
+    NSString *resumeDataName = resumeMap[url];
+    if (resumeDataName.length < 1) {
+        resumeDataName = [self getRandomResumeDataName];
+        resumeMap[url] = resumeDataName;
+        [resumeMap writeToFile:[self resumeDataMapPath] atomically:YES];
+    }
+    
+    // 2. 获取data
+    NSString *resumeDataPath = [self resumeDataPathWithName:resumeDataName];
+    NSDictionary *tempFileMap = [NSDictionary dictionaryWithContentsOfFile:[self tempFileMapPath]];
+    NSString *tempFileName = tempFileMap[url];
+    if (tempFileName.length > 0) {
+        NSString *tempFilePath = [self tempFilePathWithName:tempFileName];
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        if ([fileMgr fileExistsAtPath:tempFilePath]) {
+            // 获取文件大小
+            NSDictionary *tempFileAttr = [[NSFileManager defaultManager] attributesOfItemAtPath:tempFilePath error:nil ];
+            unsigned long long fileSize = [tempFileAttr[NSFileSize] unsignedLongLongValue];
+            
+            // 手动建一个resumeData
+            NSMutableDictionary *fakeResumeData = [NSMutableDictionary dictionary];
+            fakeResumeData[@"NSURLSessionDownloadURL"] = url;
+            // ios8、与>ios9方式稍有不同
+            if (NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_9_0) {
+                fakeResumeData[@"NSURLSessionResumeInfoTempFileName"] = tempFileName;
+            } else {
+                fakeResumeData[@"NSURLSessionResumeInfoLocalPath"] = tempFilePath;
+            }
+            fakeResumeData[@"NSURLSessionResumeBytesReceived"] = @(fileSize);
+            [fakeResumeData writeToFile:resumeDataPath atomically:YES];
+            
+            // 重新加载信息
+            return [NSData dataWithContentsOfFile:resumeDataPath];
+        }
+    }
+    return nil;
+}
+#pragma mark - resumeData
+- (NSString *)getRandomResumeDataName{
+    return [NSString stringWithFormat:@"ResumeData_%@.dat",[NSUUID UUID].UUIDString];
+}
+
+- (NSString *)saveResumeData:(NSData *)resumeData withUrl:(NSString *)url{
+    if (resumeData.length < 1 || url.length < 1) {
+        return nil;
+    }
+    
+    // 1. 用一个map文件记录resumeData的位置
+    NSString *resumeDataName = [self getRandomResumeDataName];
+    NSMutableDictionary *map = [NSMutableDictionary dictionaryWithContentsOfFile:[self resumeDataMapPath]];
+    if (!map) {
+        map = [NSMutableDictionary dictionary];
+    }
+    // 删除旧的resumeData
+    if (map[url]) {
+        [[NSFileManager defaultManager] removeItemAtPath:[self resumeDataPathWithName:map[url]] error:nil];
+    }
+    // 更新resumeInfo
+    map[url] = resumeDataName;
+    [map writeToFile:[self resumeDataMapPath] atomically:YES];
+    
+    // 2. 存储resumeData
+    NSString *resumeDataPath = [self resumeDataPathWithName:resumeDataName];
+    [resumeData writeToFile:resumeDataPath atomically:YES];
+    
+    return resumeDataName;
+}
+
+/// 获取恢复文件，文件不存在尝试手动建一个
+- (NSData *)getResumeDataWithUrl:(NSString *)url {
+    if (url.length < 1) {
+        return nil;
+    }
+    
+    // 1. 从map文件中获取resumeData的name
+    NSMutableDictionary *resumeMap = [NSMutableDictionary dictionaryWithContentsOfFile:[self resumeDataMapPath]];
+    NSString *resumeDataName = resumeMap[url];
+    
+    // 2. 获取data
+    NSData *resumeData = nil;
+    NSString *resumeDataPath = [self resumeDataPathWithName:resumeDataName];
+    if (resumeDataName.length > 0) {
+        resumeData = [NSData dataWithContentsOfFile:resumeDataPath];
+    }
+    
+    // 3. 如果没有data，找到临时文件，尝试自己建一个
+    if (!resumeData) {
+        resumeData = [self createResumeDataWithUrl:url];
+    }
+    
+    return resumeData;
+}
+
+/// 删除恢复文件信息
+- (void)removeResumeInfoWithUrl:(NSString *)url {
+    
+    // 1. 从map文件中获取resumeData的name
+    NSMutableDictionary *map = [NSMutableDictionary dictionaryWithContentsOfFile:[self resumeDataMapPath]];
+    NSString *resumeDataName = map[url];
+    
+    if (resumeDataName) {
+        // 2. 删除记录
+        [map removeObjectForKey:url];
+        [map writeToFile:[self resumeDataMapPath] atomically:YES];
+        
+        // 3. 删除resumeData
+        NSString *resumeDataPath = [self resumeDataPathWithName:resumeDataName];
+        [[NSFileManager defaultManager] removeItemAtPath:resumeDataPath error:nil];
+    }
+}
+
+#pragma mark - 路径
+
+/// 记录resumeData位置的map文件
+- (NSString *)resumeDataMapPath {
+    // key: url  value: resumeDataName
+    return [[self downloadTempFilePath] stringByAppendingPathComponent:@"ResumeDataMap.plist"];
+}
+
+/// resumeData的路径
+- (NSString *)resumeDataPathWithName:(NSString *)fileName {
+    return [[self downloadTempFilePath] stringByAppendingPathComponent:fileName];
+}
+
+/// 记录tempFile位置的map文件
+- (NSString *)tempFileMapPath {
+    // key: url  value: tempFileName
+    return [[self downloadTempFilePath] stringByAppendingPathComponent:@"TempFileMap.plist"];
+}
+
+/// 临时文件路径
+- (NSString *)tempFilePathWithName:(NSString *)fileName {
+    return [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
+}
+
+/// 记录下载信息的文件夹
+- (NSString *)downloadTempFilePath {
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    path = [path stringByAppendingPathComponent:@"DownloadTempFile"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    return path;
+}
+
 @end
+
 

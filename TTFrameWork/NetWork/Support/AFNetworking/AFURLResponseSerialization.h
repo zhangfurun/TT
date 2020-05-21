@@ -1,5 +1,5 @@
 // AFURLResponseSerialization.h
-// Copyright (c) 2011–2015 Alamofire Software Foundation (http://alamofire.org/)
+// Copyright (c) 2011–2016 Alamofire Software Foundation ( http://alamofire.org/ )
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,6 +25,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ Recursively removes `NSNull` values from a JSON object.
+*/
+id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions readingOptions);
+
+/**
  The `AFURLResponseSerialization` protocol is adopted by an object that decodes data into a more useful object representation, according to details in the server response. Response serializers may additionally perform validation on the incoming response and data.
 
  For example, a JSON response serializer may check for an acceptable status code (`2XX` range) and content type (`application/json`), decoding a valid JSON response into an object.
@@ -42,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable id)responseObjectForResponse:(nullable NSURLResponse *)response
                            data:(nullable NSData *)data
-                          error:(NSError * __nullable __autoreleasing *)error;
+                          error:(NSError * _Nullable __autoreleasing *)error NS_SWIFT_NOTHROW;
 
 @end
 
@@ -57,10 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)init;
 
-/**
- The string encoding used to serialize data received from the server, when no string encoding is specified by the response. `NSUTF8StringEncoding` by default.
- */
-@property (nonatomic, assign) NSStringEncoding stringEncoding;
+@property (nonatomic, assign) NSStringEncoding stringEncoding DEPRECATED_MSG_ATTRIBUTE("The string encoding is never used. AFHTTPResponseSerializer only validates status codes and content types but does not try to decode the received data in any way.");
 
 /**
  Creates and returns a serializer with default configuration.
@@ -81,7 +83,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The acceptable MIME types for responses. When non-`nil`, responses with a `Content-Type` with MIME types that do not intersect with the set will result in an error during validation.
  */
-@property (nonatomic, copy, nullable) NSSet *acceptableContentTypes;
+@property (nonatomic, copy, nullable) NSSet <NSString *> *acceptableContentTypes;
 
 /**
  Validates the specified response and data.
@@ -96,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)validateResponse:(nullable NSHTTPURLResponse *)response
                     data:(nullable NSData *)data
-                   error:(NSError * __nullable __autoreleasing *)error;
+                   error:(NSError * _Nullable __autoreleasing *)error;
 
 @end
 
@@ -111,6 +113,8 @@ NS_ASSUME_NONNULL_BEGIN
  - `application/json`
  - `text/json`
  - `text/javascript`
+
+ In RFC 7159 - Section 8.1, it states that JSON text is required to be encoded in UTF-8, UTF-16, or UTF-32, and the default encoding is UTF-8. NSJSONSerialization provides support for all the encodings listed in the specification, and recommends UTF-8 for efficiency. Using an unsupported encoding will result in serialization error. See the `NSJSONSerialization` documentation for more details.
  */
 @interface AFJSONResponseSerializer : AFHTTPResponseSerializer
 
@@ -166,7 +170,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init;
 
 /**
- Input and output options specifically intended for `NSXMLDocument` objects. For possible values, see the `NSJSONSerialization` documentation section "NSJSONReadingOptions". `0` by default.
+ Input and output options specifically intended for `NSXMLDocument` objects. For possible values, see the `NSXMLDocument` documentation section "Input and Output Options". `0` by default.
  */
 @property (nonatomic, assign) NSUInteger options;
 
@@ -235,7 +239,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface AFImageResponseSerializer : AFHTTPResponseSerializer
 
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+#if TARGET_OS_IOS || TARGET_OS_TV || TARGET_OS_WATCH
 /**
  The scale factor used when interpreting the image data to construct `responseImage`. Specifying a scale factor of 1.0 results in an image whose size matches the pixel-based dimensions of the image. Applying a different scale factor changes the size of the image as reported by the size property. This is set to the value of scale of the main screen by default, which automatically scales images for retina displays, for instance.
  */
@@ -259,14 +263,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The component response serializers.
  */
-@property (readonly, nonatomic, copy) NSArray *responseSerializers;
+@property (readonly, nonatomic, copy) NSArray <id<AFURLResponseSerialization>> *responseSerializers;
 
 /**
  Creates and returns a compound serializer comprised of the specified response serializers.
 
  @warning Each response serializer specified must be a subclass of `AFHTTPResponseSerializer`, and response to `-validateResponse:data:error:`.
  */
-+ (instancetype)compoundSerializerWithResponseSerializers:(NSArray *)responseSerializers;
++ (instancetype)compoundSerializerWithResponseSerializers:(NSArray <id<AFURLResponseSerialization>> *)responseSerializers;
 
 @end
 
@@ -286,7 +290,7 @@ NS_ASSUME_NONNULL_BEGIN
  `AFURLResponseSerializationErrorDomain`
  AFURLResponseSerializer errors. Error codes for `AFURLResponseSerializationErrorDomain` correspond to codes in `NSURLErrorDomain`.
  */
-extern NSString * const AFURLResponseSerializationErrorDomain;
+FOUNDATION_EXPORT NSString * const AFURLResponseSerializationErrorDomain;
 
 /**
  ## User info dictionary keys
@@ -304,8 +308,8 @@ extern NSString * const AFURLResponseSerializationErrorDomain;
  `AFNetworkingOperationFailingURLResponseDataErrorKey`
  The corresponding value is an `NSData` containing the original data of the operation associated with an error. This key is only present in the `AFURLResponseSerializationErrorDomain`.
  */
-extern NSString * const AFNetworkingOperationFailingURLResponseErrorKey;
+FOUNDATION_EXPORT NSString * const AFNetworkingOperationFailingURLResponseErrorKey;
 
-extern NSString * const AFNetworkingOperationFailingURLResponseDataErrorKey;
+FOUNDATION_EXPORT NSString * const AFNetworkingOperationFailingURLResponseDataErrorKey;
 
 NS_ASSUME_NONNULL_END

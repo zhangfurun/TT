@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 extern NSString * const TTDownloadErrorReasonKey;
 extern NSString * const TTDownloadDoDownloadBlockKey;
@@ -15,8 +16,8 @@ extern NSString * const TTDownloadAllowUseMobileNetworkNotification;
 
 @class TTDownloadRequest;
 
-typedef void(^ProgressBlock)(float progress, NSUInteger bytesRead, unsigned long long totalRead, unsigned long long totalExpectedToRead);
-typedef void(^SuccessBlock)(TTDownloadRequest *request, id responseObject);
+typedef void(^ProgressBlock)(CGFloat progress, int64_t completedCount, int64_t totalCount);
+typedef void(^SuccessBlock)(TTDownloadRequest *request);
 typedef void(^CancelBlock)(TTDownloadRequest *request);
 typedef void(^FailureBlock)(TTDownloadRequest *request, NSError *error);
 
@@ -33,6 +34,16 @@ typedef void(^FailureBlock)(TTDownloadRequest *request, NSError *error);
  * 下载文件绝对路径
  */
 @property (nonatomic, strong, readonly) NSString *filePath;
+
+/**
+ 下载文件的URL地址
+ */
+@property (nonatomic, strong, readonly) NSString *urlString;
+
+/**
+ 下载进度
+ */
+@property (nonatomic, assign, readonly) CGFloat progress;
 
 /**
  *  下载文件
@@ -66,6 +77,28 @@ typedef void(^FailureBlock)(TTDownloadRequest *request, NSError *error);
 + (TTDownloadRequest *)downloadFileWithURLString:(NSString *)URLStirng
                                     downloadPath:(NSString *)downloadPath
                                         fileName:(NSString *)fileName
+                                   progressBlock:(ProgressBlock)progressBlock
+                                    successBlock:(SuccessBlock)successBlock
+                                     cancelBlock:(CancelBlock)cancelBlock
+                                    failureBlock:(FailureBlock)failureBlock;
+
+/**
+ *  下载文件
+ *
+ *  @param URLStirng            文件链接
+ *  @param downloadPath         下载位置
+ *  @param fileName             文件名
+ *  @param isUseAllNetDownload  是否使用任何网络下载
+ *  @param progressBlock        下载进度回调
+ *  @param successBlock         下载成功回调
+ *  @param failureBlock         下载失败回调
+ *
+ *  @return 下载任务
+ */
++ (TTDownloadRequest *)downloadFileWithURLString:(NSString *)URLStirng
+                                    downloadPath:(NSString *)downloadPath
+                                        fileName:(NSString *)fileName
+                             isUseAllNetDownload:(BOOL)isUseAllNetDownload
                                    progressBlock:(ProgressBlock)progressBlock
                                     successBlock:(SuccessBlock)successBlock
                                      cancelBlock:(CancelBlock)cancelBlock

@@ -16,11 +16,6 @@
 extern const NSInteger REQUEST_DEFAULT_ERROR_CODE;
 extern NSString * const Key_Model;
 
-typedef void(^reqSuccessBlock)(TTBaseRequest *request);
-typedef void(^reqCancelBlock)(TTBaseRequest *request);
-typedef void(^reqFailureBlock)(TTBaseRequest *request, NSError *error);
-typedef void(^reqUploadBlock)(TTBaseRequest *request, NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite);
-
 @interface TTBaseRequest : NSObject
 @property (nonatomic, copy,   readonly) NSString *requestUrl;
 @property (nonatomic, strong, readonly) NSDictionary *requestParameters;

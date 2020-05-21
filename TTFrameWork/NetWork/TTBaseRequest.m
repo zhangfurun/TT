@@ -11,6 +11,7 @@
 #import "TTConst.h"
 #import "TTLogManager.h"
 #import "TTBinaryData.h"
+#import "TTServerManager.h"
 
 #import "AFNetworking.h"
 
@@ -21,7 +22,8 @@
     void(^_cancelBlock)(TTBaseRequest *);
     void(^_failureBlock)(TTBaseRequest *,NSError *);
     void(^_uploadProgressBlock)(TTBaseRequest *, NSUInteger, long long, long long);
-    AFHTTPRequestOperation *_requestOperation;
+    NSURLSessionDataTask *_requestSession;
+    NSString *_failureErrorMsg;
 }
 @end
 
@@ -50,6 +52,11 @@ static NSMutableArray *requests;
         [self doRequest];
     }
     return self;
+}
+
+#pragma mark - Property Method
+- (NSString *)failureErrorMsg {
+    return [_failureErrorMsg copy];
 }
 
 + (void)requestParameters:(NSDictionary *)parameters successBlock:(void (^)(TTBaseRequest *))successBlock cancelBlock:(void (^)(TTBaseRequest *))cancelBlock failureBlock:(void (^)(TTBaseRequest *, NSError *))failureBlock {
@@ -88,17 +95,19 @@ static NSMutableArray *requests;
 }
 
 - (void)doRequest{
-    id successBlock = ^(AFHTTPRequestOperation *operateion,id responseObject){
-        [self handlerResponse:operateion responseObject:responseObject];
+    id successBlock = ^(NSURLSessionDataTask *task,id responseObject){
+        [self handlerResponse:task responseObject:responseObject];
     };
     
-    id failureBlock = ^(AFHTTPRequestOperation *operation, NSError *error){
-        [self responseError:operation error:error];
+    id failureBlock = ^(NSURLSessionDataTask * _Nullable task, NSError *error){
+        [self responseError:task error:error];
     };
     
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
+    
+    AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    mgr.requestSerializer.timeoutInterval = [self getTimeoutInterval];
     NSString *uaHeaderStr = [self getUserAgent];
-    if (![NSString isNilOrEmpty:uaHeaderStr]) {
+    if (![uaHeaderStr isEqualToString:EMPTY_STR]) {
         [mgr.requestSerializer setValue:uaHeaderStr forHTTPHeaderField:@"User-Agent"];
     }
     NSDictionary *reqHeaderDict = [self getCustomHeaders];
@@ -109,17 +118,26 @@ static NSMutableArray *requests;
         }
     }
     mgr.responseSerializer = [AFHTTPResponseSerializer serializer];
-    if ([TTLogManager logStatus]) {
+    if (TTServerManager.isLogStatusOpen) {
         TTLog(@"%@",_requestUrl);
     }
     TTRequestMethod reqMethod = [self getRequestMethod];
     switch (reqMethod) {
         case TTRequestMethodGet:
-            _requestOperation = [mgr GET:_requestUrl parameters:nil success:successBlock failure:failureBlock];
+            _requestSession = [mgr GET:_requestUrl
+            parameters:nil
+               headers:nil
+              progress:nil
+               success:successBlock
+               failure:failureBlock];
             break;
         case TTRequestMethodPost: {
-            _requestOperation = [mgr POST:_requestUrl parameters:[self getRequestParamDict] constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-                if (_binaryParameterArray) {
+            __weak TTBaseRequest *WS = self;
+            
+            id pramamDict = [self getRequestParamDict];
+            if (_binaryParameterArray && _binaryParameterArray.count > 0) {
+                
+                _requestSession = [mgr POST:_requestUrl parameters:pramamDict headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
                     for (id item in _binaryParameterArray) {
                         if ([item isKindOfClass:[TTBinaryData class]]) {
                             TTBinaryData *data = (TTBinaryData *)item;
@@ -127,36 +145,57 @@ static NSMutableArray *requests;
                         }
                     }
                 }
-            } success:successBlock failure:failureBlock];
-            __weak TTBaseRequest *WS = self;
-            [_requestOperation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-                [WS handlerUploadProcess:bytesWritten totalBytesWritten:totalBytesWritten totalBytesExpectedToWrite:totalBytesExpectedToWrite];
-            }];
+                                   progress:^(NSProgress * _Nonnull uploadProgress) {
+                    [WS handlerUploadProcess:uploadProgress];
+                }
+                                    success:successBlock
+                                    failure:failureBlock];
+                
+            } else {
+                _requestSession = [mgr POST:_requestUrl
+                                 parameters:pramamDict
+                                    headers:nil
+                                   progress:nil
+                                    success:successBlock
+                                    failure:failureBlock];
+            }
         }
             break;
         case TTRequestMethodPut:
-            _requestOperation = [mgr PUT:_requestUrl parameters:[self getRequestParamDict] success:successBlock failure:failureBlock];
+            _requestSession = [mgr PUT:_requestUrl
+                            parameters:[self getRequestParamDict]
+                               headers:nil
+                               success:successBlock
+                               failure:failureBlock];
             break;
         case TTRequestMethodDelete:
-            _requestOperation = [mgr DELETE:_requestUrl parameters:[self getRequestParamDict] success:successBlock failure:failureBlock];
+            _requestSession = [mgr DELETE:_requestUrl
+                               parameters:[self getRequestParamDict]
+                                  headers:nil
+                                  success:successBlock
+                                  failure:failureBlock];
             break;
     }
 }
 
-- (void)handlerUploadProcess:(NSUInteger)bytesWritten totalBytesWritten:(long long)totalBytesWritten totalBytesExpectedToWrite:(long long)totalBytesExpectedToWrite {
+- (void)handlerUploadProcess:(NSProgress *)uploadProgress {
+    int64_t uploadedCount = uploadProgress.completedUnitCount;
+    int64_t totalUploadCount = uploadProgress.totalUnitCount;
+    CGFloat progress = 1.f * uploadedCount / totalUploadCount;
+    
     if (_uploadProgressBlock) {
-        _uploadProgressBlock(self, bytesWritten, totalBytesWritten, totalBytesExpectedToWrite);
+        _uploadProgressBlock(self, progress, uploadedCount, totalUploadCount);
     }
 }
 
-- (void)handlerResponse:(AFHTTPRequestOperation *)operation responseObject:(id)responseObject{
+- (void)handlerResponse:(NSURLSessionDataTask *)task responseObject:(id)responseObject{
     [self finishRequest];
-    NSString *MIMEType = operation.response.MIMEType;
+    NSString *MIMEType = task.response.MIMEType;
     if ([MIMEType isEqualToString:MIMEType_JPG] || [MIMEType isEqualToString:MIMEType_PNG]) {
-        _responseImage = [UIImage imageWithData:operation.responseData];
+        _responseImage = [UIImage imageWithData:responseObject];
         [self executeSuccess];
     } else {
-        NSString *responseString = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
+        NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSString *trimmingString = [responseString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         self.resultString = trimmingString;
         [self handlerResultString:trimmingString];
@@ -164,44 +203,78 @@ static NSMutableArray *requests;
 }
 
 - (void)handlerResultString:(NSString *)resultString {
-    NSData *jsonData = [resultString dataUsingEncoding:NSUTF8StringEncoding];
-    id result = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
-    _resultDict = [NSMutableDictionary dictionary];
-    if ([result isKindOfClass:[NSDictionary class]]) {
-        _resultDict = [[NSMutableDictionary alloc] initWithDictionary:result];
-        [self executeSuccess];
-    } else if ([result isKindOfClass:[NSArray class]]){
-        _resultArray = [[NSMutableArray alloc] initWithArray:result];
-        [self executeSuccess];
-    } else {
+    if (STR_ISNULL_OR_EMPTY(resultString)) {
+        NSError *error = [NSError errorWithDomain:NSStringFromClass([self class]) code:-1 userInfo:@{@"error" : @"返回结果未处理!"}];
+        _failureErrorMsg = [self fetchFailureErrorMsg:error];
         if (_failureBlock) {
-            NSError *error = [NSError errorWithDomain:NSStringFromClass([self class]) code:-1 userInfo:@{@"error" : @"返回结果未处理!"}];
-            _failureBlock(self,error);
+            _failureBlock(self, error);
         }
+        return;
+    }
+    @try {
+        NSData *jsonData = [resultString dataUsingEncoding:NSUTF8StringEncoding];
+        id result = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+        _resultDict = [NSMutableDictionary dictionary];
+        if ([result isKindOfClass:[NSDictionary class]]) {
+            _resultDict = [[NSMutableDictionary alloc] initWithDictionary:result];
+            [self executeSuccess];
+        } else if ([result isKindOfClass:[NSArray class]]){
+            _resultArray = [[NSMutableArray alloc] initWithArray:result];
+            [self executeSuccess];
+        } else {
+            NSError *error = [NSError errorWithDomain:NSStringFromClass([self class]) code:-1 userInfo:@{@"error" : @"返回结果未处理!"}];
+            _failureErrorMsg = [self fetchFailureErrorMsg:error];
+            if (_failureBlock) {
+                _failureBlock(self, error);
+            }
+        }
+    } @catch (NSException *exception) {
+        NSError *error = [NSError errorWithDomain:NSStringFromClass([self class]) code:-1 userInfo:@{@"error" : @"返回结果未处理!"}];
+        _failureErrorMsg = [self fetchFailureErrorMsg:error];
+        if (_failureBlock) {
+            _failureBlock(self, error);
+        }
+    } @finally {
+        
     }
 }
 
-- (void)executeSuccess{
+- (void)executeSuccess {
     [self processResult];
     if (_successBlock) {
         _successBlock(self);
     }
 }
 
-- (void)responseError:(AFHTTPRequestOperation *)operation error:(NSError *)error{
+- (void)responseError:(NSURLSessionTask *)task error:(NSError *)error {
     [self finishRequest];
+    _failureErrorMsg = [self fetchFailureErrorMsg:error];
     if (_failureBlock) {
         _failureBlock(self, error);
     }
 }
 
-- (void)finishRequest{
+- (void)finishRequest {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [requests removeObject:self];
-    if ([TTLogManager logStatus]) {
+    if (TTServerManager.isLogStatusOpen) {
         TTLog(@"%@ requestFinished: %@", self,_requestUrl);
-        //        TTLog(@"%@", requests);
     }
+}
+
+- (NSString *)fetchFailureErrorMsg:(NSError *)error {
+    NSString *msg = @"发生了一个未知的错误";
+    switch (error.code) {
+        case NSURLErrorCancelled:
+            msg = [NSString stringWithFormat:@"%@_请求已取消", [[self class] getCancelString]];
+            _failureBlock = nil;
+            [[self class] cancelTheRequest];
+            break;
+        default:
+            msg = TT_FetchFailureErrorMsg(error);
+            break;
+    }
+    return msg;
 }
 
 + (TTNetworkReachabilityStatus)fetchReachabilityStatus {
@@ -212,6 +285,7 @@ static NSMutableArray *requests;
     AFNetworkReachabilityManager *nwReachabilityManager = [AFNetworkReachabilityManager sharedManager];
     [nwReachabilityManager startMonitoring];
 }
+
 
 #pragma mark - RequestUrl and Parameters
 - (NSString *)getRequestUrl{
@@ -290,8 +364,11 @@ static NSMutableArray *requests;
 
 #pragma mark - Cancel Request
 - (void)canelRequest{
-    if (_requestOperation) {
-        [_requestOperation cancel];
+   if (_requestSession) {
+        [_requestSession cancel];
+    }
+    if (_cancelBlock) {
+        _cancelBlock(self);
     }
 }
 

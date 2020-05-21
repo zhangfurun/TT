@@ -66,8 +66,8 @@ static TTTencentCenter *instance;
     return [TencentOAuth iphoneQQInstalled] && [TencentOAuth iphoneQQSupportSSOLogin];
 }
 
-- (BOOL)isInstalledQZone {
-    return [TencentOAuth iphoneQZoneInstalled] && [TencentOAuth iphoneQZoneSupportSSOLogin];
+- (BOOL)isInstalledTIM {
+    return [TencentOAuth iphoneTIMInstalled] && [TencentOAuth iphoneTIMSupportSSOLogin];
 }
 
 - (NSArray *)permissions {
